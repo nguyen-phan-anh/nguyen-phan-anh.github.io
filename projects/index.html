@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Projects</title>
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
@@ -12,7 +12,7 @@
 <!-- ===== Sidebar ===== -->
 <aside class="sidebar">
   <div class="profile">
-    <img src="../assets/img/avatar.jpg" class="avatar">
+    <img src="/assets/img/avatar.jpg" class="avatar">
     <h2>Phan Anh</h2>
     <p class="role">Research Student</p>
   </div>
@@ -77,7 +77,7 @@
 </div>
 
 <script>
-fetch("../assets/components/menu.html")
+fetch("/assets/components/menu.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("menu").innerHTML = data;
