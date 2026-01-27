@@ -3,24 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>About</title>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 <div class="layout">
 
-
 <aside class="sidebar">
 <div class="profile">
-<img src="assets/img/avatar.jpg" class="avatar">
+<img src="/assets/img/avatar.jpg" class="avatar">
 <h2>Phan Anh</h2>
 <p class="role">Research Student</p>
 </div>
 
-
 <div id="menu"></div>
 
 </aside>
-
 
 <main class="main">
 <div style="padding:80px; max-width:900px;">
@@ -28,19 +25,30 @@
 <p style="margin-top:20px; line-height:1.8;">
 
 Mình đã bắt đầu dạy tiếng Anh đến nay được 3 năm rồi. Mình chuyên về dạy cho người mới bắt đầu và luyện thi TOEIC.
-  Chứng chỉ của mình:
-  
 
-  Một số ảnh chứng chỉ của học sinh của mình đi thi về
 </p>
+  
+<h2>Chứng chỉ của mình:</h2>
+<p style="margin-top:20px; line-height:1.8;">
+
+Mình đã bắt đầu dạy tiếng Anh đến nay được 3 năm rồi. Mình chuyên về dạy cho người mới bắt đầu và luyện thi TOEIC.
+
+</p>
+
+<h2>Một số ảnh chứng chỉ của học sinh của mình đi thi về</h2>
+<p style="margin-top:20px; line-height:1.8;">
+
+Mình đã bắt đầu dạy tiếng Anh đến nay được 3 năm rồi. Mình chuyên về dạy cho người mới bắt đầu và luyện thi TOEIC.
+
+</p>
+
 </div>
 </main>
-
 
 </div>
 
 <script>
-fetch("assets/components/menu.html")
+fetch("/assets/components/menu.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("menu").innerHTML = data;
