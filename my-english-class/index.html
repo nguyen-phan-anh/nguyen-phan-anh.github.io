@@ -73,11 +73,27 @@ const track = document.querySelector(".slider-track");
 const slides = document.querySelectorAll(".slider-track img");
 const nextBtn = document.querySelector(".slider-btn.next");
 const prevBtn = document.querySelector(".slider-btn.prev");
+const dotsContainer = document.querySelector(".slider-dots");
 
 let index = 0;
 
+/* create dots */
+slides.forEach((_, i)=>{
+  const dot = document.createElement("span");
+  if(i===0) dot.classList.add("active");
+  dot.addEventListener("click", ()=>{
+    index = i;
+    updateSlider();
+  });
+  dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".slider-dots span");
+
 function updateSlider(){
   track.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach(d=>d.classList.remove("active"));
+  dots[index].classList.add("active");
 }
 
 nextBtn.addEventListener("click", ()=>{
@@ -94,7 +110,7 @@ prevBtn.addEventListener("click", ()=>{
 setInterval(()=>{
   index = (index + 1) % slides.length;
   updateSlider();
-}, 4000); // 4s
-</script>  
+}, 4500);
+</script>
 </body>
 </html>
