@@ -72,48 +72,52 @@ fetch("/assets/components/menu.html")
 </script>  
 
 <script>
-const track = document.querySelector(".slider-track");
-const slides = document.querySelectorAll(".slider-track img");
-const nextBtn = document.querySelector(".slider-btn.next");
-const prevBtn = document.querySelector(".slider-btn.prev");
-const dotsContainer = document.querySelector(".slider-dots");
+document.addEventListener("DOMContentLoaded", function(){
 
-let index = 0;
+  const track = document.querySelector(".slider-track");
+  const slides = document.querySelectorAll(".slider-track img");
+  const nextBtn = document.querySelector(".slider-btn.next");
+  const prevBtn = document.querySelector(".slider-btn.prev");
+  const dotsContainer = document.querySelector(".slider-dots");
 
-/* create dots */
-slides.forEach((_, i)=>{
-  const dot = document.createElement("span");
-  if(i===0) dot.classList.add("active");
-  dot.addEventListener("click", ()=>{
-    index = i;
+  let index = 0;
+
+  /* create dots */
+  slides.forEach((_, i)=>{
+    const dot = document.createElement("span");
+    if(i===0) dot.classList.add("active");
+    dot.addEventListener("click", ()=>{
+      index = i;
+      updateSlider();
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll(".slider-dots span");
+
+  function updateSlider(){
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(d=>d.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+
+  nextBtn.addEventListener("click", ()=>{
+    index = (index + 1) % slides.length;
     updateSlider();
   });
-  dotsContainer.appendChild(dot);
+
+  prevBtn.addEventListener("click", ()=>{
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlider();
+  });
+
+  /* Auto slide */
+  setInterval(()=>{
+    index = (index + 1) % slides.length;
+    updateSlider();
+  }, 4500);
+
 });
-
-const dots = document.querySelectorAll(".slider-dots span");
-
-function updateSlider(){
-  track.style.transform = `translateX(-${index * 100}%)`;
-  dots.forEach(d=>d.classList.remove("active"));
-  dots[index].classList.add("active");
-}
-
-nextBtn.addEventListener("click", ()=>{
-  index = (index + 1) % slides.length;
-  updateSlider();
-});
-
-prevBtn.addEventListener("click", ()=>{
-  index = (index - 1 + slides.length) % slides.length;
-  updateSlider();
-});
-
-/* Auto slide */
-setInterval(()=>{
-  index = (index + 1) % slides.length;
-  updateSlider();
-}, 4500);
 </script>
 </body>
 </html>
