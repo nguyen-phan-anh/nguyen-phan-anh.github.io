@@ -27,7 +27,7 @@
 
 
 <main class="main">
-<section class="hero" style="background-image:url('assets/img/hero.jpg')">
+<section class="hero" id="hero">
 <div class="hero-overlay"></div>
 <div class="hero-content">
 <h1>Hi, I'm Phan Anh</h1>
@@ -39,5 +39,28 @@
 
 
 </div>
+
+<script>
+const heroImages = [
+  "assets/img/hero1.jpg",
+  "assets/img/hero2.jpg",
+  "assets/img/hero3.jpg"
+];
+
+let current = 0;
+const hero = document.getElementById("hero");
+
+function changeHero(){
+  hero.style.backgroundImage = `url('${heroImages[current]}')`;
+  hero.style.backgroundSize = "cover";
+  hero.style.backgroundPosition = "center";
+  hero.style.transition = "background-image 1s ease-in-out";
+  current = (current + 1) % heroImages.length;
+}
+
+changeHero(); // load ảnh đầu
+setInterval(changeHero, 5000); // 5s đổi ảnh
+</script>
+  
 </body>
 </html>
