@@ -33,5 +33,14 @@ Write your biography, research interests, and academic goals here.
 
 
 </div>
+
+<script>
+fetch("assets/components/menu.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("menu").innerHTML = data;
+  });
+</script>  
+  
 </body>
 </html>
