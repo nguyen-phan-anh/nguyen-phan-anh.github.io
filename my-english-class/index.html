@@ -67,6 +67,34 @@ fetch("/assets/components/menu.html")
     document.getElementById("menu").innerHTML = data;
   });
 </script>  
-  
+
+<script>
+const track = document.querySelector(".slider-track");
+const slides = document.querySelectorAll(".slider-track img");
+const nextBtn = document.querySelector(".slider-btn.next");
+const prevBtn = document.querySelector(".slider-btn.prev");
+
+let index = 0;
+
+function updateSlider(){
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+nextBtn.addEventListener("click", ()=>{
+  index = (index + 1) % slides.length;
+  updateSlider();
+});
+
+prevBtn.addEventListener("click", ()=>{
+  index = (index - 1 + slides.length) % slides.length;
+  updateSlider();
+});
+
+/* Auto slide */
+setInterval(()=>{
+  index = (index + 1) % slides.length;
+  updateSlider();
+}, 4000); // 4s
+</script>  
 </body>
 </html>
