@@ -75,5 +75,14 @@
 </main>
 
 </div>
+
+<script>
+fetch("assets/components/menu.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("menu").innerHTML = data;
+  });
+</script> 
+  
 </body>
 </html>
