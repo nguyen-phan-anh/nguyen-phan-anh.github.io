@@ -3,39 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <title>About</title>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 <div class="layout">
 
-
 <aside class="sidebar">
 <div class="profile">
-<img src="assets/img/avatar.jpg" class="avatar">
+<img src="/assets/img/avatar.jpg" class="avatar">
 <h2>Phan Anh</h2>
 <p class="role">Research Student</p>
 </div>
-
 
 <div id="menu"></div>
 
 </aside>
 
-
 <main class="main">
 <div style="padding:80px; max-width:900px;">
 <h1>About Me</h1>
 <p style="margin-top:20px; line-height:1.8;">
-Write your biography, research interests, and academic goals here.
+  Write your biography, research interests, and academic goals here.
+  Tôi là Phan Anh, hiện đã tốt nghiệp Đại học Bách khoa Hà Nội.
+  Tôi thích chơi game, đặc biệt là các thể loại game phụ thuộc vào lựa chọn của người chơi, 
+  và ứng với các lựa chọn thì kết quả game sẽ khác (Ví dụ: Detroit Become Human; Dark Anthology Games;...
 </p>
 </div>
 </main>
 
-
 </div>
 
 <script>
-fetch("assets/components/menu.html")
+fetch("/assets/components/menu.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("menu").innerHTML = data;
