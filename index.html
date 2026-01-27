@@ -59,6 +59,15 @@ setInterval(changeHero, 5000); // 5s đổi ảnh
 </script>
 
 <script src="assets/js/main.js"></script>
+
+<script>
+fetch("assets/components/menu.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("menu").innerHTML = data;
+  });
+</script>  
+  
   
 </body>
 </html>
