@@ -182,3 +182,10 @@ color:#111;
 .slider-dots span.active{
   background: white;
 }
+.slider-track img{
+  transition: transform 0.5s ease;
+}
+
+.slider-track img:hover{
+  transform: scale(1.08);
+}
