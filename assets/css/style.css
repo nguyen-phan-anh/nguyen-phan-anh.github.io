@@ -69,5 +69,15 @@ text-decoration:none;
 color:#111;
 }
 
+.hero{
+  transition: opacity 1s ease-in-out, background-image 1s ease-in-out;
+}
+.fade-out{
+  opacity: 0;
+}
+.fade-in{
+  opacity: 1;
+}
+
 
 .btn:hover{background:#111;color:#fff}
