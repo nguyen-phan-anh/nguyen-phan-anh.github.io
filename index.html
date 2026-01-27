@@ -1,192 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Academic Profile</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Inter,system-ui,-apple-system,sans-serif;color:#111}
-    a{text-decoration:none;color:inherit}
-
-    .layout{display:flex;min-height:100vh}
-
-    /* Sidebar */
-    .sidebar{
-      width:300px;
-      background:#fafafa;
-      border-right:1px solid #e5e5e5;
-      padding:32px 24px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-    }
-
-    .profile{
-      text-align:center;
-    }
-
-    .avatar{
-      width:110px;height:110px;
-      border-radius:50%;
-      object-fit:cover;
-      margin-bottom:12px;
-    }
-
-    .name{font-weight:600;font-size:18px}
-    .title{font-size:13px;color:#555;margin-top:4px}
-
-    nav{margin-top:40px}
-    nav a{
-      display:block;
-      padding:10px 0;
-      font-size:15px;
-      color:#222;
-    }
-
-    nav a.active{color:#2563eb;font-weight:600}
-
-    .footer{
-      font-size:12px;
-      color:#777;
-      line-height:1.6;
-    }
-
-    /* Main */
-    .main{
-      flex:1;
-      position:relative;
-      background:#000;
-      overflow:hidden;
-    }
-
-    .hero-bg{
-      position:absolute;
-      inset:0;
-      background:url('https://www.vecteezy.com/photo/60843811-close-up-of-raindrops-on-leaves-hd-background-luxury-hd-wallpaper-image-trendy-background-illustration') center/cover no-repeat;
-      filter:brightness(0.85);
-    }
-
-    .overlay{
-      position:absolute;
-      inset:0;
-      background:rgba(255,255,255,0.65);
-    }
-
-    .hero-content{
-      position:relative;
-      z-index:2;
-      padding:80px 80px;
-      max-width:900px;
-    }
-
-    .hero-content h1{
-      font-family:'Playfair Display',serif;
-      font-size:72px;
-      line-height:1.05;
-      margin-bottom:24px;
-    }
-
-    .hero-content .subtitle{
-      font-size:18px;
-      margin-bottom:24px;
-    }
-
-    .hero-content .desc{
-      font-size:16px;
-      max-width:520px;
-      line-height:1.7;
-      color:#222;
-    }
-
-    .btn{
-      display:inline-block;
-      margin-top:28px;
-      padding:12px 28px;
-      border:1px solid #111;
-      font-size:14px;
-      transition:0.3s;
-    }
-
-    .btn:hover{background:#111;color:#fff}
-
-    /* Dots */
-    .dots{
-      position:absolute;
-      left:40px;
-      bottom:40px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      z-index:3;
-    }
-
-    .dot{
-      width:10px;height:10px;
-      border-radius:50%;
-      background:#999;
-    }
-
-    .dot.active{background:#2563eb}
-
-    @media(max-width:900px){
-      .layout{flex-direction:column}
-      .sidebar{width:100%;flex-direction:row;align-items:center}
-      nav{display:flex;gap:16px;margin:0}
-      .hero-content{padding:40px}
-      .hero-content h1{font-size:48px}
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Home</title>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div class="layout">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div>
-        <div class="profile">
-          <!-- Replace avatar.jpg with your image -->
-          <img src="https://via.placeholder.com/200" class="avatar" />
-          <div class="name">Nguyen Phan Anh</div>
-          <div class="title">Graduated from<br/>Hanoi University of Science and Technology</div>
-        </div>
 
-        <nav>
-          <a href="#" class="active">Home</a>
-          <a href="about.html">About</a>
-          <a href="#">Awards</a>
-          <a href="#">Projects</a>
-          <a href="#">Contact</a>
-        </nav>
-      </div>
 
-      <div class="footer">
-        © Copyright 2026 All rights reserved<br/>
-      </div>
-    </aside>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="pages/publications.html">Publications</a>
+<a href="pages/projects.html">Projects</a>
+</nav>
 
-    <!-- Main -->
-    <main class="main">
-      <div class="hero-bg"></div>
-      <div class="overlay"></div>
 
-      <div class="hero-content">
-        <h1>Hi!<br/>I'm Phan Anh</h1>
-        <div class="subtitle">Graduated from<br/>Hanoi University of Science and Technology</div>
-        <p class="desc">
-          I work on research at the intersection of information systems, data science, and artificial intelligence, focusing on real-world applications and interdisciplinary collaboration.
-        </p>
-        <a href="cv.pdf" class="btn" download>DOWNLOAD CV</a>
-      </div>
+<section class="hero">
+<img src="assets/img/avatar.jpg" class="avatar" loading="lazy">
+<h1>Phan Anh</h1>
+<p>Academic Portfolio Website</p>
+<a href="CV.pdf" class="btn" download>Download CV</a>
+</section>
 
-      <div class="dots">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
-    </main>
-  </div>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
