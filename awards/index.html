@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projects</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+<div class="layout">
+
+<!-- ===== Sidebar ===== -->
+<aside class="sidebar">
+  <div class="profile">
+    <img src="/assets/img/avatar.jpg" class="avatar">
+    <h2>Phan Anh</h2>
+    <p class="role">Research Student</p>
+  </div>
+
+  <div id="menu"></div>
+
+</aside>
+
+<!-- ===== Main ===== -->
+<main class="main">
+  <div style="padding:80px; max-width:1000px;">
+
+    <h1>Projects</h1>
+
+    <!-- Project item -->
+    <section class="project-card">
+      <h2>Sinh viên 5 tốt cấp Thành phố</h2>
+      <p class="project-meta">Năm học 2021 - 2022 và 2022 - 2023</p>
+      <p>
+        •	Ảnh sân khấu <br>
+        •	Ảnh bằng khen <br>
+        •	Ảnh banner trước KTX
+      </p>
+    </section>
+
+    <!-- Project item -->
+    <section class="project-card">
+      <h2>Sinh viên 5 tốt cấp Đại học Bách khoa Hà Nội</h2>
+      <p class="project-meta">Cả 4 năm Đại học</p>
+      <p>
+        •	Ảnh chụp 4 cúp <br>
+        •	Ảnh GCN + Sân khấu
+        </a>
+      </p>
+
+    </section>
+
+    <!-- Project item -->
+    <section class="project-card">
+      <h2>Giấy khen Hiệu trưởng - Giấy khen Giám đốc</h2>
+      <p class="project-meta">Năm học 2020 - 2021; 2021 - 2022 và 2022 - 2023</p>
+      <p>
+        •	Ảnh chụp 3 giấy khen
+      </p>
+    </section>
+
+    <!-- Project item -->
+    <section class="project-card">
+      <h2>Học bổng KKHT</h2>
+      <p class="project-meta">Năm học ...</p>
+      <p>
+        •	Ảnh chụp ????
+      </p>
+    </section>
+
+    <!-- Project item -->
+    <section class="project-card">
+      <h2>Học bổng Exness</h2>
+      <p class="project-meta">Năm nào không nhớ</p>
+      <p>
+        •	Ảnh chụp giấy khen <br>
+        •	Ảnh chụp hôm nhận bằng ở c1
+      </p>
+    </section>
+
+  </div>
+</main>
+
+</div>
+
+<script>
+fetch("/assets/components/menu.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("menu").innerHTML = data;
+  });
+</script> 
+  
+</body>
+</html>
