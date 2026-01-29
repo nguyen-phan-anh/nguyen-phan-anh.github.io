@@ -58,11 +58,12 @@
       <p>
         •	Ảnh chụp 3 giấy khen
       </p>
-      <h3>Hình ảnh giấy chứng nhận và lễ trao học bổng:</h3>
-      <div class="img-grid">
-        <img src="/assets/img/GKHT-20-21.jpg" onclick="openModal(0)">
-        <img src="/assets/img/GKHT-21-22.jpg" onclick="openModal(1)">
-        <img src="/assets/img/GKHT-22-23.jpg" onclick="openModal(2)">
+      <h3>Hình ảnh giấy khen:</h3>
+
+      <div class="img-grid" data-gallery="gkht">
+        <img src="/assets/img/GKHT-20-21.jpg" onclick="openGallery('gkht',0)">
+        <img src="/assets/img/GKHT-21-22.jpg" onclick="openGallery('gkht',1)">
+        <img src="/assets/img/GKHT-22-23.jpg" onclick="openGallery('gkht',2)">
       </div>
 
 <!-- Modal Gallery -->
@@ -94,10 +95,10 @@
         •	Ảnh chụp hôm nhận bằng ở c1
       </p>
       <h3>Hình ảnh giấy chứng nhận và lễ trao học bổng:</h3>
-      <div class="img-grid">
-  <img src="/assets/img/HB-Exness-1.jpg" onclick="openModal(0)">
-  <img src="/assets/img/HB-Exness-2.jpg" onclick="openModal(1)">
-  <img src="/assets/img/HB-Exness-3.jpg" onclick="openModal(2)">
+      <div class="img-grid" data-gallery="exness">
+  <img src="/assets/img/HB-Exness-1.jpg" onclick="openGallery('exness',0)">
+  <img src="/assets/img/HB-Exness-2.jpg" onclick="openGallery('exness',1)">
+  <img src="/assets/img/HB-Exness-3.jpg" onclick="openGallery('exness',2)">
 </div>
 
 <!-- Modal Gallery -->
@@ -123,20 +124,31 @@ fetch("/assets/components/menu.html")
   });
 </script> 
 <script>
-const images = [
-  "/assets/img/HB-Exness-1.jpg",
-  "/assets/img/HB-Exness-2.jpg",
-  "/assets/img/HB-Exness-3.jpg"
-];
+const galleries = {
+  award1: [
+    "/assets/img/award1-1.jpg",
+    "/assets/img/award1-2.jpg",
+    "/assets/img/award1-3.jpg"
+  ],
+  exness: [
+    "/assets/img/HB-Exness-1.jpg",
+    "/assets/img/HB-Exness-2.jpg",
+    "/assets/img/HB-Exness-3.jpg"
+  ]
+};
 
+let currentGallery = "";
 let currentIndex = 0;
 
-function openModal(index){
+function openGallery(galleryName, index){
+  currentGallery = galleryName;
   currentIndex = index;
+
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
+
   modal.style.display = "flex";
-  modalImg.src = images[currentIndex];
+  modalImg.src = galleries[currentGallery][currentIndex];
 }
 
 function closeModal(){
@@ -144,18 +156,21 @@ function closeModal(){
 }
 
 function nextImg(){
-  currentIndex = (currentIndex + 1) % images.length;
-  document.getElementById("modalImg").src = images[currentIndex];
+  const imgs = galleries[currentGallery];
+  currentIndex = (currentIndex + 1) % imgs.length;
+  document.getElementById("modalImg").src = imgs[currentIndex];
 }
 
 function prevImg(){
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  document.getElementById("modalImg").src = images[currentIndex];
+  const imgs = galleries[currentGallery];
+  currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+  document.getElementById("modalImg").src = imgs[currentIndex];
 }
 
 /* Keyboard control */
 document.addEventListener("keydown", function(e){
-  if(document.getElementById("imgModal").style.display === "flex"){
+  const modal = document.getElementById("imgModal");
+  if(modal.style.display === "flex"){
     if(e.key === "Escape") closeModal();
     if(e.key === "ArrowRight") nextImg();
     if(e.key === "ArrowLeft") prevImg();
