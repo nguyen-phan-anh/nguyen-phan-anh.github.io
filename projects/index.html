@@ -74,6 +74,21 @@
         <span>Machine Learning</span>
         <span>Decision Support</span>
       </div>
+    <h3>Hình ảnh giấy khen:</h3>
+
+      <div class="img-grid" data-gallery="gkht">
+        <img src="/assets/img/GKHT-20-21.jpg" onclick="openGallery('gkht',0)">
+        <img src="/assets/img/GKHT-21-22.jpg" onclick="openGallery('gkht',1)">
+        <img src="/assets/img/GKHT-22-23.jpg" onclick="openGallery('gkht',2)">
+      </div>
+
+<!-- Modal Gallery -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <span class="nav prev" onclick="prevImg()">&#10094;</span>
+  <img class="modal-content" id="modalImg">
+  <span class="nav next" onclick="nextImg()">&#10095;</span>
+</div>
     </section>
 
     <!-- Project item -->
@@ -102,6 +117,60 @@ fetch("/assets/components/menu.html")
     document.getElementById("menu").innerHTML = data;
   });
 </script> 
+<script>
+const galleries = {
+  gkht: [
+    "/assets/img/GKHT-20-21.jpg",
+    "/assets/img/GKHT-21-22.jpg",
+    "/assets/img/GKHT-22-23.jpg"
+  ],
+  exness: [
+    "/assets/img/HB-Exness-1.jpg",
+    "/assets/img/HB-Exness-2.jpg",
+    "/assets/img/HB-Exness-3.jpg"
+  ]
+};
+
+let currentGallery = "";
+let currentIndex = 0;
+
+function openGallery(galleryName, index){
+  currentGallery = galleryName;
+  currentIndex = index;
+
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+  modalImg.src = galleries[currentGallery][currentIndex];
+}
+
+function closeModal(){
+  document.getElementById("imgModal").style.display = "none";
+}
+
+function nextImg(){
+  const imgs = galleries[currentGallery];
+  currentIndex = (currentIndex + 1) % imgs.length;
+  document.getElementById("modalImg").src = imgs[currentIndex];
+}
+
+function prevImg(){
+  const imgs = galleries[currentGallery];
+  currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+  document.getElementById("modalImg").src = imgs[currentIndex];
+}
+
+/* Keyboard control */
+document.addEventListener("keydown", function(e){
+  const modal = document.getElementById("imgModal");
+  if(modal.style.display === "flex"){
+    if(e.key === "Escape") closeModal();
+    if(e.key === "ArrowRight") nextImg();
+    if(e.key === "ArrowLeft") prevImg();
+  }
+});
+</script>
   
 </body>
 </html>
