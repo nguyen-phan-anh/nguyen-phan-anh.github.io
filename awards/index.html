@@ -78,12 +78,18 @@
         •	Ảnh chụp giấy khen <br>
         •	Ảnh chụp hôm nhận bằng ở c1
       </p>
-      <h3>Project Screenshots</h3>
-        <div class="img-grid">
-          <img src="/assets/img/HB-Exness-1.jpg" alt="Học bổng Exness năm học 2022-2023">
-          <img src="/assets/img/HB-Exness-2.jpg" alt="Hình ảnh lễ trao học bổng">
-          <img src="/assets/img/HB-Exness-3.jpg" alt="Phan Anh đứng thứ 5 từ phải sang">
-        </div>
+      <h3>Hình ảnh giấy chứng nhận và lễ trao học bổng:</h3>
+      <div class="img-grid">
+        <img src="/assets/img/HB-Exness-1.jpg" alt="Học bổng Exness năm học 2022-2023" onclick="openModal(this.src)">
+        <img src="/assets/img/HB-Exness-2.jpg" alt="Hình ảnh lễ trao học bổng" onclick="openModal(this.src)">
+        <img src="/assets/img/HB-Exness-3.jpg" alt="Phan Anh đứng thứ 5 từ phải sang" onclick="openModal(this.src)">
+      </div>
+
+<!-- Modal -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
     </section>
 
   </div>
@@ -98,6 +104,24 @@ fetch("/assets/components/menu.html")
     document.getElementById("menu").innerHTML = data;
   });
 </script> 
-  
+<script>
+function openModal(src){
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  modal.style.display = "flex";
+  modalImg.src = src;
+}
+
+function closeModal(){
+  document.getElementById("imgModal").style.display = "none";
+}
+
+/* ESC to close */
+document.addEventListener("keydown", function(e){
+  if(e.key === "Escape"){
+    closeModal();
+  }
+});
+</script>  
 </body>
 </html>
