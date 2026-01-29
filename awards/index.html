@@ -108,23 +108,44 @@ fetch("/assets/components/menu.html")
   });
 </script> 
 <script>
-function openModal(src){
+const images = [
+  "/assets/img/HB-Exness-1.jpg",
+  "/assets/img/HB-Exness-2.jpg",
+  "/assets/img/HB-Exness-3.jpg"
+];
+
+let currentIndex = 0;
+
+function openModal(index){
+  currentIndex = index;
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
   modal.style.display = "flex";
-  modalImg.src = src;
+  modalImg.src = images[currentIndex];
 }
 
 function closeModal(){
   document.getElementById("imgModal").style.display = "none";
 }
 
-/* ESC to close */
+function nextImg(){
+  currentIndex = (currentIndex + 1) % images.length;
+  document.getElementById("modalImg").src = images[currentIndex];
+}
+
+function prevImg(){
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  document.getElementById("modalImg").src = images[currentIndex];
+}
+
+/* Keyboard control */
 document.addEventListener("keydown", function(e){
-  if(e.key === "Escape"){
-    closeModal();
+  if(document.getElementById("imgModal").style.display === "flex"){
+    if(e.key === "Escape") closeModal();
+    if(e.key === "ArrowRight") nextImg();
+    if(e.key === "ArrowLeft") prevImg();
   }
 });
-</script>  
+</script>
 </body>
 </html>
