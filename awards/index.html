@@ -80,15 +80,18 @@
       </p>
       <h3>Hình ảnh giấy chứng nhận và lễ trao học bổng:</h3>
       <div class="img-grid">
-        <img src="/assets/img/HB-Exness-1.jpg" alt="Học bổng Exness năm học 2022-2023" onclick="openModal(this.src)">
-        <img src="/assets/img/HB-Exness-2.jpg" alt="Hình ảnh lễ trao học bổng" onclick="openModal(this.src)">
-        <img src="/assets/img/HB-Exness-3.jpg" alt="Phan Anh đứng thứ 5 từ phải sang" onclick="openModal(this.src)">
-      </div>
+  <img src="/assets/img/HB-Exness-1.jpg" onclick="openModal(0)">
+  <img src="/assets/img/HB-Exness-2.jpg" onclick="openModal(1)">
+  <img src="/assets/img/HB-Exness-3.jpg" onclick="openModal(2)">
+</div>
 
-<!-- Modal -->
-<div id="imgModal" class="modal" onclick="closeModal()">
-  <span class="close">&times;</span>
+<!-- Modal Gallery -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+
+  <span class="nav prev" onclick="prevImg()">&#10094;</span>
   <img class="modal-content" id="modalImg">
+  <span class="nav next" onclick="nextImg()">&#10095;</span>
 </div>
     </section>
 
