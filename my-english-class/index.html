@@ -44,12 +44,23 @@ Mình có IELTS 7.5, TOEIC 990 và 980
         <img src="/assets/img/PA-Eng-Cert-3.jpg" onclick="openGallery('PA-cert',2)">
       </div>
 
-<!-- Modal Gallery -->
+<!-- Modal Portfolio Gallery -->
 <div id="imgModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <span class="nav prev" onclick="prevImg()">&#10094;</span>
-  <img class="modal-content" id="modalImg">
-  <span class="nav next" onclick="nextImg()">&#10095;</span>
+  <div class="modal-overlay" onclick="closeModal()"></div>
+
+  <div class="modal-ui">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <span class="nav prev" onclick="prevImg()">&#10094;</span>
+
+    <div class="modal-box">
+      <img class="modal-content" id="modalImg">
+      <div class="modal-caption" id="modalCaption"></div>
+      <div class="modal-counter" id="modalCounter"></div>
+    </div>
+
+    <span class="nav next" onclick="nextImg()">&#10095;</span>
+  </div>
 </div>
 
 
@@ -77,17 +88,34 @@ fetch("/assets/components/menu.html")
   });
 </script>  
 
-  <script>
+<script>
 const galleries = {
   "PA-cert": [
-    "/assets/img/PA-Eng-Cert-1.jpg",
-    "/assets/img/PA-Eng-Cert-2.jpg",
-    "/assets/img/PA-Eng-Cert-3.jpg"
+    {
+      src: "/assets/img/PA-Eng-Cert-1.jpg",
+      caption: "IELTS Academic 7.5"
+    },
+    {
+      src: "/assets/img/PA-Eng-Cert-2.jpg",
+      caption: "TOEIC 990 – Listening & Reading"
+    },
+    {
+      src: "/assets/img/PA-Eng-Cert-3.jpg",
+      caption: "TOEIC 980 – Listening & Reading"
+    }
   ]
 };
 
 let currentGallery = "";
 let currentIndex = 0;
+
+/* Preload images */
+function preloadGallery(name){
+  galleries[name].forEach(img=>{
+    const i = new Image();
+    i.src = img.src;
+  });
+}
 
 function openGallery(galleryName, index){
   currentGallery = galleryName;
@@ -95,9 +123,15 @@ function openGallery(galleryName, index){
 
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
+  const caption = document.getElementById("modalCaption");
+  const counter = document.getElementById("modalCounter");
 
-  modal.style.display = "flex";
-  modalImg.src = galleries[currentGallery][currentIndex];
+  modal.style.display = "block";
+  modalImg.src = galleries[currentGallery][currentIndex].src;
+  caption.innerText = galleries[currentGallery][currentIndex].caption;
+  counter.innerText = `${currentIndex+1} / ${galleries[currentGallery].length}`;
+
+  preloadGallery(galleryName);
 }
 
 function closeModal(){
@@ -107,19 +141,29 @@ function closeModal(){
 function nextImg(){
   const imgs = galleries[currentGallery];
   currentIndex = (currentIndex + 1) % imgs.length;
-  document.getElementById("modalImg").src = imgs[currentIndex];
+  updateModal();
 }
 
 function prevImg(){
   const imgs = galleries[currentGallery];
   currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
-  document.getElementById("modalImg").src = imgs[currentIndex];
+  updateModal();
+}
+
+function updateModal(){
+  const modalImg = document.getElementById("modalImg");
+  const caption = document.getElementById("modalCaption");
+  const counter = document.getElementById("modalCounter");
+
+  modalImg.src = galleries[currentGallery][currentIndex].src;
+  caption.innerText = galleries[currentGallery][currentIndex].caption;
+  counter.innerText = `${currentIndex+1} / ${galleries[currentGallery].length}`;
 }
 
 /* Keyboard control */
 document.addEventListener("keydown", function(e){
   const modal = document.getElementById("imgModal");
-  if(modal.style.display === "flex"){
+  if(modal.style.display === "block"){
     if(e.key === "Escape") closeModal();
     if(e.key === "ArrowRight") nextImg();
     if(e.key === "ArrowLeft") prevImg();
