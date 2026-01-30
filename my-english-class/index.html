@@ -36,6 +36,24 @@ Mình đã bắt đầu dạy tiếng Anh đến nay được 3 năm rồi. Mìn
 <p style="margin-top:20px; line-height:1.8;">
 
 Mình có IELTS 7.5, TOEIC 990 và 980
+  <h3>Ảnh chụp chứng chỉ của mình:</h3>
+
+      <div class="img-grid" data-gallery="PA-cert">
+        <img src="/assets/img/PA-Eng-Cert-1.jpg" onclick="openGallery('gkht',0)">
+        <img src="/assets/img/PA-Eng-Cert-2.jpg" onclick="openGallery('gkht',1)">
+        <img src="/assets/img/PA-Eng-Cert-3.jpg" onclick="openGallery('gkht',2)">
+      </div>
+
+<!-- Modal Gallery -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <span class="nav prev" onclick="prevImg()">&#10094;</span>
+  <img class="modal-content" id="modalImg">
+  <span class="nav next" onclick="nextImg()">&#10095;</span>
+</div>
+
+
+  
 
   <div class="slider-container">
   <button class="slider-btn prev">‹</button>
@@ -120,6 +138,55 @@ document.addEventListener("DOMContentLoaded", function(){
     updateSlider();
   }, 4500);
 
+});
+</script>
+  <script>
+const galleries = {
+  PA-cert: [
+    "/assets/img/PA-Eng-Cert-1.jpg",
+    "/assets/img/PA-Eng-Cert-2.jpg",
+    "/assets/img/PA-Eng-Cert-3.jpg"
+  ]
+};
+
+let currentGallery = "";
+let currentIndex = 0;
+
+function openGallery(galleryName, index){
+  currentGallery = galleryName;
+  currentIndex = index;
+
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+  modalImg.src = galleries[currentGallery][currentIndex];
+}
+
+function closeModal(){
+  document.getElementById("imgModal").style.display = "none";
+}
+
+function nextImg(){
+  const imgs = galleries[currentGallery];
+  currentIndex = (currentIndex + 1) % imgs.length;
+  document.getElementById("modalImg").src = imgs[currentIndex];
+}
+
+function prevImg(){
+  const imgs = galleries[currentGallery];
+  currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+  document.getElementById("modalImg").src = imgs[currentIndex];
+}
+
+/* Keyboard control */
+document.addEventListener("keydown", function(e){
+  const modal = document.getElementById("imgModal");
+  if(modal.style.display === "flex"){
+    if(e.key === "Escape") closeModal();
+    if(e.key === "ArrowRight") nextImg();
+    if(e.key === "ArrowLeft") prevImg();
+  }
 });
 </script>
 </body>
