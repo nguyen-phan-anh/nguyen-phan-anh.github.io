@@ -52,21 +52,6 @@ Mình có IELTS 7.5, TOEIC 990 và 980
   <span class="nav next" onclick="nextImg()">&#10095;</span>
 </div>
 
-  <div class="slider-container">
-  <button class="slider-btn prev">‹</button>
-
-  <div class="slider-track">
-    <img src="/assets/img/PA-Eng-Cert-1.jpg">
-    <img src="/assets/img/PA-Eng-Cert-2.jpg">
-    <img src="/assets/img/PA-Eng-Cert-3.jpg">
-  </div>
-
-  <button class="slider-btn next">›</button>
-
-  <!-- dots -->
-  <div class="slider-dots"></div>
-</div>
-
 </p>
 
 <h2>Một số ảnh chứng chỉ của học sinh của mình đi thi về</h2>
@@ -89,56 +74,6 @@ fetch("/assets/components/menu.html")
   });
 </script>  
 
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-
-  const track = document.querySelector(".slider-track");
-  const slides = document.querySelectorAll(".slider-track img");
-  const nextBtn = document.querySelector(".slider-btn.next");
-  const prevBtn = document.querySelector(".slider-btn.prev");
-  const dotsContainer = document.querySelector(".slider-dots");
-
-  let index = 0;
-
-  /* create dots */
-  slides.forEach((_, i)=>{
-    const dot = document.createElement("span");
-    if(i===0) dot.classList.add("active");
-    dot.addEventListener("click", ()=>{
-      index = i;
-      updateSlider();
-    });
-    dotsContainer.appendChild(dot);
-  });
-
-  const dots = document.querySelectorAll(".slider-dots span");
-
-  function updateSlider(){
-    track.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach(d=>d.classList.remove("active"));
-    dots[index].classList.add("active");
-  }
-
-  nextBtn.addEventListener("click", ()=>{
-    index = (index + 1) % slides.length;
-    updateSlider();
-  });
-
-  prevBtn.addEventListener("click", ()=>{
-    index = (index - 1 + slides.length) % slides.length;
-    updateSlider();
-  });
-
-  /* Auto slide */
-  setInterval(()=>{
-    index = (index + 1) % slides.length;
-    updateSlider();
-  }, 4500);
-
-});
-</script>
-
-  
   <script>
 const galleries = {
   PA-cert: [
