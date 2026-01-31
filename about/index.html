@@ -2,33 +2,154 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>About</title>
+<title>Projects</title>
 <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
 <div class="layout">
 
+<!-- ===== Sidebar ===== -->
 <aside class="sidebar">
-<div class="profile">
-<img src="/assets/img/avatar.jpg" class="avatar">
-<h2>Phan Anh</h2>
-<p class="role">Research Student</p>
-</div>
+  <div class="profile">
+    <img src="/assets/img/avatar.jpg" class="avatar">
+    <h2>Phan Anh</h2>
+    <p class="role">Research Student</p>
+  </div>
 
-<div id="menu"></div>
+  <div id="menu"></div>
 
 </aside>
 
+  
+<!-- ===== Main ===== -->
 <main class="main">
-<div style="padding:80px; max-width:900px;">
-<h1>About Me</h1>
-<p style="margin-top:20px; line-height:1.8;">
-  Write your biography, research interests, and academic goals here.
-  Tôi là Phan Anh, hiện đã tốt nghiệp Đại học Bách khoa Hà Nội.
-  Tôi thích chơi game, đặc biệt là các thể loại game phụ thuộc vào lựa chọn của người chơi, 
-  và ứng với các lựa chọn thì kết quả game sẽ khác (Ví dụ: Detroit Become Human; Dark Anthology Games;...
-</p>
+  <div style="padding:80px; max-width:1000px;">
+
+    <h1>Projects</h1>
+
+    <!-- Project item -->
+    <section class="project-card">
+      <h2>Thông tin liên hệ</h2>
+      <p>
+        •	Số điện thoại: (+84) - 989 250202 <br>
+        •	Email: nguyenphananh.forwork@gmail.com
+        •	Facebook: ...
+      </p>
+    </section>
+
+    <!-- Project item -->
+    <section class="project-card">
+      <h2>Sở thích</h2>
+      <p>
+        •	Sưu tập: Mình thích sưu tập nhiều thứ. Gần đây nhất thì có sưu tập album K-pop nhóm Red Velvet, sưu tập thẻ bài Naruto, Pokemon
+      </p>
+      <h3>Hình ảnh một số bộ sưu tập của mình:</h3>
+
+      <div class="img-grid" data-gallery="BST">
+        <img src="/assets/img/GKHT-20-21.jpg" onclick="openGallery('BST',0)">
+        <img src="/assets/img/GKHT-21-22.jpg" onclick="openGallery('BST',1)">
+        <img src="/assets/img/GKHT-22-23.jpg" onclick="openGallery('BST',2)">
+      </div>
+
+      <p>
+        •	Boardgame và Card game: Mình chơi nhiều loại boardgame, ví dụ như Chinatown, Monopoly,... và card game thì mình chơi Riftbound và Pokemon TCG
+      </p>
+      <h3>Hình ảnh một số game của mình:</h3>
+
+      <div class="img-grid" data-gallery="BST">
+        <img src="/assets/img/GKHT-20-21.jpg" onclick="openGallery('BST',0)">
+        <img src="/assets/img/GKHT-21-22.jpg" onclick="openGallery('BST',1)">
+        <img src="/assets/img/GKHT-22-23.jpg" onclick="openGallery('BST',2)">
+      </div>
+
+      <p>
+        •	Game điện tử và Esport: Mình thích thể loại choice-based games, nghĩa là kết thúc game như thế nào sẽ do các lựa chọn của bạn. Một số ví dụ về thể loại
+        này là Detroit Become Human, Beyond: Two Souls, Telltale series,... Ngoài ra mình cũng thích các game co-op như Overcooked, It takes two hay We were here series. 
+        Mình có chơi cả Liên minh và Liên quân
+      </p>
+
+      <h3>Hình ảnh một số game mình yêu thích:</h3>
+
+      <div class="img-grid" data-gallery="Game">
+        <img src="/assets/img/Game-DET.jpg" onclick="openGallery('Game',0)">
+        <img src="/assets/img/Game-TWD.jpg" onclick="openGallery('Game',1)">
+        <img src="/assets/img/Game-OVC.jpg" onclick="openGallery('Game',2)">
+        <img src="/assets/img/Game-ITT.jpg" onclick="openGallery('Game',3)">
+        <img src="/assets/img/Game-WWH.jpg" onclick="openGallery('Game',4)">
+      </div>
+
+<!-- Modal Gallery -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <span class="nav prev" onclick="prevImg()">&#10094;</span>
+  <img class="modal-content" id="modalImg">
+  <span class="nav next" onclick="nextImg()">&#10095;</span>
 </div>
+    </section>
+
+
+    <!-- Project item -->
+    <section class="project-card">
+      <h2>Giấy khen Hiệu trưởng - Giấy khen Giám đốc</h2>
+      <p class="project-meta">Năm học 2020 - 2021; 2021 - 2022 và 2022 - 2023</p>
+      <p>
+        •	Ảnh chụp 3 giấy khen
+      </p>
+      <h3>Hình ảnh giấy khen:</h3>
+
+      <div class="img-grid" data-gallery="gkht">
+        <img src="/assets/img/GKHT-20-21.jpg" onclick="openGallery('gkht',0)">
+        <img src="/assets/img/GKHT-21-22.jpg" onclick="openGallery('gkht',1)">
+        <img src="/assets/img/GKHT-22-23.jpg" onclick="openGallery('gkht',2)">
+      </div>
+
+<!-- Modal Gallery -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <span class="nav prev" onclick="prevImg()">&#10094;</span>
+  <img class="modal-content" id="modalImg">
+  <span class="nav next" onclick="nextImg()">&#10095;</span>
+</div>
+    </section>
+
+    <!-- Project item -->
+    <section class="project-card">
+      <h2>Học bổng KKHT</h2>
+      <p class="project-meta">Năm học ...</p>
+      <p>
+        •	Ảnh chụp ????
+      </p>
+      
+    </section>
+
+    <!-- Project item -->
+    <section class="project-card">
+      <h2>Học bổng Exness</h2>
+      <p class="project-meta">Năm học 2022 - 2023</p>
+      <p>
+        •	Học bổng doanh nghiệp dành cho sinh viên có kết quả học tập và rèn luyện xuất sắc <br>
+        •	Ảnh chụp giấy khen <br>
+        •	Ảnh chụp hôm nhận bằng ở c1
+      </p>
+      <h3>Hình ảnh giấy chứng nhận và lễ trao học bổng:</h3>
+      <div class="img-grid" data-gallery="exness">
+  <img src="/assets/img/HB-Exness-1.jpg" onclick="openGallery('exness',0)">
+  <img src="/assets/img/HB-Exness-2.jpg" onclick="openGallery('exness',1)">
+  <img src="/assets/img/HB-Exness-3.jpg" onclick="openGallery('exness',2)">
+</div>
+
+<!-- Modal Gallery -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+
+  <span class="nav prev" onclick="prevImg()">&#10094;</span>
+  <img class="modal-content" id="modalImg">
+  <span class="nav next" onclick="nextImg()">&#10095;</span>
+</div>
+    </section>
+
+  </div>
 </main>
 
 </div>
@@ -39,7 +160,67 @@ fetch("/assets/components/menu.html")
   .then(data => {
     document.getElementById("menu").innerHTML = data;
   });
-</script>  
-  
+</script> 
+<script>
+const galleries = {
+  gkht: [
+    "/assets/img/GKHT-20-21.jpg",
+    "/assets/img/GKHT-21-22.jpg",
+    "/assets/img/GKHT-22-23.jpg"
+  ],
+  exness: [
+    "/assets/img/HB-Exness-1.jpg",
+    "/assets/img/HB-Exness-2.jpg",
+    "/assets/img/HB-Exness-3.jpg"
+  ],
+  Game: [
+    "/assets/img/Game-DET.jpg",
+    "/assets/img/Game-TWD.jpg",
+    "/assets/img/Game-OVC.jpg",
+    "/assets/img/Game-ITT.jpg",
+    "/assets/img/Game-WWH.jpg"
+  ]
+};
+
+let currentGallery = "";
+let currentIndex = 0;
+
+function openGallery(galleryName, index){
+  currentGallery = galleryName;
+  currentIndex = index;
+
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+  modalImg.src = galleries[currentGallery][currentIndex];
+}
+
+function closeModal(){
+  document.getElementById("imgModal").style.display = "none";
+}
+
+function nextImg(){
+  const imgs = galleries[currentGallery];
+  currentIndex = (currentIndex + 1) % imgs.length;
+  document.getElementById("modalImg").src = imgs[currentIndex];
+}
+
+function prevImg(){
+  const imgs = galleries[currentGallery];
+  currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+  document.getElementById("modalImg").src = imgs[currentIndex];
+}
+
+/* Keyboard control */
+document.addEventListener("keydown", function(e){
+  const modal = document.getElementById("imgModal");
+  if(modal.style.display === "flex"){
+    if(e.key === "Escape") closeModal();
+    if(e.key === "ArrowRight") nextImg();
+    if(e.key === "ArrowLeft") prevImg();
+  }
+});
+</script>
 </body>
 </html>
