@@ -30,13 +30,30 @@
 
     <!-- Project item -->
     <section class="project-card">
-      <h2>Sinh viên 5 tốt cấp Thành phố</h2>
+      <h2>Danh hiệu "Sinh viên 5 tốt"</h2>
       <p class="project-meta">Năm học 2021 - 2022 và 2022 - 2023</p>
       <p>
-        •	Ảnh sân khấu <br>
-        •	Ảnh bằng khen <br>
+        •	Danh hiệu "Sinh viên 5 tốt" cấp Thành phố: Vinh danh 2 năm liên tiếp (2022 - 2023) cho thành tích xuất sắc về Học tập, Đạo đức, Thể lực, Tình nguyện và Hội nhập.
+        •	Danh hiệu "Sinh viên 5 tốt" cấp Trường: Đạt danh hiệu trong cả 4 năm học đại học
         •	Ảnh banner trước KTX
+        •	Ảnh full cúp
       </p>
+      <div class="img-grid" data-gallery="SV5T">
+        <img src="/assets/img/SV5TTP-2022-SK.jpg" onclick="openGallery('SV5T',0)">
+        <img src="/assets/img/SV5TTP-2022-BK.jpg" onclick="openGallery('SV5T',1)">
+        <img src="/assets/img/SV5TTP-2023-SK.jpg" onclick="openGallery('SV5T',2)">
+        <img src="/assets/img/SV5TTP-2023-BK.jpg" onclick="openGallery('SV5T',3)">
+      </div>
+
+<!-- Modal Gallery -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <span class="nav prev" onclick="prevImg()">&#10094;</span>
+  <img class="modal-content" id="modalImg">
+  <span class="nav next" onclick="nextImg()">&#10095;</span>
+</div>
+
+      
     </section>
 
     <!-- Project item -->
@@ -56,7 +73,8 @@
       <h2>Giấy khen Hiệu trưởng - Giấy khen Giám đốc</h2>
       <p class="project-meta">Năm học 2020 - 2021; 2021 - 2022 và 2022 - 2023</p>
       <p>
-        •	Ảnh chụp 3 giấy khen
+        •	Giấy khen dành cho sinh viên có nhiều đóng góp tích cực trong các hoạt động của Đại học
+        •	Phần thưởng cao quý cho sự nhiệt huyết và cống hiến trong công tác tổ chức các sự kiện quy mô toàn trường.
       </p>
       <h3>Hình ảnh giấy khen:</h3>
 
@@ -129,6 +147,12 @@ const galleries = {
     "/assets/img/GKHT-20-21.jpg",
     "/assets/img/GKHT-21-22.jpg",
     "/assets/img/GKHT-22-23.jpg"
+  ],
+  SV5T: [
+    "/assets/img/SV5TTP-2022-SK.jpg",
+    "/assets/img/SV5TTP-2022-BK.jpg",
+    "/assets/img/SV5TTP-2023-SK.jpg",
+    "/assets/img/SV5TTP-2023-BK.jpg"
   ],
   exness: [
     "/assets/img/HB-Exness-1.jpg",
