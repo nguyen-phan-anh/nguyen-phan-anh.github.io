@@ -42,25 +42,25 @@
     <section class="project-card">
       <h2>Sở thích</h2>
       <p>
-        •	Sưu tập: Mình thích sưu tập nhiều thứ. Gần đây nhất thì có sưu tập album K-pop nhóm Red Velvet, sưu tập thẻ bài Naruto, Pokemon
+        •	Sưu tập: Mình thích sưu tập nhiều thứ, chẳng hạn như album K-pop nhóm Red Velvet, sưu tập thẻ bài Naruto, Pokemon, vỏ lon,...
       </p>
       <h3>Hình ảnh một số bộ sưu tập của mình:</h3>
 
       <div class="img-grid" data-gallery="BST">
-        <img src="/assets/img/GKHT-20-21.jpg" onclick="openGallery('BST',0)">
-        <img src="/assets/img/GKHT-21-22.jpg" onclick="openGallery('BST',1)">
-        <img src="/assets/img/GKHT-22-23.jpg" onclick="openGallery('BST',2)">
+        <img src="/assets/img/BST-Album.jpg" onclick="openGallery('BST',0)">
+        <img src="/assets/img/BST-Boardgame.jpg" onclick="openGallery('BST',1)">
+        <img src="/assets/img/BST-VoLon.jpg" onclick="openGallery('BST',2)">
       </div>
 
       <p>
-        •	Boardgame và Card game: Mình chơi nhiều loại boardgame, ví dụ như Chinatown, Monopoly,... và card game thì mình chơi Riftbound và Pokemon TCG
+        •	Boardgame và Card game: Mình chơi nhiều loại boardgame, ví dụ như Monopoly, Chinatown, Room 25 ,... và card game thì mình chơi Pokemon TCG và Riftbound 
       </p>
       <h3>Hình ảnh một số game của mình:</h3>
 
-      <div class="img-grid" data-gallery="BST">
-        <img src="/assets/img/GKHT-20-21.jpg" onclick="openGallery('BST',0)">
-        <img src="/assets/img/GKHT-21-22.jpg" onclick="openGallery('BST',1)">
-        <img src="/assets/img/GKHT-22-23.jpg" onclick="openGallery('BST',2)">
+      <div class="img-grid" data-gallery="BG">
+        <img src="/assets/img/BG-Monopoly.jpg" onclick="openGallery('BG',0)">
+        <img src="/assets/img/BG-Chinatown.jpg" onclick="openGallery('BG',1)">
+        <img src="/assets/img/BG-Pokemon.jpg" onclick="openGallery('BG',2)">
       </div>
 
       <p>
@@ -139,14 +139,6 @@
   <img src="/assets/img/HB-Exness-3.jpg" onclick="openGallery('exness',2)">
 </div>
 
-<!-- Modal Gallery -->
-<div id="imgModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-
-  <span class="nav prev" onclick="prevImg()">&#10094;</span>
-  <img class="modal-content" id="modalImg">
-  <span class="nav next" onclick="nextImg()">&#10095;</span>
-</div>
     </section>
 
   </div>
@@ -173,6 +165,16 @@ const galleries = {
     "/assets/img/HB-Exness-2.jpg",
     "/assets/img/HB-Exness-3.jpg"
   ],
+  BST: [
+    "/assets/img/BST-Album.jpg",
+    "/assets/img/BST-Boardgame.jpg",
+    "/assets/img/BST-VoLon.jpg"
+  ],
+  BG: [
+    "/assets/img/BG-Monopoly.jpg",
+    "/assets/img/BG-Chinatown.jpg",
+    "/assets/img/BG-Pokemon.jpg"
+  ],
   Game: [
     "/assets/img/Game-DET.jpg",
     "/assets/img/Game-TWD.jpg",
@@ -182,6 +184,7 @@ const galleries = {
   ]
 };
 
+  
 let currentGallery = "";
 let currentIndex = 0;
 
