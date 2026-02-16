@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projects</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+<div class="layout">
+
+<!-- ===== Sidebar ===== -->
+<aside class="sidebar">
+  <div class="profile">
+    <img src="/assets/img/avatar.jpg" class="avatar">
+    <h2>Phan Anh</h2>
+    <p class="role">Research Student</p>
+  </div>
+
+  <div id="menu"></div>
+
+</aside>
+
+<!-- ===== Main ===== -->
+<main class="main">
+  <div style="padding:80px; max-width:1000px;">
+
+    <h1>Projects</h1>
+
+    <!-- Project item -->
+    <section class="project-card">
+      <h2>Tổ Hỗ trợ triển khai Hệ thống iCTSV</h2>
+      <p class="project-meta">2024 • Graduation Research Project</p>
+      <p>
+        •	Từ một CTV, mình đã trở thành phó mảng Kiểm duyệt và cuối cùng là Tổ Trưởng
+        •	Trách nhiệm: Quản lý hoạt động của Tổ; Đề xuất tổ chức các hoạt động; Hỗ trợ các hoạt động của nhà trường như SHCD
+        •	Processed and analyzed data using Python<br>
+        •	Derived insights to support customer management and marketing decisions<br>
+      </p>
+      <div class="project-tags">
+        <span>Data Analytics</span>
+        <span>Data Science</span>
+        <span>AI in ???</span>
+      </div>
+    </section>
+
+    <!-- Project item -->
+    <section class="project-card">
+      <h2>Thực tập sinh R&D tại Công ty Giải pháp phần mềm tài chính FSS</h2>
+      <p class="project-meta">Tháng ? đến tháng ? năm ????</p>
+      <p>
+        •	Vị trí công việc: Data Engineer<br>
+        •	Học hỏi về cấu trúc Data Warehouse tại các ngân hàng<br>
+        •	Lập trình SQL các job lấy dữ liệu hàng ngày<br>
+
+        •	Applied RFM model to segment and analyze banking customers<br>
+        •	Processed and analyzed data using Python<br>
+        •	Derived insights to support customer management and marketing decisions<br>
+      </p>
+      <div class="project-tags">
+        <span>SQL</span>
+        <span>Data Science</span>
+        <span>AI in ???</span>
+      </div>
+      <h3>Một vài hình ảnh về dự án:</h3>
+
+      <div class="img-grid" data-gallery="FSS">
+        <img src="/assets/img/GKHT-20-21.jpg" onclick="openGallery('FSS',0)">
+        <img src="/assets/img/GKHT-21-22.jpg" onclick="openGallery('FSS',1)">
+        <img src="/assets/img/GKHT-22-23.jpg" onclick="openGallery('FSS',2)">
+      </div>
+
+      <!-- Modal Gallery -->
+      <div id="imgModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="nav prev" onclick="prevImg()">&#10094;</span>
+        <img class="modal-content" id="modalImg">
+        <span class="nav next" onclick="nextImg()">&#10095;</span>
+      </div>
+    </section>
+
+    <!-- Project item -->
+    <section class="project-card">
+      <h2>Contend Moderator cho Livestream TikTok</h2>
+      <p class="project-meta">Tháng ? đến tháng ? năm ????</p>
+      <p>
+        •	Vị trí công việc: Contend Moderator<br>
+        •	Học hỏi về các policy của nền tảng<br>
+        •	Lập trình SQL các job lấy dữ liệu hàng ngày<br>
+
+        •	Applied RFM model to segment and analyze banking customers<br>
+        •	Processed and analyzed data using Python<br>
+        •	Derived insights to support customer management and marketing decisions<br>
+      </p>
+      <div class="project-tags">
+        <span>Lark</span>
+        <span>TCS</span>
+        <span>OPUS</span>
+        <span>Juren</span>
+      </div>
+      
+    </section>
+
+  </div>
+</main>
+
+</div>
+
+<script>
+fetch("/assets/components/menu.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("menu").innerHTML = data;
+  });
+</script> 
+<script>
+const galleries = {
+  FSS: [
+    "/assets/img/GKHT-20-21.jpg",
+    "/assets/img/GKHT-21-22.jpg",
+    "/assets/img/GKHT-22-23.jpg"
+  ],
+  exness: [
+    "/assets/img/HB-Exness-1.jpg",
+    "/assets/img/HB-Exness-2.jpg",
+    "/assets/img/HB-Exness-3.jpg"
+  ]
+};
+
+let currentGallery = "";
+let currentIndex = 0;
+
+function openGallery(galleryName, index){
+  currentGallery = galleryName;
+  currentIndex = index;
+
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+  modalImg.src = galleries[currentGallery][currentIndex];
+}
+
+function closeModal(){
+  document.getElementById("imgModal").style.display = "none";
+}
+
+function nextImg(){
+  const imgs = galleries[currentGallery];
+  currentIndex = (currentIndex + 1) % imgs.length;
+  document.getElementById("modalImg").src = imgs[currentIndex];
+}
+
+function prevImg(){
+  const imgs = galleries[currentGallery];
+  currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+  document.getElementById("modalImg").src = imgs[currentIndex];
+}
+
+/* Keyboard control */
+document.addEventListener("keydown", function(e){
+  const modal = document.getElementById("imgModal");
+  if(modal.style.display === "flex"){
+    if(e.key === "Escape") closeModal();
+    if(e.key === "ArrowRight") nextImg();
+    if(e.key === "ArrowLeft") prevImg();
+  }
+});
+</script>
+  
+</body>
+</html>
