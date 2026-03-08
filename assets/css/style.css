@@ -369,3 +369,12 @@ color:#111;
   .modal-content{ max-height:60vh; }
   .nav{ font-size:40px; }
 }
+
+/* ===== List indent fix ===== */
+ul{
+  padding-left:25px;
+}
+
+ul ul{
+  padding-left:20px;
+}
