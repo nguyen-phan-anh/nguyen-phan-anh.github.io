@@ -372,9 +372,15 @@ color:#111;
 
 /* ===== List indent fix ===== */
 ul{
-  padding-left:25px;
+  padding-left:22px;
+  margin-top:10px;
+}
+
+li{
+  margin:4px 0;
 }
 
 ul ul{
-  padding-left:20px;
+  margin-top:6px;
+  padding-left:18px;
 }
