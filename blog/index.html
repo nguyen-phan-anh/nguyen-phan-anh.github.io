@@ -1,15 +1,50 @@
-<h2>Blog</h2>
+<!DOCTYPE html> <html lang="en">
+<head>
+<meta charset="UTF-8"> <title>Projects</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
 
-<ul>
-  <li>
-    <a href="./first-post/">
-      My First Research Note
-    </a>
-  </li>
+<body>
+<div class="layout">
 
-  <li>
-    <a href="./second-post/">
-      Learning English Through Movies
-    </a>
-  </li>
-</ul>
+<!-- ===== Sidebar ===== -->
+<aside class="sidebar">
+  <div class="profile">
+    <img src="/assets/img/avatar.jpg" class="avatar">
+    <h2>Phan Anh</h2> <p class="role">Research Student</p>
+  </div>
+  <div id="menu"></div>
+
+</aside>
+  
+<!-- ===== Main ===== -->
+<main class="main">
+  <div style="padding:80px; max-width:1000px;">
+
+    <h1>Review quá trình làm hồ sơ du học</h1>
+
+    <!-- Apply du học -->
+    <section class="project-card">
+      <h2>Quá trình apply du học Đài Loan</h2>
+      <p class="project-meta">Ngày đăng: 22/05/2026</p>
+      <p>
+        Các bạn nào đang ấp ủ giấc mơ du học có thể tham khảo bài viết này của mình nhó :3<br>
+        Xem ngay tại đây: <a href="./apply-du-hoc/">Quá trình apply du học của mình</a>
+      </p>
+    </section>
+
+  </div>
+</main>
+
+</div>
+
+<script>
+fetch("/assets/components/menu.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("menu").innerHTML = data;
+  });
+</script> 
+
+</body>
+</html>
