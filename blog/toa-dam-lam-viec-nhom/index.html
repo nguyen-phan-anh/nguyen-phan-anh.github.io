@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8"><title>Projects</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+<div class="layout">
+
+<!-- ===== Sidebar ===== -->
+<aside class="sidebar">
+  <div class="profile">
+    <img src="/assets/img/avatar.jpg" class="avatar">
+    <h2>Phan Anh</h2>
+    <p class="role">Research Student</p>
+  </div>
+
+  <div id="menu"></div>
+
+</aside>
+
+  
+<!-- ===== Main ===== -->
+<main class="main">
+  <div style="padding:80px; max-width:1000px;">
+
+    <h1>Tọa đàm "Làm việc nhóm"</h1>
+
+    <!-- Sự khởi đầu -->
+    <section class="project-card">
+      <h2>Ngày XX/YY/2025: Khơi dậy ước mơ du học</h2>
+      <p class="project-meta">Chuẩn bị mề mặt tinh thần và vật chất</p>
+      <p>
+        •	Gội đầu ra ý tưởng
+        Brief với Tổ iCTSV
+      </p>
+    </section>
+  </div>
+</main>
+
+</div>
+
+<script>
+fetch("/assets/components/menu.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("menu").innerHTML = data;
+  });
+</script> 
+
+</body>
+</html>
