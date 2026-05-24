@@ -99,22 +99,17 @@
 
     <!-- Project item -->
     <section class="project-card">
-      <h2>Contend Moderator cho Livestream TikTok</h2>
-      <p class="project-meta">Tháng ? đến tháng ? năm ????</p>
+      <h2>Content Moderator tại Gear Inc Vietnam</h2>
+      <p class="project-meta">Tháng 2 đến tháng 5 năm 2026</p>
       <p>
-        •	Vị trí công việc: Contend Moderator<br>
-        •	Học hỏi về các policy của nền tảng<br>
-        •	Lập trình SQL các job lấy dữ liệu hàng ngày<br>
-
-        •	Applied RFM model to segment and analyze banking customers<br>
-        •	Processed and analyzed data using Python<br>
-        •	Derived insights to support customer management and marketing decisions<br>
+        •	Vị trí công việc: Content Moderator<br>
+        •	Nội dung công việc: Kiểm soát nội dung Livestream, xem xét việc tuân thủ Tiêu chuẩn cộng đồng<br>
+        •	Nắm bắt và áp dụng các policy của nền tảng một cách nhanh chóng và chính xác<br>
       </p>
       <div class="project-tags">
-        <span>Lark</span>
-        <span>TCS</span>
-        <span>OPUS</span>
-        <span>考试与培训（举人）</span>
+        <span>Emotion Control</span>
+        <span>Detail Oriented</span>
+        <span>Consistency</span>
       </div>
       
     </section>
@@ -131,9 +126,7 @@ fetch("/assets/components/menu.html")
     document.getElementById("menu").innerHTML = data;
 
     const links = document.querySelectorAll("#menu a");
-
-    // URL hiện tại
-    let currentPath = window.location.pathname;
+    let currentPath = window.location.pathname; // URL hiện tại
 
     // chuẩn hóa path
     currentPath = currentPath
@@ -157,11 +150,7 @@ fetch("/assets/components/menu.html")
 </script>
 <script>
 const galleries = {
-  FSS: [
-    "./img/FSS-1.jpg",
-    "./img/FSS-2.jpg",
-    "./img/FSS-3.jpg"
-  ],
+  FSS: ["./img/FSS-1.jpg", "./img/FSS-2.jpg", "./img/FSS-3.jpg"],
   iCTSV: [
     "./img/iCTSV-1.jpg",
     "./img/iCTSV-2.jpg",
@@ -172,8 +161,7 @@ const galleries = {
   ]
 };
 
-let currentGallery = "";
-let currentIndex = 0;
+let currentGallery = ""; let currentIndex = 0;
 
 function openGallery(galleryName, index){
   currentGallery = galleryName;
