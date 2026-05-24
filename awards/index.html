@@ -139,8 +139,18 @@ fetch("/assets/components/menu.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("menu").innerHTML = data;
+
+    // Tô nền menu hiện tại
+    const links = document.querySelectorAll("#menu a");
+    const currentPath = window.location.pathname;
+
+    links.forEach(link => {
+      if(link.getAttribute("href") === currentPath){
+        link.classList.add("active");
+      }
+    });
   });
-</script> 
+</script>
 <script>
 const galleries = {
   gkht: [
