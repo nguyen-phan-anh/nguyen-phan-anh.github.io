@@ -140,17 +140,32 @@ fetch("/assets/components/menu.html")
   .then(data => {
     document.getElementById("menu").innerHTML = data;
 
-    // Tô nền menu hiện tại
     const links = document.querySelectorAll("#menu a");
-    const currentPath = window.location.pathname;
+
+    // URL hiện tại
+    let currentPath = window.location.pathname;
+
+    // chuẩn hóa path
+    currentPath = currentPath
+      .replace(/index\.html$/, "")
+      .replace(/\.html$/, "")
+      .replace(/\/$/, "");
 
     links.forEach(link => {
-      if(link.getAttribute("href") === currentPath){
+      let linkPath = link.getAttribute("href");
+
+      linkPath = linkPath
+        .replace(/index\.html$/, "")
+        .replace(/\.html$/, "")
+        .replace(/\/$/, "");
+
+      if(linkPath === currentPath){
         link.classList.add("active");
       }
     });
   });
 </script>
+  
 <script>
 const galleries = {
   gkht: [
