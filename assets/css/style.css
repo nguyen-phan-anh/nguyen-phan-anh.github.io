@@ -5,13 +5,13 @@ body{font-family:system-ui,sans-serif;background:#f5f5f5}
 
 .sidebar{
   position: fixed; background:#fff;
-  width:280px;
+  width:280px; height: 100vh; top: 0; left: 0;
   border-right:1px solid #e5e5e5;
   padding:30px 20px;
   display:flex;
   flex-direction:column;
   box-shadow: 2px 0 10px rgba(0,0,0,0.05);
-  z-index: 1000;
+  z-index: 1000; overflow-y: auto;
 }
 
 .profile{text-align:center;margin-bottom:40px}
