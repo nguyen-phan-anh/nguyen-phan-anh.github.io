@@ -68,12 +68,36 @@ setInterval(changeHero, 5000); // 5s đổi ảnh
 <script src="assets/js/main.js"></script>
 
 <script>
-fetch("assets/components/menu.html")
+fetch("/assets/components/menu.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("menu").innerHTML = data;
+
+    const links = document.querySelectorAll("#menu a");
+
+    // URL hiện tại
+    let currentPath = window.location.pathname;
+
+    // chuẩn hóa path
+    currentPath = currentPath
+      .replace(/index\.html$/, "")
+      .replace(/\.html$/, "")
+      .replace(/\/$/, "");
+
+    links.forEach(link => {
+      let linkPath = link.getAttribute("href");
+
+      linkPath = linkPath
+        .replace(/index\.html$/, "")
+        .replace(/\.html$/, "")
+        .replace(/\/$/, "");
+
+      if(linkPath === currentPath){
+        link.classList.add("active");
+      }
+    });
   });
-</script>  
+</script> 
   
   
 </body>
