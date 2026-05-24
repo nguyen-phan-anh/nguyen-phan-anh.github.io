@@ -100,7 +100,12 @@
       <p>
         •	Ảnh chụp ????
       </p>
-      
+      <h3>Hình ảnh thông tin và chứng nhận học bổng:</h3>
+
+      <div class="img-grid" data-gallery="KKHT">
+        <img src="./img/HB-KKHT-1.jpg" onclick="openGallery('KKHT',0)">
+        <img src="./img/HB-KKHT-2.jpg" onclick="openGallery('KKHT',1)">
+      </div>
     </section>
 
     <!-- Project item -->
@@ -179,6 +184,10 @@ const galleries = {
     "./img/SV5TTP-2023-SK.jpg",
     "./img/SV5TTP-2023-BK.jpg"
   ],
+  KKHT: [
+    "./img/HB-KKHT-1.jpg",
+    "./img/HB-KKHT-2.jpg"
+  ],
   exness: [
     "./img/HB-Exness-1.jpg",
     "./img/HB-Exness-2.jpg",
@@ -186,12 +195,11 @@ const galleries = {
   ]
 };
 
-let currentGallery = "";
-let currentIndex = 0;
+  
+let currentGallery = ""; let currentIndex = 0;
 
 function openGallery(galleryName, index){
-  currentGallery = galleryName;
-  currentIndex = index;
+  currentGallery = galleryName; currentIndex = index;
 
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
