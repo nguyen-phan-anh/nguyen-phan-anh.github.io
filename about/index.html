@@ -66,9 +66,9 @@
 
     <!-- Project item -->
     <section class="project-card">
-      <h2>Sở thích</h2>
+      <h2>Hobbies</h2>
       <p>
-        •	Sưu tập: Mình thích sưu tập nhiều thứ, chẳng hạn như album K-pop nhóm Red Velvet, sưu tập thẻ bài Naruto, Pokemon, vỏ lon,...
+        •	Sưu tập: Mình thích sưu tập nhiều thứ, chẳng hạn như album K-pop nhóm Red Velvet, sưu tập thẻ bài Naruto, Pokemon, vỏ lon,... <br>
       </p>
       <h3>Hình ảnh một số bộ sưu tập của mình:</h3>
 
@@ -79,7 +79,7 @@
       </div>
 
       <p>
-        •	Boardgame và Card game: Mình chơi nhiều loại boardgame, ví dụ như Monopoly, Chinatown, Room 25 ,... và card game thì mình chơi Pokemon TCG và Riftbound 
+        •	Boardgame và Card game: Mình chơi nhiều loại boardgame, ví dụ như Monopoly, Chinatown, Room 25 ,... và card game thì mình chơi Pokemon TCG và Riftbound <br>
       </p>
       <h3>Hình ảnh một số game của mình:</h3>
 
@@ -92,7 +92,7 @@
       <p>
         •	Game điện tử và Esport: Mình thích thể loại choice-based games, nghĩa là kết thúc game như thế nào sẽ do các lựa chọn của bạn. Một số ví dụ về thể loại
         này là Detroit Become Human, Beyond: Two Souls, Telltale series,... Ngoài ra mình cũng thích các game co-op như Overcooked, It takes two hay We were here series. 
-        Mình có chơi cả Liên minh và Liên quân
+        Mình có chơi cả Liên minh và Liên quân <br>
       </p>
 
       <h3>Hình ảnh một số game mình yêu thích:</h3>
@@ -117,19 +117,18 @@
 
     <!-- Project item -->
     <section class="project-card">
-      <h2>Điểm mạnh - Điểm yếu</h2>
+      <h2>Strengths and Weaknesses</h2>
       <p class="project-meta"> </p>
       <p>
         <ul>
-          <li>Điểm mạnh
+          <li>Strengths
             <ul>
               <li>Dedicated, biết đặt mục tiêu và hoàn thành mục tiêu của mình</li>
-              <li>Grade 10 GPA: 9.2/10.0</li>
-              <li>Grade 11 GPA: 9.2/10.0</li>
-              <li>Grade 12 GPA: 9.5/10.0</li>
+              <li> bbb </li>
+              <li> bbb </li>
             </ul>
           </li>
-          <li>Điểm yếu
+          <li>Weaknesses
             <ul>
               <li>Không có kinh nghiệm: Kinh nghiệm nghiên cứu khoa học = 0 (As of May 2026)</li>
               <li>Dễ bị ảnh hưởng bởi các sự phân tâm xung quanh (VD: Tiếng ồn lớn, ánh nhìn của người khác,...)</li>
@@ -152,14 +151,10 @@ fetch("/assets/components/menu.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("menu").innerHTML = data;
-
     const links = document.querySelectorAll("#menu a");
+    let currentPath = window.location.pathname; // URL hiện tại
 
-    // URL hiện tại
-    let currentPath = window.location.pathname;
-
-    // chuẩn hóa path
-    currentPath = currentPath
+    currentPath = currentPath // chuẩn hóa path
       .replace(/index\.html$/, "")
       .replace(/\.html$/, "")
       .replace(/\/$/, "");
