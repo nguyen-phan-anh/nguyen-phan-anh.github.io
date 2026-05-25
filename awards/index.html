@@ -179,26 +179,44 @@ const galleries = {
 
 let currentGallery = ""; let currentIndex = 0;
 function openGallery(galleryName, index){
-  currentGallery = galleryName; currentIndex = index;
+  currentGallery = galleryName;
+  currentIndex = index;
+
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
+
   modal.style.display = "flex";
   modalImg.src = galleries[currentGallery][currentIndex];
 }
 
-function closeModal(){document.getElementById("imgModal").style.display = "none";}
+function closeModal(){
+  document.getElementById("imgModal").style.display = "none";
+}
 
 function nextImg(){
   const imgs = galleries[currentGallery];
+
   currentIndex = (currentIndex + 1) % imgs.length;
+
   document.getElementById("modalImg").src = imgs[currentIndex];
 }
 
 function prevImg(){
   const imgs = galleries[currentGallery];
+
   currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+
   document.getElementById("modalImg").src = imgs[currentIndex];
 }
+
+/* click vùng tối để đóng modal */
+const modal = document.getElementById("imgModal");
+
+modal.addEventListener("click", function(e){
+  if(e.target === modal){
+    closeModal();
+  }
+});
 
 /* Keyboard control */
 document.addEventListener("keydown", function(e){
