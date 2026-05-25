@@ -44,15 +44,6 @@
           <source src="./media/TNXS-Vid.mp4" type="video/mp4">
         </video>
       </div>
-
-<!-- Modal Gallery -->
-<div id="imgModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <span class="nav prev" onclick="prevImg()">&#10094;</span>
-  <img class="modal-content" id="modalImg">
-  <span class="nav next" onclick="nextImg()">&#10095;</span>
-</div>
-
       
     </section>
 
@@ -74,14 +65,6 @@
         <img src="./img/SV5TTP-KTX.jpg"     onclick="openGallery('SV5T',4)">
         <img src="./img/SV5T-Full-cup.jpg"  onclick="openGallery('SV5T',5)">
       </div>
-
-<!-- Modal Gallery -->
-<div id="imgModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <span class="nav prev" onclick="prevImg()">&#10094;</span>
-  <img class="modal-content" id="modalImg">
-  <span class="nav next" onclick="nextImg()">&#10095;</span>
-</div>
     </section>
 
     <!-- Project item -->
@@ -100,13 +83,6 @@
         <img src="./img/GKHT-22-23.jpg" onclick="openGallery('gkht',2)">
       </div>
 
-      <!-- Modal Gallery -->
-      <div id="imgModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <span class="nav prev" onclick="prevImg()">&#10094;</span>
-        <img class="modal-content" id="modalImg">
-        <span class="nav next" onclick="nextImg()">&#10095;</span>
-      </div>
     </section>
 
     <!-- Project item -->
@@ -201,22 +177,16 @@ const galleries = {
   ]
 };
 
-  
 let currentGallery = ""; let currentIndex = 0;
-
 function openGallery(galleryName, index){
   currentGallery = galleryName; currentIndex = index;
-
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
-
   modal.style.display = "flex";
   modalImg.src = galleries[currentGallery][currentIndex];
 }
 
-function closeModal(){
-  document.getElementById("imgModal").style.display = "none";
-}
+function closeModal(){document.getElementById("imgModal").style.display = "none";}
 
 function nextImg(){
   const imgs = galleries[currentGallery];
