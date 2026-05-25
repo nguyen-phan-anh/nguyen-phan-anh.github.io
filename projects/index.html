@@ -82,32 +82,7 @@
         <img src="./img/nau-lau-2.png" onclick="openGallery('NauLau',1)">
         <img src="./img/nau-lau-3.png" onclick="openGallery('NauLau',2)">
       </div>
-
-<!-- Modal Gallery -->
-<div id="imgModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <span class="nav prev" onclick="prevImg()">&#10094;</span>
-  <img class="modal-content" id="modalImg">
-  <span class="nav next" onclick="nextImg()">&#10095;</span>
-</div>
-
-      
-    </section>
-
-    <!-- Project item -->
-    <section class="project-card">
-      <h2>Smart Academic Support System</h2>
-      <p class="project-meta">2024 • Academic Project</p>
-      <p>
-        An intelligent information system to support student advising using
-        predictive analytics and recommender systems.
-      </p>
-      <div class="project-tags">
-        <span>Information Systems</span>
-        <span>Machine Learning</span>
-        <span>Decision Support</span>
-      </div>
-    
+  
     </section>
 
     <!-- Project item -->
@@ -150,6 +125,18 @@ Bước 7: Xây dựng Dashboard
         •	Công việc: Phân tích Dim, Fact, OLTP, OLAP <br>
         •	Video thuyết trình: https://youtu.be/09FTRXLidpg <br>
       </p>
+      
+      <div class="img-grid" data-gallery="Olist">
+        <img src="./img/Olist-1.png" onclick="openGallery('Olist',0)">
+        <img src="./img/Olist-2.png" onclick="openGallery('Olist',1)">
+        <img src="./img/Olist-3.png" onclick="openGallery('Olist',2)">
+        <img src="./img/Olist-4.png" onclick="openGallery('Olist',3)">
+        <img src="./img/Olist-5.png" onclick="openGallery('Olist',4)">
+        <img src="./img/Olist-6.png" onclick="openGallery('Olist',5)">
+      </div>
+
+
+      
       <div class="project-tags">
         <span>Data Analysis</span>
         <span>Academic Profile</span>
@@ -170,6 +157,14 @@ Bước 7: Xây dựng Dashboard
         <span>GitHub Pages</span>
       </div>
     </section>
+
+    <!-- Modal Gallery -->
+      <div id="imgModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="nav prev" onclick="prevImg()">&#10094;</span>
+        <img class="modal-content" id="modalImg">
+        <span class="nav next" onclick="nextImg()">&#10095;</span>
+      </div>
 
   </div>
 </main>
@@ -207,21 +202,10 @@ fetch("/assets/components/menu.html")
 </script>
 <script>
 const galleries = {
-  gkht: [
-    "/assets/img/GKHT-20-21.jpg",
-    "/assets/img/GKHT-21-22.jpg",
-    "/assets/img/GKHT-22-23.jpg"
-  ],
-  NauLau: [
-    "./img/nau-lau-1.png",
-    "./img/nau-lau-2.png",
-    "./img/nau-lau-3.png"
-  ],
-  exness: [
-    "/assets/img/HB-Exness-1.jpg",
-    "/assets/img/HB-Exness-2.jpg",
-    "/assets/img/HB-Exness-3.jpg"
-  ]
+  NauLau: ["./img/nau-lau-1.png", "./img/nau-lau-2.png", "./img/nau-lau-3.png"],
+  Olist: ["./img/Olist-1.png", "./img/Olist-2.png", "./img/Olist-3.png", 
+          "./img/Olist-4.png", "./img/Olist-5.png", "./img/Olist-6.png"]
+  DATN: ["./img/DATN-1.png", "./img/DATN-2.png", "./img/DATN-3.png"]
 };
 
 let currentGallery = ""; let currentIndex = 0;
