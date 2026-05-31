@@ -64,16 +64,14 @@ display:inline-block; padding:12px 30px; border:1px solid #111; text-decoration:
 .project-card{
   background:#fff;
   padding:30px;
-  margin-top:30px;
-  border-radius:12px;
+  margin-top:30px; border-radius:12px;
   box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 .project-card h2{margin-bottom:8px;}
 
 .project-meta{
-  font-size:13px;
-  color:#666;
+  font-size:13px; color:#666;
   margin-bottom:12px;
 }
 
@@ -103,15 +101,12 @@ display:inline-block; padding:12px 30px; border:1px solid #111; text-decoration:
 }
 
 .slider-track{
-  display: flex;
-  height: 100%;
+  display: flex; height: 100%;
   transition: transform 0.6s ease;
 }
 
 .slider-track img{
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
+  width: 100%; height: 100%; flex-shrink: 0;
   object-fit: contain;   /* không crop, không vỡ ảnh */
   background:#fff;
 }
@@ -123,9 +118,7 @@ display:inline-block; padding:12px 30px; border:1px solid #111; text-decoration:
   transform: translateY(-50%);
   background: rgba(0,0,0,0.45);
   color: white; border: none;
-  font-size: 26px;
-  width: 42px;
-  height: 42px;
+  font-size: 26px; width: 42px; height: 42px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 10;
@@ -168,8 +161,7 @@ display:inline-block; padding:12px 30px; border:1px solid #111; text-decoration:
 
 /* ===== Image Grid ===== */
 .img-grid{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
+  display:grid; grid-template-columns:repeat(3, 1fr);
   gap:20px; margin-top:15px;
 }
 
@@ -187,10 +179,8 @@ display:inline-block; padding:12px 30px; border:1px solid #111; text-decoration:
 
 /* ===== Modal Gallery ===== */
 .modal{
-  display:none;
-  position:fixed;
-  z-index:9999;
-  left:0; top:0;
+  display:none; position:fixed;
+  z-index:9999; left:0; top:0;
   width:100%; height:100%;
   background:rgba(0,0,0,0.9);
   align-items:center; justify-content:center;
@@ -201,14 +191,9 @@ display:inline-block; padding:12px 30px; border:1px solid #111; text-decoration:
 }
 
 .close{
-  position:absolute;
-  top:20px;
-  right:30px;
-  font-size:40px;
-  color:#fff;
-  cursor:pointer;
-  user-select:none;
-  z-index:10001;
+  position:absolute; top:20px; right:30px;
+  font-size:40px; color:#fff; cursor:pointer;
+  user-select:none; z-index:10001;
 }
 
 /* Navigation */
@@ -320,4 +305,16 @@ ul ul{margin-top:6px;padding-left:18px;}
 .menu a.active{
   background:#e9e9e9;
   font-weight:600;
+}
+
+/* Cột 1 */
+td:nth-child(1),
+th:nth-child(1){
+  text-align:center;
+}
+
+/* Cột 2 */
+td:nth-child(2),
+th:nth-child(2){
+  text-align:left;
 }
