@@ -218,7 +218,7 @@ const galleries = {
   NauLau: ["./img/nau-lau-1.png", "./img/nau-lau-2.png", "./img/nau-lau-3.png"],
   Olist: ["./img/Olist-1.jpg", "./img/Olist-2.jpg", "./img/Olist-3.jpg", 
           "./img/Olist-4.jpg", "./img/Olist-5.jpg", "./img/Olist-6.jpg"],
-  10KBC: ["./img/10KBC-phat-dong.jpg", "./img/10KBC-tra-cuu.jpg", "./img/10KBC-thong-ke.jpg",  
+  "10KBC": ["./img/10KBC-phat-dong.jpg", "./img/10KBC-tra-cuu.jpg", "./img/10KBC-thong-ke.jpg",  
           "./img/10KBC-BTC.jpg", "./img/10KBC-du-lieu.jpg", "./img/10KBC-gui-mail.jpg"],
   DATN: ["./img/DATN-1.jpg", "./img/DATN-2.jpg", "./img/DATN-3.jpg"]
 };
@@ -230,10 +230,8 @@ let currentGallery = ""; let currentIndex = 0;
 function openGallery(galleryName, index){
   currentGallery = galleryName;
   currentIndex = index;
-
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
-
   modal.style.display = "flex";
   modalImg.src = galleries[currentGallery][currentIndex];
 }
@@ -244,17 +242,13 @@ function closeModal(){
 
 function nextImg(){
   const imgs = galleries[currentGallery];
-
   currentIndex = (currentIndex + 1) % imgs.length;
-
   document.getElementById("modalImg").src = imgs[currentIndex];
 }
 
 function prevImg(){
   const imgs = galleries[currentGallery];
-
   currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
-
   document.getElementById("modalImg").src = imgs[currentIndex];
 }
 
@@ -271,9 +265,7 @@ modal.addEventListener("click", function(e){
 document.addEventListener("keydown", function(e){
   const modal = document.getElementById("imgModal");
   if(modal.style.display === "flex"){
-    if(e.key === "Escape") closeModal();
-    if(e.key === "ArrowRight") nextImg();
-    if(e.key === "ArrowLeft") prevImg();
+    if(e.key === "Escape") closeModal(); if(e.key === "ArrowRight") nextImg(); if(e.key === "ArrowLeft") prevImg();
   }
 });
 </script>
