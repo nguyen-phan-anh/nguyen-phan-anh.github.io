@@ -1,0 +1,77 @@
+[
+    {
+        "song": "Yellow",
+        "artist": "Coldplay",
+        "spotify": "https://open.spotify.com/search/Yellow%20Coldplay"
+    },
+    {
+        "song": "Fix You",
+        "artist": "Coldplay",
+        "spotify": "https://open.spotify.com/search/Fix%20You%20Coldplay"
+    },
+    {
+        "song": "The Scientist",
+        "artist": "Coldplay",
+        "spotify": "https://open.spotify.com/search/The%20Scientist%20Coldplay"
+    },
+    {
+        "song": "Viva La Vida",
+        "artist": "Coldplay",
+        "spotify": "https://open.spotify.com/search/Viva%20La%20Vida"
+    },
+    {
+        "song": "Photograph",
+        "artist": "Ed Sheeran",
+        "spotify": "https://open.spotify.com/search/Photograph%20Ed%20Sheeran"
+    },
+    {
+        "song": "Perfect",
+        "artist": "Ed Sheeran",
+        "spotify": "https://open.spotify.com/search/Perfect%20Ed%20Sheeran"
+    },
+    {
+        "song": "Thinking Out Loud",
+        "artist": "Ed Sheeran",
+        "spotify": "https://open.spotify.com/search/Thinking%20Out%20Loud"
+    },
+    {
+        "song": "Atlantis",
+        "artist": "Seafret",
+        "spotify": "https://open.spotify.com/search/Atlantis%20Seafret"
+    },
+    {
+        "song": "Somewhere Only We Know",
+        "artist": "Keane",
+        "spotify": "https://open.spotify.com/search/Somewhere%20Only%20We%20Know"
+    },
+    {
+        "song": "Numb",
+        "artist": "Linkin Park",
+        "spotify": "https://open.spotify.com/search/Numb%20Linkin%20Park"
+    },
+    {
+        "song": "In The End",
+        "artist": "Linkin Park",
+        "spotify": "https://open.spotify.com/search/In%20The%20End"
+    },
+    {
+        "song": "Someone Like You",
+        "artist": "Adele",
+        "spotify": "https://open.spotify.com/search/Someone%20Like%20You"
+    },
+    {
+        "song": "Until I Found You",
+        "artist": "Stephen Sanchez",
+        "spotify": "https://open.spotify.com/search/Until%20I%20Found%20You"
+    },
+    {
+        "song": "Take Me To Church",
+        "artist": "Hozier",
+        "spotify": "https://open.spotify.com/search/Take%20Me%20To%20Church"
+    },
+    {
+        "song": "Counting Stars",
+        "artist": "OneRepublic",
+        "spotify": "https://open.spotify.com/search/Counting%20Stars"
+    }
+]
