@@ -1,1 +1,84 @@
-a
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8"><title>Projects</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+<div class="layout">
+
+<!-- ===== Sidebar ===== -->
+<aside class="sidebar">
+  <div class="profile">
+    <img src="/assets/img/avatar.jpg" class="avatar">
+    <h2>Phan Anh</h2>
+    <p class="role">Research Student</p>
+  </div>
+
+  <div id="menu"></div>
+
+</aside>
+
+  
+<!-- ===== Main ===== -->
+<main class="main">
+  <div style="padding:80px; max-width:1000px;">
+
+    <h1>Tọa đàm "Làm việc nhóm"</h1>
+
+    <!-- Trước cấp 1 -->
+    <section class="project-card">
+      <h2>Trước cấp 1</h2>
+      <p class="project-meta">Phan Anh xin phép được bày tỏ sự biết ơn sâu sắc</p>
+      <p>
+        <br> Bố Đắc, mẹ Hiệp, ông Nhị bà Thân, ông Nội bà Minh, bác Hiền bác Phong, dì Hoàn chú Lâm, dì Hảo chú Việt Anh, cậu Thành
+        <br> Chú Đức cô Trang, cô Trâm chú Cường, cô Xoan
+        <br> Em Ngọc Anh, Hiền Anh (Tròn), Thục Anh (Hóm), em Sóc, em Mỹ Anh (Nhí) em Nguyệt Mỹ (Nhi), em Rich em ??
+        <br> Anh Vũ chị Ngọc, em My em Sếu, em San Bọ Sâu
+
+      </p>
+    </section>
+
+    <!-- Cấp 1 -->
+    <section class="project-card">
+      <h2>Cấp 1</h2>
+      <p class="project-meta">Phan Anh xin phép được bày tỏ sự biết ơn sâu sắc</p>
+      <p>
+        <br> 
+        <br> Quốc Bảo, Hạnh Trang Minh Trang, Minh Vũ Đức Minh, Kim Ngân Thu Giang
+        <br> Thuận An, Kira Ngô Minh Anh, Vân Anh
+        <br> Xuân Thanh, Duy Sơn
+
+      </p>
+    </section>
+
+    <!-- Cấp 2 -->
+    <section class="project-card">
+      <h2>Cấp 2</h2>
+      <p class="project-meta">Phan Anh xin phép được bày tỏ sự biết ơn sâu sắc</p>
+      <p>
+        <br> 
+        <br> Quốc Bảo, Hạnh Trang Minh Trang, Minh Vũ Đức Minh, Kim Ngân Thu Giang
+        <br> Thuận An, Kira Ngô Minh Anh, Vân Anh
+        <br> Xuân Thanh, Duy Sơn
+
+      </p>
+    </section>
+
+
+    
+  </div>
+</main>
+
+</div>
+
+<script>
+fetch("/assets/components/menu.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("menu").innerHTML = data;
+  });
+</script> 
+
+</body>
+</html>
