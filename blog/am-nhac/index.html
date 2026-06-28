@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Music Collection</title>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- ===== Sidebar ===== -->
+    <aside class="sidebar">
+
+        <div class="profile">
+            <img src="/assets/img/avatar.jpg" class="avatar">
+            <h2>Phan Anh</h2>
+            <p class="role">Research Student</p>
+        </div>
+
+        <div id="menu"></div>
+
+    </aside>
+
+    <!-- ===== Main ===== -->
+    <main class="main">
+
+        <div class="music-container">
+
+            <!-- Header -->
+            <section class="music-header">
+
+                <div>
+
+                    <h1>Music Collection</h1>
+
+                    <p>
+                        A collection of songs that have accompanied
+                        different stages of my life.
+                    </p>
+
+                </div>
+
+                <a
+                    class="spotify-btn"
+                    href="https://open.spotify.com/playlist/3LTt3xSndwWF7vkIWRTpC3"
+                    target="_blank">
+
+                    Open Playlist ↗
+
+                </a>
+
+            </section>
+
+            <!-- Toolbar -->
+
+            <section class="toolbar">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search song or artist...">
+
+                <span id="songCount">
+                    Loading...
+                </span>
+
+            </section>
+
+            <!-- Table -->
+
+            <section class="table-wrapper">
+
+                <table id="songTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th data-sort="id">
+                                #
+                            </th>
+
+                            <th data-sort="song">
+                                Song
+                            </th>
+
+                            <th data-sort="artist">
+                                Artist
+                            </th>
+
+                            <th>
+                                Listen
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <!-- script.js render -->
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script>
+
+fetch("/assets/components/menu.html")
+.then(res=>res.text())
+.then(data=>{
+
+    document.getElementById("menu").innerHTML=data;
+
+    const links=document.querySelectorAll("#menu a");
+
+    let currentPath=window.location.pathname;
+
+    currentPath=currentPath
+        .replace(/index\.html$/,"")
+        .replace(/\.html$/,"")
+        .replace(/\/$/,"");
+
+    links.forEach(link=>{
+
+        let linkPath=link.getAttribute("href");
+
+        linkPath=linkPath
+            .replace(/index\.html$/,"")
+            .replace(/\.html$/,"")
+            .replace(/\/$/,"");
+
+        if(linkPath===currentPath){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+</script>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
