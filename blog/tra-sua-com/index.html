@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8"><title>Projects</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+<div class="layout">
+
+<!-- ===== Sidebar ===== -->
+<aside class="sidebar">
+  <div class="profile">
+    <img src="/assets/img/avatar.jpg" class="avatar">
+    <h2>Phan Anh</h2>
+    <p class="role">Research Student</p>
+  </div>
+
+  <div id="menu"></div>
+
+</aside>
+
+  
+<!-- ===== Main ===== -->
+<main class="main">
+  <div style="padding:80px; max-width:1000px;">
+
+    <h1>Review Trà sữa cốm</h1>
+
+    <!-- Top 1: ZangTee -->
+    <section class="project-card">
+      <h2>"Thu Cốm" tại ZangTee</h2>
+      <p class="project-meta">Địa chỉ: Giang Văn Minh, Láng Hạ</p>
+      <p>
+        - Kem/Sốt cốm: Có <br>
+        - Hạt nổ yến mạch: Có <br>
+        - Giá: 85k size L <br>
+        Đánh giá: Gọi 50% đá cốc không vơi mấy, sốt cốm cực béo ngậy cực ngon, lượng cốm trong cốc và trên thành cốc vừa phải, cốt trà sữa ngọt.
+        Phù hợp với những ai thích bơ sữa, béo ngậy, nhưng đắt. 
+        Không gian quán không thích hợp để ngồi lại, nhưng mình mua mang về nên khum quan tâm. Mình uống 2 lần rùi.
+      </p>
+    </section>
+
+    <!-- Top 2: NooShan -->
+    <section class="project-card">
+      <h2>"Yến mạch cốm non" tại NooShan</h2>
+      <p class="project-meta">Địa chỉ: Shopeefood</p>
+      <p>
+        - Kem/Sốt cốm: Không có <br>
+        - Hạt nổ yến mạch: Có <br>
+        - Giá: 60k size L sau khi áp mã trên shopeefood - Giá tại quán mình không rõ bao nhiêu <br>
+        Đánh giá: Gọi 50% đá cốc có vơi 1 chút, cốm ở đây là 1 cục cốm siêu to khổng lồ ở đáy cốc, cốm ở thành cốc có nma ít hơn. 
+        Cốm cực dày dặn, nhai rất sướng. Mình uống 2 lần rùi
+      </p>
+    </section>
+
+
+    
+  </div>
+</main>
+
+</div>
+
+<script>
+fetch("/assets/components/menu.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("menu").innerHTML = data;
+  });
+</script> 
+
+</body>
+</html>
