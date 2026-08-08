@@ -229,7 +229,16 @@ function prevImg(){
   currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
   document.getElementById("modalImg").src = imgs[currentIndex];
 }
+  
+/* click vùng tối để đóng modal */
+const modal = document.getElementById("imgModal");
 
+modal.addEventListener("click", function(e){
+  if(e.target === modal){
+    closeModal();
+  }
+});
+  
 /* Keyboard control */
 document.addEventListener("keydown", function(e){
   const modal = document.getElementById("imgModal");
