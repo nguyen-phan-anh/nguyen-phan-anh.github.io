@@ -179,6 +179,14 @@ function updateModal(){
   caption.innerText = galleries[currentGallery][currentIndex].caption;
   counter.innerText = `${currentIndex+1} / ${galleries[currentGallery].length}`;
 }
+  /* click vùng tối để đóng modal */
+const modal = document.getElementById("imgModal");
+
+modal.addEventListener("click", function(e){
+  if(e.target === modal){
+    closeModal();
+  }
+});
 
 /* Keyboard control */
 document.addEventListener("keydown", function(e){
