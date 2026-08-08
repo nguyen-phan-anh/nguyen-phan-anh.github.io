@@ -94,8 +94,8 @@ fetch("/assets/components/menu.html")
   .then(data => {
     document.getElementById("menu").innerHTML = data;
     const links = document.querySelectorAll("#menu a");
-    let currentPath = window.location.pathname;    // URL hiện tại
-    currentPath = currentPath     // chuẩn hóa path
+    let currentPath = window.location.pathname;
+    currentPath = currentPath
       .replace(/index\.html$/, "")
       .replace(/\.html$/, "")
       .replace(/\/$/, "");
@@ -179,11 +179,12 @@ function updateModal(){
   caption.innerText = galleries[currentGallery][currentIndex].caption;
   counter.innerText = `${currentIndex+1} / ${galleries[currentGallery].length}`;
 }
-  /* click vùng tối để đóng modal */
+
+/* click vùng tối để đóng modal */
 const modal = document.getElementById("imgModal");
 
 modal.addEventListener("click", function(e){
-  if(e.target === modal){
+  if(e.target === modal || e.target.classList.contains("modal-overlay")){
     closeModal();
   }
 });
@@ -192,7 +193,9 @@ modal.addEventListener("click", function(e){
 document.addEventListener("keydown", function(e){
   const modal = document.getElementById("imgModal");
   if(modal.style.display === "block"){
-    if(e.key === "Escape") closeModal(); if(e.key === "ArrowRight") nextImg(); if(e.key === "ArrowLeft") prevImg();
+    if(e.key === "Escape") closeModal(); 
+    if(e.key === "ArrowRight") nextImg(); 
+    if(e.key === "ArrowLeft") prevImg();
   }
 });
 </script>
