@@ -37,32 +37,11 @@ Mình đã bắt đầu dạy tiếng Anh đến nay được 3 năm rồi. Mìn
 
 Mình có IELTS 7.5, TOEIC 990 và 980
   <h3>Ảnh chụp chứng chỉ của mình:</h3>
-
       <div class="img-grid" data-gallery="PA-cert">
         <img src="./img/PA-Eng-Cert-1.jpg" onclick="openGallery('PA-cert',0)">
         <img src="./img/PA-Eng-Cert-2.jpg" onclick="openGallery('PA-cert',1)">
         <img src="./img/PA-Eng-Cert-3.jpg" onclick="openGallery('PA-cert',2)">
       </div>
-
-<!-- Modal Portfolio Gallery -->
-<div id="imgModal" class="modal">
-  <div class="modal-overlay" onclick="closeModal()"></div>
-
-  <div class="modal-ui">
-    <span class="close" onclick="closeModal()">&times;</span>
-
-    <span class="nav prev" onclick="prevImg()">&#10094;</span>
-
-    <div class="modal-box">
-      <img class="modal-content" id="modalImg">
-      <div class="modal-caption" id="modalCaption"></div>
-      <div class="modal-counter" id="modalCounter"></div>
-    </div>
-
-    <span class="nav next" onclick="nextImg()">&#10095;</span>
-  </div>
-</div>
-  
 </p>
 
 <h2>Một số ảnh chứng chỉ của học sinh của mình đi thi về</h2>
@@ -75,8 +54,16 @@ Mình có IELTS 7.5, TOEIC 990 và 980
   <img src="./img/PA-Stu-645.jpg" onclick="openGallery('PA-Stu',3)">
   <img src="./img/PA-Stu-630.jpg" onclick="openGallery('PA-Stu',4)">
   <img src="./img/PA-Stu-555.jpg" onclick="openGallery('PA-Stu',5)">
-  <img src="./img/PA-Stu-525.jpg" onclick="openGallery('PA-Stu',6)">
-     
+  <img src="./img/PA-Stu-525.jpg" onclick="openGallery('PA-Stu',6)"> 
+</div>
+
+  <h2>Một số ảnh lớp học của mình</h2>
+<p style="margin-top:20px; line-height:1.8;">
+
+<div class="img-grid" data-gallery="PA-Class">
+  <img src="./img/MyClass-01.jpg" onclick="openGallery('PA-Class',0)">
+  <img src="./img/MyClass-02.jpg" onclick="openGallery('PA-Class',1)">
+  <img src="./img/MyClass-03.jpg" onclick="openGallery('PA-Class',2)">
 </div>
 
 <!-- Modal Portfolio Gallery -->
@@ -91,7 +78,6 @@ Mình có IELTS 7.5, TOEIC 990 và 980
       <div class="modal-caption" id="modalCaption"></div>
       <div class="modal-counter" id="modalCounter"></div>
     </div>
-
     <span class="nav next" onclick="nextImg()">&#10095;</span>
   </div>
 
@@ -132,27 +118,23 @@ fetch("/assets/components/menu.html")
 <script>
 const galleries = {
   "PA-cert": [
-    {
-      src: "./img/PA-Eng-Cert-1.jpg",
-      caption: "IELTS Academic 7.5"
-    },
-    {
-      src: "./img/PA-Eng-Cert-2.jpg",
-      caption: "TOEIC 990 – Listening & Reading"
-    },
-    {
-      src: "./img/PA-Eng-Cert-3.jpg",
-      caption: "TOEIC 980 – Listening & Reading"
-    }
+    {src: "./img/PA-Eng-Cert-1.jpg", caption: "IELTS Academic 7.5"},
+    {src: "./img/PA-Eng-Cert-2.jpg", caption: "TOEIC 990 – Listening & Reading"},
+    {src: "./img/PA-Eng-Cert-3.jpg", caption: "TOEIC 980 – Listening & Reading"}
   ],
   "PA-Stu": [
     {src: "./img/PA-Stu-990.jpg", caption: "Nguyễn Thạc Dũng - 990"},
-    {src: "./img/PA-Stu-775.jpg",caption: "Trần Quang Trung - 775"},
+    {src: "./img/PA-Stu-775.jpg", caption: "Trần Quang Trung - 775"},
     {src: "./img/PA-Stu-725.jpg", caption: "Đỗ Thị Thùy Trang - 725"},
     {src: "./img/PA-Stu-645.jpg", caption: "Nguyễn Thị Trà My - 645"},
     {src: "./img/PA-Stu-630.jpg", caption: "Luân Thị Hoàng Anh - 630"},
     {src: "./img/PA-Stu-555.jpg", caption: "Nguyễn Bích Hà - 555"},
     {src: "./img/PA-Stu-525.jpg", caption: "Bùi Thị Hiền - 525"}
+  ],
+  "PA-Class": [
+    {src: "./img/MyClass-01.jpg", caption: "Lớp F09 BTL"},
+    {src: "./img/MyClass-02.jpg", caption: "Lớp F10 BTL"},
+    {src: "./img/MyClass-03.jpg", caption: "Lớp B10 BTL"}
   ]
 };
 
@@ -168,10 +150,8 @@ function preloadGallery(name){
 
 function openGallery(galleryName, index){
   currentGallery = galleryName; currentIndex = index;
-
   const modal = document.getElementById("imgModal"); const modalImg = document.getElementById("modalImg");
   const caption = document.getElementById("modalCaption"); const counter = document.getElementById("modalCounter");
-
   modal.style.display = "block";
   modalImg.src = galleries[currentGallery][currentIndex].src;
   caption.innerText = galleries[currentGallery][currentIndex].caption;
@@ -195,7 +175,6 @@ function updateModal(){
   const modalImg = document.getElementById("modalImg");
   const caption = document.getElementById("modalCaption");
   const counter = document.getElementById("modalCounter");
-
   modalImg.src = galleries[currentGallery][currentIndex].src;
   caption.innerText = galleries[currentGallery][currentIndex].caption;
   counter.innerText = `${currentIndex+1} / ${galleries[currentGallery].length}`;
