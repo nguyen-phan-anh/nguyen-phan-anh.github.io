@@ -1,0 +1,321 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:#f5f5f5}
+
+.layout{display:flex;min-height:100vh}
+
+.sidebar{
+  position: fixed; background:#fff;
+  width:280px; height: 100vh; top: 0; left: 0;
+  border-right:1px solid #e5e5e5;
+  padding:30px 20px;
+  display:flex;
+  flex-direction:column;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+  z-index: 1000; overflow-y: auto;
+}
+
+.profile{text-align:center;margin-bottom:40px}
+.avatar{width:120px;height:120px;border-radius:50%;object-fit:cover}
+.profile h2{margin-top:10px}
+.role{font-size:13px;color:#666}
+
+.menu a{
+  display:block;
+  padding:14px 18px;
+  border-radius:12px;
+  text-decoration:none;
+  color:#111;
+  font-size:15px;
+  transition:0.2s;
+}
+.menu a.active{color:#2563eb;font-weight:600}
+
+.menu a:hover{background:#f1f1f1;}
+
+.main{margin-left:280px;
+   flex:1;position:relative}
+
+.hero{
+height:100vh;
+background-size:cover;
+background-position:center;
+position:relative;
+}
+
+.hero-overlay{position:absolute; inset:0; background:rgba(255,255,255,0.6);}
+
+.hero-content{ position:relative;
+z-index:2;
+max-width:700px; padding:100px;
+}
+
+.hero-content h1{font-size:60px; margin-bottom:20px}
+.hero-content p{font-size:18px; margin-bottom:30px}
+
+.btn{
+display:inline-block; padding:12px 30px; border:1px solid #111; text-decoration:none; color:#111;
+}
+
+.hero{
+  transition: opacity 1s ease-in-out, background-image 1s ease-in-out;
+}
+.fade-out{opacity: 0;}
+.fade-in{opacity: 1;}
+
+.project-card{
+  background:#fff;
+  padding:30px;
+  margin-top:30px; border-radius:12px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.project-card h2{margin-bottom:8px;}
+
+.project-meta{
+  font-size:13px; color:#666;
+  margin-bottom:12px;
+}
+
+.project-tags{margin-top:15px;}
+
+.project-tags span{
+  display:inline-block;
+  background:#f0f2f5;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  margin-right:8px;
+}
+
+.btn:hover{background:#111;color:#fff}
+
+/* ===== Image Slider ===== */
+.slider-container{
+  position: relative;
+  width: 100%;
+  max-width: 780px;   /* không quá to */
+  height: 420px;      /* khống chế chiều cao */
+  margin-top: 40px;
+  overflow: hidden;
+  border-radius: 14px;
+  background:#f2f2f2;
+}
+
+.slider-track{
+  display: flex; height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.slider-track img{
+  width: 100%; height: 100%; flex-shrink: 0;
+  object-fit: contain;   /* không crop, không vỡ ảnh */
+  background:#fff;
+}
+
+/* Buttons */
+.slider-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: white; border: none;
+  font-size: 26px; width: 42px; height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-btn.prev{left: 12px;}
+.slider-btn.next{right: 12px;}
+
+.slider-btn:hover{
+  background: rgba(0,0,0,0.75);
+}
+
+/* Dots */
+.slider-dots{
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.slider-dots span{
+  width: 10px;
+  height: 10px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-dots span.active{
+  background: white;
+}
+.slider-track img{
+  transition: transform 0.5s ease;
+}
+
+.slider-track img:hover{transform: scale(1.08);}
+
+
+/* ===== Image Grid ===== */
+.img-grid{
+  display:grid; grid-template-columns:repeat(3, 1fr);
+  gap:20px; margin-top:15px;
+}
+
+.img-grid img{
+  border-radius: 15px; cursor:pointer;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  transition:0.3s;
+  width: 100%; height: 250px; object-fit: cover;
+}
+
+.img-grid img:hover{
+  transform:scale(1.03);
+}
+
+
+/* ===== Modal Gallery ===== */
+.modal{
+  display:none; position:fixed;
+  z-index:9999; left:0; top:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.9);
+  align-items:center; justify-content:center;
+}
+
+.modal-content{
+  max-width:90%; max-height:90%; border-radius:12px;
+}
+
+.close{
+  position:absolute; top:20px; right:30px;
+  font-size:40px; color:#fff; cursor:pointer;
+  user-select:none; z-index:10001;
+}
+
+/* Navigation */
+.nav{
+  position:absolute; top:50%;
+  transform:translateY(-50%);
+  font-size:60px;
+  color:#fff; cursor:pointer;
+  user-select:none; padding:10px;
+  z-index:10001;
+}
+
+.nav.prev{ left:30px;}
+.nav.next{ right:30px;}
+.nav:hover{ color:#ddd;}
+
+/* ===== Portfolio Gallery Modal ===== */
+.modal{
+  display:none;
+  position:fixed;
+  z-index:9999;
+  left:0; top:0;
+  width:100%; height:100%;
+}
+
+.modal-overlay{
+  position:absolute;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.85);
+  backdrop-filter: blur(6px);
+}
+
+.modal-ui{
+  position:relative;
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal-box{
+  display:flex; flex-direction:column; align-items:center;
+  max-width:90%; max-height:90%;
+  animation:fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:scale(0.96);}
+  to{opacity:1; transform:scale(1);}
+}
+
+.modal-content{
+  max-width:100%; max-height:75vh; border-radius:14px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+.modal-caption{
+  margin-top:12px;
+  color:#fff;
+  font-size:15px; opacity:0.85;
+  font-style:italic; text-align:center;
+}
+
+.modal-counter{
+  margin-top:6px; font-size:13px;
+  color:#ccc; opacity:0.8;
+}
+
+/* Controls */
+.close{
+  position:absolute; top:25px; right:35px;
+  font-size:42px; color:#fff;
+  cursor:pointer;
+  z-index:10001;
+}
+
+.nav{
+  position:absolute; top:50%;
+  transform:translateY(-50%);
+  font-size:60px;
+  color:#fff; cursor:pointer;
+  user-select:none; padding:15px;
+  z-index:10001; opacity:0.85;
+  transition:0.2s;
+}
+
+.nav:hover{opacity:1;}
+.nav.prev{left:30px;}
+.nav.next{right:30px;}
+
+/* Mobile */
+@media (max-width:768px){
+  .modal-content{ max-height:60vh; }
+  .nav{ font-size:40px; }
+}
+
+/* ===== List indent fix ===== */
+ul{padding-left:22px;margin-top:10px;}
+li{margin:4px 0;}
+ul ul{margin-top:6px;padding-left:18px;}
+
+.project-video{
+  width:100%; max-width:700px;
+  border-radius:16px; margin-top:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.menu a.active{
+  background:#e9e9e9;
+  font-weight:600;
+}
+
+/* Cột 1 */
+td:nth-child(1),
+th:nth-child(1){
+  text-align:center;
+}
+
+/* Cột 2 */
+td:nth-child(2),
+th:nth-child(2){
+  text-align:left;
+}
