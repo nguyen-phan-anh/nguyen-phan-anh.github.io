@@ -13,6 +13,20 @@ if (sidebar) {
     })
     .then(data => {
       sidebar.innerHTML = data;
+
+      // ===== Active Menu =====
+      const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+      const menuLinks = sidebar.querySelectorAll(".menu a");
+
+      menuLinks.forEach(link => {
+        const linkPath = new URL(link.href).pathname.replace(/\/$/, "") || "/";
+
+        if (linkPath === currentPath) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
     })
     .catch(error => {
       console.error("Failed to load sidebar:", error);
