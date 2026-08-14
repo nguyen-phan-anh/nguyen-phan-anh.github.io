@@ -2,185 +2,276 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>About</title>
+<title>My English Class</title>
 <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
+
 <div class="layout">
 
-<aside class="sidebar">
-<div class="profile">
-<img src="/assets/img/avatar.jpg" class="avatar">
-<h2>Phan Anh</h2>
-<p class="role">Research Student</p>
-</div>
+  <!-- ===== Sidebar ===== -->
+  <aside id="sidebar" class="sidebar"></aside>
 
-<div id="menu"></div>
 
-</aside>
+  <!-- ===== Main ===== -->
+  <main class="main">
 
-<main class="main">
-<div style="padding:80px; max-width:900px;">
-  
-<h1>About my English class</h1>
-<p style="margin-top:20px; line-height:1.8;">
+    <div style="padding:80px; max-width:900px;">
 
-Mình đã bắt đầu dạy tiếng Anh đến nay được 3 năm rồi. Mình chuyên về dạy cho người mới bắt đầu và luyện thi TOEIC.
+      <h1>About my English class</h1>
 
-</p>
-  
-<h2>Chứng chỉ của mình:</h2>
-<p style="margin-top:20px; line-height:1.8;">
+      <p style="margin-top:20px; line-height:1.8;">
+        Mình đã bắt đầu dạy tiếng Anh đến nay được 3 năm rồi.
+        Mình chuyên về dạy cho người mới bắt đầu và luyện thi TOEIC.
+      </p>
 
-Mình có IELTS 7.5, TOEIC 990 và 980
-  <h3>Ảnh chụp chứng chỉ của mình:</h3>
+
+      <h2>Chứng chỉ của mình:</h2>
+
+      <p style="margin-top:20px; line-height:1.8;">
+        Mình có IELTS 7.5, TOEIC 990 và 980
+      </p>
+
+      <h3>Ảnh chụp chứng chỉ của mình:</h3>
+
       <div class="img-grid" data-gallery="PA-cert">
         <img src="./img/PA-Eng-Cert-1.jpg" onclick="openGallery('PA-cert',0)">
         <img src="./img/PA-Eng-Cert-2.jpg" onclick="openGallery('PA-cert',1)">
         <img src="./img/PA-Eng-Cert-3.jpg" onclick="openGallery('PA-cert',2)">
       </div>
-</p>
 
-<h2>Một số ảnh chứng chỉ của học sinh của mình đi thi về</h2>
-<p style="margin-top:20px; line-height:1.8;">
 
-<div class="img-grid" data-gallery="PA-Stu">
-  <img src="./img/PA-Stu-990.jpg" onclick="openGallery('PA-Stu',0)">
-  <img src="./img/PA-Stu-775.jpg" onclick="openGallery('PA-Stu',1)">
-  <img src="./img/PA-Stu-725.jpg" onclick="openGallery('PA-Stu',2)">
-  <img src="./img/PA-Stu-645.jpg" onclick="openGallery('PA-Stu',3)">
-  <img src="./img/PA-Stu-630.jpg" onclick="openGallery('PA-Stu',4)">
-  <img src="./img/PA-Stu-555.jpg" onclick="openGallery('PA-Stu',5)">
-  <img src="./img/PA-Stu-525.jpg" onclick="openGallery('PA-Stu',6)"> 
-</div>
+      <h2>Một số ảnh chứng chỉ của học sinh của mình đi thi về</h2>
 
-  <h2>Một số ảnh lớp học của mình</h2>
-<p style="margin-top:20px; line-height:1.8;">
+      <div class="img-grid" data-gallery="PA-Stu">
+        <img src="./img/PA-Stu-990.jpg" onclick="openGallery('PA-Stu',0)">
+        <img src="./img/PA-Stu-775.jpg" onclick="openGallery('PA-Stu',1)">
+        <img src="./img/PA-Stu-725.jpg" onclick="openGallery('PA-Stu',2)">
+        <img src="./img/PA-Stu-645.jpg" onclick="openGallery('PA-Stu',3)">
+        <img src="./img/PA-Stu-630.jpg" onclick="openGallery('PA-Stu',4)">
+        <img src="./img/PA-Stu-555.jpg" onclick="openGallery('PA-Stu',5)">
+        <img src="./img/PA-Stu-525.jpg" onclick="openGallery('PA-Stu',6)">
+      </div>
 
-<div class="img-grid" data-gallery="PA-Class">
-  <img src="./img/MyClass-01.jpg" onclick="openGallery('PA-Class',0)">
-  <img src="./img/MyClass-02.jpg" onclick="openGallery('PA-Class',1)">
-  <img src="./img/MyClass-03.jpg" onclick="openGallery('PA-Class',2)">
-</div>
 
-<!-- Modal Portfolio Gallery -->
-<div id="imgModal" class="modal">
-  <div class="modal-overlay" onclick="closeModal()"></div>
+      <h2>Một số ảnh lớp học của mình</h2>
 
-  <div class="modal-ui">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <span class="nav prev" onclick="prevImg()">&#10094;</span>
-    <div class="modal-box">
-      <img class="modal-content" id="modalImg">
-      <div class="modal-caption" id="modalCaption"></div>
-      <div class="modal-counter" id="modalCounter"></div>
+      <div class="img-grid" data-gallery="PA-Class">
+        <img src="./img/MyClass-01.jpg" onclick="openGallery('PA-Class',0)">
+        <img src="./img/MyClass-02.jpg" onclick="openGallery('PA-Class',1)">
+        <img src="./img/MyClass-03.jpg" onclick="openGallery('PA-Class',2)">
+      </div>
+
+
+      <!-- ===== Modal Portfolio Gallery ===== -->
+      <div id="imgModal" class="modal">
+
+        <div class="modal-overlay" onclick="closeModal()"></div>
+
+        <div class="modal-ui">
+
+          <span class="close" onclick="closeModal()">&times;</span>
+
+          <span class="nav prev" onclick="prevImg()">&#10094;</span>
+
+          <div class="modal-box">
+            <img class="modal-content" id="modalImg">
+            <div class="modal-caption" id="modalCaption"></div>
+            <div class="modal-counter" id="modalCounter"></div>
+          </div>
+
+          <span class="nav next" onclick="nextImg()">&#10095;</span>
+
+        </div>
+
+      </div>
+
     </div>
-    <span class="nav next" onclick="nextImg()">&#10095;</span>
-  </div>
 
-</p>
-
-</div>
-</main>
+  </main>
 
 </div>
 
+
+<!-- ===== Gallery JS ===== -->
 <script>
-fetch("/assets/components/menu.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("menu").innerHTML = data;
-    const links = document.querySelectorAll("#menu a");
-    let currentPath = window.location.pathname;
-    currentPath = currentPath
-      .replace(/index\.html$/, "")
-      .replace(/\.html$/, "")
-      .replace(/\/$/, "");
 
-    links.forEach(link => {
-      let linkPath = link.getAttribute("href");
-
-      linkPath = linkPath
-        .replace(/index\.html$/, "")
-        .replace(/\.html$/, "")
-        .replace(/\/$/, "");
-
-      if(linkPath === currentPath){
-        link.classList.add("active");
-      }
-    });
-  });
-</script>  
-
-<script>
 const galleries = {
+
   "PA-cert": [
-    {src: "./img/PA-Eng-Cert-1.jpg", caption: "IELTS Academic 7.5"},
-    {src: "./img/PA-Eng-Cert-2.jpg", caption: "TOEIC 990 – Listening & Reading"},
-    {src: "./img/PA-Eng-Cert-3.jpg", caption: "TOEIC 980 – Listening & Reading"}
+    {
+      src: "./img/PA-Eng-Cert-1.jpg",
+      caption: "IELTS Academic 7.5"
+    },
+    {
+      src: "./img/PA-Eng-Cert-2.jpg",
+      caption: "TOEIC 990 – Listening & Reading"
+    },
+    {
+      src: "./img/PA-Eng-Cert-3.jpg",
+      caption: "TOEIC 980 – Listening & Reading"
+    }
   ],
+
   "PA-Stu": [
-    {src: "./img/PA-Stu-990.jpg", caption: "Nguyễn Thạc Dũng - 990"},
-    {src: "./img/PA-Stu-775.jpg", caption: "Trần Quang Trung - 775"},
-    {src: "./img/PA-Stu-725.jpg", caption: "Đỗ Thị Thùy Trang - 725"},
-    {src: "./img/PA-Stu-645.jpg", caption: "Nguyễn Thị Trà My - 645"},
-    {src: "./img/PA-Stu-630.jpg", caption: "Luân Thị Hoàng Anh - 630"},
-    {src: "./img/PA-Stu-555.jpg", caption: "Nguyễn Bích Hà - 555"},
-    {src: "./img/PA-Stu-525.jpg", caption: "Bùi Thị Hiền - 525"}
+    {
+      src: "./img/PA-Stu-990.jpg",
+      caption: "Nguyễn Thạc Dũng - 990"
+    },
+    {
+      src: "./img/PA-Stu-775.jpg",
+      caption: "Trần Quang Trung - 775"
+    },
+    {
+      src: "./img/PA-Stu-725.jpg",
+      caption: "Đỗ Thị Thùy Trang - 725"
+    },
+    {
+      src: "./img/PA-Stu-645.jpg",
+      caption: "Nguyễn Thị Trà My - 645"
+    },
+    {
+      src: "./img/PA-Stu-630.jpg",
+      caption: "Luân Thị Hoàng Anh - 630"
+    },
+    {
+      src: "./img/PA-Stu-555.jpg",
+      caption: "Nguyễn Bích Hà - 555"
+    },
+    {
+      src: "./img/PA-Stu-525.jpg",
+      caption: "Bùi Thị Hiền - 525"
+    }
   ],
+
   "PA-Class": [
-    {src: "./img/MyClass-01.jpg", caption: "Lớp F09 BTL"},
-    {src: "./img/MyClass-02.jpg", caption: "Lớp F10 BTL"},
-    {src: "./img/MyClass-03.jpg", caption: "Lớp B10 BTL"}
+    {
+      src: "./img/MyClass-01.jpg",
+      caption: "Lớp F09 BTL"
+    },
+    {
+      src: "./img/MyClass-02.jpg",
+      caption: "Lớp F10 BTL"
+    },
+    {
+      src: "./img/MyClass-03.jpg",
+      caption: "Lớp B10 BTL"
+    }
   ]
+
 };
 
-let currentGallery = ""; let currentIndex = 0;
+
+let currentGallery = "";
+let currentIndex = 0;
+
 
 /* Preload images */
-function preloadGallery(name){
-  galleries[name].forEach(img=>{
+
+function preloadGallery(name) {
+
+  galleries[name].forEach(img => {
+
     const i = new Image();
     i.src = img.src;
+
   });
+
 }
 
-function openGallery(galleryName, index){
-  currentGallery = galleryName; currentIndex = index;
-  const modal = document.getElementById("imgModal"); const modalImg = document.getElementById("modalImg");
-  const caption = document.getElementById("modalCaption"); const counter = document.getElementById("modalCounter");
-  modal.style.display = "block";
-  modalImg.src = galleries[currentGallery][currentIndex].src;
-  caption.innerText = galleries[currentGallery][currentIndex].caption;
-  counter.innerText = `${currentIndex+1} / ${galleries[currentGallery].length}`;
-  preloadGallery(galleryName);
-}
 
-function closeModal(){document.getElementById("imgModal").style.display = "none";}
+/* Open gallery */
 
-function nextImg(){
-  const imgs = galleries[currentGallery]; currentIndex = (currentIndex + 1) % imgs.length;
-  updateModal();
-}
+function openGallery(galleryName, index) {
 
-function prevImg(){
-  const imgs = galleries[currentGallery];
-  currentIndex = (currentIndex - 1 + imgs.length) % imgs.length; updateModal();
-}
+  currentGallery = galleryName;
+  currentIndex = index;
 
-function updateModal(){
+  const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
   const caption = document.getElementById("modalCaption");
   const counter = document.getElementById("modalCounter");
-  modalImg.src = galleries[currentGallery][currentIndex].src;
-  caption.innerText = galleries[currentGallery][currentIndex].caption;
-  counter.innerText = `${currentIndex+1} / ${galleries[currentGallery].length}`;
+
+  modal.style.display = "block";
+
+  modalImg.src =
+    galleries[currentGallery][currentIndex].src;
+
+  caption.innerText =
+    galleries[currentGallery][currentIndex].caption;
+
+  counter.innerText =
+    `${currentIndex + 1} / ${galleries[currentGallery].length}`;
+
+  preloadGallery(galleryName);
+
 }
 
-/* click vùng tối bên ngoài ảnh để đóng modal */
+
+/* Close modal */
+
+function closeModal() {
+
+  document.getElementById("imgModal").style.display = "none";
+
+}
+
+
+/* Next image */
+
+function nextImg() {
+
+  const imgs = galleries[currentGallery];
+
+  currentIndex =
+    (currentIndex + 1) % imgs.length;
+
+  updateModal();
+
+}
+
+
+/* Previous image */
+
+function prevImg() {
+
+  const imgs = galleries[currentGallery];
+
+  currentIndex =
+    (currentIndex - 1 + imgs.length) % imgs.length;
+
+  updateModal();
+
+}
+
+
+/* Update modal */
+
+function updateModal() {
+
+  const modalImg = document.getElementById("modalImg");
+  const caption = document.getElementById("modalCaption");
+  const counter = document.getElementById("modalCounter");
+
+  modalImg.src =
+    galleries[currentGallery][currentIndex].src;
+
+  caption.innerText =
+    galleries[currentGallery][currentIndex].caption;
+
+  counter.innerText =
+    `${currentIndex + 1} / ${galleries[currentGallery].length}`;
+
+}
+
+
+/* Click outside modal */
+
 const modal = document.getElementById("imgModal");
 
-modal.addEventListener("click", function(e){
+modal.addEventListener("click", function(e) {
+
   if (
     !e.target.closest(".modal-box") &&
     !e.target.closest(".nav") &&
@@ -188,17 +279,39 @@ modal.addEventListener("click", function(e){
   ) {
     closeModal();
   }
+
 });
 
+
 /* Keyboard control */
-document.addEventListener("keydown", function(e){
+
+document.addEventListener("keydown", function(e) {
+
   const modal = document.getElementById("imgModal");
-  if(modal.style.display === "block"){
-    if(e.key === "Escape") closeModal(); 
-    if(e.key === "ArrowRight") nextImg(); 
-    if(e.key === "ArrowLeft") prevImg();
+
+  if (modal.style.display === "block") {
+
+    if (e.key === "Escape") {
+      closeModal();
+    }
+
+    if (e.key === "ArrowRight") {
+      nextImg();
+    }
+
+    if (e.key === "ArrowLeft") {
+      prevImg();
+    }
+
   }
+
 });
+
 </script>
+
+
+<!-- ===== Main JS ===== -->
+<script src="/js/main.js"></script>
+
 </body>
 </html>
