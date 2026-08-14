@@ -1,21 +1,14 @@
 <!DOCTYPE html> <html lang="en">
 <head>
 <meta charset="UTF-8"> <title>Projects</title>
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 <div class="layout">
 
-<!-- ===== Sidebar ===== -->
-<aside class="sidebar">
-  <div class="profile">
-    <img src="/assets/img/avatar.jpg" class="avatar">
-    <h2>Phan Anh</h2> <p class="role">Research Student</p>
-  </div>
-  <div id="menu"></div>
-
-</aside>
+  <!-- ===== Sidebar ===== -->
+  <aside id="sidebar" class="sidebar"></aside>
   
 <!-- ===== Main ===== -->
 <main class="main">
@@ -67,38 +60,7 @@
 </main>
 
 </div>
-
-<script>
-fetch("/assets/components/menu.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("menu").innerHTML = data;
-
-    const links = document.querySelectorAll("#menu a");
-
-    // URL hiện tại
-    let currentPath = window.location.pathname;
-
-    // chuẩn hóa path
-    currentPath = currentPath
-      .replace(/index\.html$/, "")
-      .replace(/\.html$/, "")
-      .replace(/\/$/, "");
-
-    links.forEach(link => {
-      let linkPath = link.getAttribute("href");
-
-      linkPath = linkPath
-        .replace(/index\.html$/, "")
-        .replace(/\.html$/, "")
-        .replace(/\/$/, "");
-
-      if(linkPath === currentPath){
-        link.classList.add("active");
-      }
-    });
-  });
-</script>
-
+  <!-- ===== Main JS ===== -->
+<script src="js/main.js"></script>
 </body>
 </html>
