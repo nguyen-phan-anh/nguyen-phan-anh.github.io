@@ -40,24 +40,7 @@
 </main>
 </div>
 
-<script>
-const heroImages = ["img/hero1.jpg","img/hero2.jpg","img/hero3.jpg","img/hero4.jpg","img/hero5.jpg"];
-
-let current = 0;
-const hero = document.getElementById("hero");
-
-function changeHero(){
-  hero.style.backgroundImage = `url('${heroImages[current]}')`;
-  hero.style.backgroundSize = "cover";
-  hero.style.backgroundPosition = "center";
-  hero.style.transition = "background-image 1s ease-in-out";
-  current = (current + 1) % heroImages.length;
-}
-changeHero(); // load ảnh đầu
-setInterval(changeHero, 5000); // 5s đổi ảnh
-</script>
-
-  <!-- ===== Main JS ===== -->
+<!-- ===== Main JS ===== -->
 <script src="/js/main.js"></script>
   
 </body>
