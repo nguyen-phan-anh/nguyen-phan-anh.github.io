@@ -1,9 +1,11 @@
 console.log("Website loaded");
 
 const heroImages = [
-  "assets/img/hero1.jpg",
-  "assets/img/hero2.jpg",
-  "assets/img/hero3.jpg"
+  "img/hero1.jpg",
+  "img/hero2.jpg",
+  "img/hero3.jpg",
+  "img/hero4.jpg",
+  "img/hero5.jpg"
 ];
 
 let current = 0;
