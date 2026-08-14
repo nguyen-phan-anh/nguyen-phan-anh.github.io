@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <title>Projects</title>
@@ -7,268 +8,350 @@
 </head>
 
 <body>
+
 <div class="layout">
 
-<!-- ===== Sidebar ===== -->
-<aside class="sidebar">
-  <div class="profile">
-    <img src="/assets/img/avatar.jpg" class="avatar">
-    <h2>Phan Anh</h2>
-    <p class="role">Research Student</p>
-  </div>
-  <div id="menu"></div>
-</aside>
-
-<!-- ===== Main ===== -->
-<main class="main">
-  <div style="padding:80px; max-width:1000px;">
-
-    <h1>Projects</h1>
-
-    <!-- Project 1: RFM -->
-    <section class="project-card">
-      <h2>Application of the RFM Model in Customer Analysis for the Banking Sector</h2>
-      <p class="project-meta">2024 • Graduation Research Project</p>
-      <p>
-        •	Applied RFM model to segment and analyze banking customers<br>
-        •	Processed and analyzed data using Python<br>
-        •	Derived insights to support customer management and marketing decisions<br>
-      </p>
-      <div class="project-tags">
-        <span>Data Analytics</span>
-        <span>Data Science</span>
-        <span>AI in ???</span>
-      </div>
-      <div class="img-grid" data-gallery="DATN">
-        <img src="./img/DATN-1.jpg" onclick="openGallery('DATN',0)">
-        <img src="./img/DATN-2.jpg" onclick="openGallery('DATN',1)">
-        <img src="./img/DATN-3.jpg" onclick="openGallery('DATN',2)">
-      </div>
-    </section>
-
-    <!-- Project 2: Giải chạy -->
-    <section class="project-card">
-      <h2>Giải chạy 10000 bước chân vì sức khỏe mỗi ngày</h2>
-      <p class="project-meta">2020 - 2024 • Institutional Project</p>
-      <p>
-        •	Giải chạy thường kỳ tại Đại học Bách khoa Hà Nội, bắt đầu từ học kỳ 2020-1 và tới hiện tại (năm 2026) vẫn đang tiếp tục <br>
-        •	Đặt nền móng cho giải chạy: Đề xuất về phương thức ghi nhận thành tích, tiêu chuẩn cấp phát minh chứng rèn luyện,... <br>
-        •	Phát triển từ việc sử dụng app ngoài (Strava, Motion,...) sang tích hợp chức năng chạy bộ trên app iCTSV với vai trò tester, đảm bảo
-        các chức năng được ghi nhận chính xác (tọa độ GPS, tốc độ, số bước chân, lắc máy để chạy tại chỗ,...)
-        •	Tiếp nhận, xử lý dữ liệu chạy của sinh viên toàn trường và cấp phát minh chứng rèn luyện <br>
-        •	Gửi kết quả thành tích và giấy chứng nhận, xử lý khiếu nại <br>
-        •	Ban Tổ chức buổi tổng kết giải chạy lần N và phát động giải chạy lần N+1 <br>
-      </p>
-      <div class="project-tags">
-        <span>Microsoft Excel</span>
-        <span>Data Science</span>
-        <span>Information Processing</span>
-      </div>
-      <div class="img-grid" data-gallery="10KBC">
-        <img src="./img/10KBC-phat-dong.jpg" onclick="openGallery('10KBC',0)">
-        <img src="./img/10KBC-tra-cuu.jpg" onclick="openGallery('10KBC',1)">
-        <img src="./img/10KBC-thong-ke.jpg" onclick="openGallery('10KBC',2)">
-        <img src="./img/10KBC-BTC.jpg" onclick="openGallery('10KBC',3)">
-        <img src="./img/10KBC-du-lieu.jpg" onclick="openGallery('10KBC',4)">
-        <img src="./img/10KBC-gui-mail.jpg" onclick="openGallery('10KBC',5)">
-      </div>
-    </section>
-
-    <!-- Project 3: Nấu lẩu -->
-    <section class="project-card">
-      <h2>Hệ thống quản lý cửa hàng bán nguyên liệu nấu lẩu</h2>
-      <p class="project-meta">2023 • Final project for the Object-Oriented Programming course</p>
-      <p>
-        Hệ thống giúp chủ shop quản lý cửa hàng bán nguyên liệu nấu lẩu như nước dùng, đồ thả lẩu, gia vị,...<br>
-        Phần mềm hỗ trợ các chức năng từ đơn giản (như thêm, sửa, xóa,...) tới nâng cao (như tìm kiếm, báo cáo,...)<br>
-        Xem video demo phần mềm tại đây:<a href="https://www.youtube.com/watch?v=H0cvMg9xhcQ" target="_blank">
-        Video demo phần mềm quản lý cửa hàng
-        </a>
-      </p>
-      <div class="project-tags">
-        <span>SQL - Database Management</span> <span>C# - Winform</span> <span>OOP</span>
-      </div>
-      <h3>Một vài hình ảnh về dự án:</h3>
-
-      <div class="img-grid" data-gallery="NauLau">
-        <img src="./img/nau-lau-1.png" onclick="openGallery('NauLau',0)">
-        <img src="./img/nau-lau-2.png" onclick="openGallery('NauLau',1)">
-        <img src="./img/nau-lau-3.png" onclick="openGallery('NauLau',2)">
-      </div>
-  
-    </section>
-
-    <!-- Project item -->
-    <section class="project-card">
-      <h2>Phân tích dữ liệu thương mại điện tử Olist</h2>
-      <p class="project-meta">2023 • Bài tập nhóm học phần Kho dữ liệu và kinh doanh thông minh</p>
-      <p>
-        •	Bộ dữ liệu: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce <br>
-        •	Đóng góp của bản thân: Exploratory Data Analysis (EDA) <br>
-Bước 1: Khảo sát
-- Tìm hiểu mô hình, quy trình cho bài toán: Tổng quan lĩnh vực, quy trình nghiệp vụ, luồng dữ liệu, ERD
-- Tìm hiểu yêu cầu phân tích: Mô tả theo các chủ điểm và minh họa thông qua mindmap
-- Tìm hiểu hệ thống chỉ số, cây phân tích dashboard và liên kết dashboard sẽ phân tích ở đâu trên quy trình/mô hình
-- Tìm hiểu data flow of IT systems, quy mô dữ liệu và tần suất cập nhật dữ liệu mới
-
-Bước 2: ERD OLTP
-👉Màu sắc phân loại, gạch chân các trường quan trọng để xây dựng data model đa chiều
-        
-Bước 3: Data exploration
-- Sử dụng đa dạng biểu đồ để xác định phân phối, thống kê đăc trưng và phân tích tương quan 
-- Phân tích chi tiết kiến trúc dữ liệu         
-
-Bước 4: ETL dữ liệu
-- Sử dụng đa dạng công cụ ETL: Power query - Python - SQL
-- Mô tả quá trình OLAP và trình bày Before - After của hoạt động ETL
-
-Bước 5: Phân tích Dimension
-- Tiền xử lý dữ liệu để tạo ra các chiều mới hiêu quả hơn để phân tích khi dữ liệu quá dài
-- Phân dimension thành các nhóm cho dễ theo dõi và thống kê số lượng dòng ở mỗi dimension
-
-Bước 6: Phân tích Data model OLAP (logic, vật lý)
-        
-Bước 7: Xây dựng Dashboard
-- Phân tích chi tiết dạng story telling
-- Phân tích OLAP (sử dụng slicer, drill down,...). có
-- Phân tích theo dòng thời gian để phát hiện tính mùa, xu thế, dự báo
-- Public dashboard lên web
-
-        
-        •	Công việc: Phân tích Dim, Fact, OLTP, OLAP <br>
-        •	Video thuyết trình: https://youtu.be/09FTRXLidpg <br>
-      </p>
-      
-      <div class="img-grid" data-gallery="Olist">
-        <img src="./img/Olist-1.jpg" onclick="openGallery('Olist',0)">
-        <img src="./img/Olist-2.jpg" onclick="openGallery('Olist',1)">
-        <img src="./img/Olist-3.jpg" onclick="openGallery('Olist',2)">
-        <img src="./img/Olist-4.jpg" onclick="openGallery('Olist',3)">
-        <img src="./img/Olist-5.jpg" onclick="openGallery('Olist',4)">
-        <img src="./img/Olist-6.jpg" onclick="openGallery('Olist',5)">
-      </div>
+  <!-- ===== Sidebar ===== -->
+  <aside id="sidebar" class="sidebar"></aside>
 
 
-      
-      <div class="project-tags">
-        <span>Data Analysis</span>
-        <span>Academic Profile</span>
-        <span>GitHub Pages</span>
-      </div>
-    </section>
+  <!-- ===== Main ===== -->
+  <main class="main">
 
-    <!-- Project item -->
-    <section class="project-card">
-      <h2>Research Portfolio Website</h2>
-      <p class="project-meta">2024 • Personal Project</p>
-      <p>
-        Personal academic website for research profile, publications, and portfolio.
-      </p>
-      <div class="project-tags">
-        <span>Web</span>
-        <span>Academic Profile</span>
-        <span>GitHub Pages</span>
-      </div>
-    </section>
+    <div style="padding:80px; max-width:1000px;">
 
-  </div>
-</main>
+      <h1>Projects</h1>
+
+
+      <!-- Project 1: RFM -->
+      <section class="project-card">
+
+        <h2>Application of the RFM Model in Customer Analysis for the Banking Sector</h2>
+
+        <p class="project-meta">
+          2024 • Graduation Research Project
+        </p>
+
+        <p>
+          • Applied RFM model to segment and analyze banking customers<br>
+          • Processed and analyzed data using Python<br>
+          • Derived insights to support customer management and marketing decisions<br>
+        </p>
+
+        <div class="project-tags">
+          <span>Data Analytics</span>
+          <span>Data Science</span>
+          <span>AI in ???</span>
+        </div>
+
+        <div class="img-grid" data-gallery="DATN">
+          <img src="./img/DATN-1.jpg" onclick="openGallery('DATN',0)">
+          <img src="./img/DATN-2.jpg" onclick="openGallery('DATN',1)">
+          <img src="./img/DATN-3.jpg" onclick="openGallery('DATN',2)">
+        </div>
+
+      </section>
+
+
+      <!-- Project 2: Giải chạy -->
+      <section class="project-card">
+
+        <h2>Giải chạy 10000 bước chân vì sức khỏe mỗi ngày</h2>
+
+        <p class="project-meta">
+          2020 - 2024 • Institutional Project
+        </p>
+
+        <p>
+          • Giải chạy thường kỳ tại Đại học Bách khoa Hà Nội, bắt đầu từ học kỳ 2020-1 và tới hiện tại (năm 2026) vẫn đang tiếp tục <br>
+          • Đặt nền móng cho giải chạy: Đề xuất về phương thức ghi nhận thành tích, tiêu chuẩn cấp phát minh chứng rèn luyện,... <br>
+          • Phát triển từ việc sử dụng app ngoài (Strava, Motion,...) sang tích hợp chức năng chạy bộ trên app iCTSV với vai trò tester, đảm bảo
+          các chức năng được ghi nhận chính xác (tọa độ GPS, tốc độ, số bước chân, lắc máy để chạy tại chỗ,...)<br>
+          • Tiếp nhận, xử lý dữ liệu chạy của sinh viên toàn trường và cấp phát minh chứng rèn luyện <br>
+          • Gửi kết quả thành tích và giấy chứng nhận, xử lý khiếu nại <br>
+          • Ban Tổ chức buổi tổng kết giải chạy lần N và phát động giải chạy lần N+1 <br>
+        </p>
+
+        <div class="project-tags">
+          <span>Microsoft Excel</span>
+          <span>Data Science</span>
+          <span>Information Processing</span>
+        </div>
+
+        <div class="img-grid" data-gallery="10KBC">
+          <img src="./img/10KBC-phat-dong.jpg" onclick="openGallery('10KBC',0)">
+          <img src="./img/10KBC-tra-cuu.jpg" onclick="openGallery('10KBC',1)">
+          <img src="./img/10KBC-thong-ke.jpg" onclick="openGallery('10KBC',2)">
+          <img src="./img/10KBC-BTC.jpg" onclick="openGallery('10KBC',3)">
+          <img src="./img/10KBC-du-lieu.jpg" onclick="openGallery('10KBC',4)">
+          <img src="./img/10KBC-gui-mail.jpg" onclick="openGallery('10KBC',5)">
+        </div>
+
+      </section>
+
+
+      <!-- Project 3: Nấu lẩu -->
+      <section class="project-card">
+
+        <h2>Hệ thống quản lý cửa hàng bán nguyên liệu nấu lẩu</h2>
+
+        <p class="project-meta">
+          2023 • Final project for the Object-Oriented Programming course
+        </p>
+
+        <p>
+          Hệ thống giúp chủ shop quản lý cửa hàng bán nguyên liệu nấu lẩu như nước dùng, đồ thả lẩu, gia vị,...<br>
+          Phần mềm hỗ trợ các chức năng từ đơn giản (như thêm, sửa, xóa,...) tới nâng cao (như tìm kiếm, báo cáo,...)<br>
+          Xem video demo phần mềm tại đây:
+          <a href="https://www.youtube.com/watch?v=H0cvMg9xhcQ" target="_blank">
+            Video demo phần mềm quản lý cửa hàng
+          </a>
+        </p>
+
+        <div class="project-tags">
+          <span>SQL - Database Management</span>
+          <span>C# - Winform</span>
+          <span>OOP</span>
+        </div>
+
+        <h3>Một vài hình ảnh về dự án:</h3>
+
+        <div class="img-grid" data-gallery="NauLau">
+          <img src="./img/nau-lau-1.png" onclick="openGallery('NauLau',0)">
+          <img src="./img/nau-lau-2.png" onclick="openGallery('NauLau',1)">
+          <img src="./img/nau-lau-3.png" onclick="openGallery('NauLau',2)">
+        </div>
+
+      </section>
+
+
+      <!-- Project 4: Olist -->
+      <section class="project-card">
+
+        <h2>Phân tích dữ liệu thương mại điện tử Olist</h2>
+
+        <p class="project-meta">
+          2023 • Bài tập nhóm học phần Kho dữ liệu và kinh doanh thông minh
+        </p>
+
+        <p>
+          • Bộ dữ liệu: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce <br>
+          • Đóng góp của bản thân: Exploratory Data Analysis (EDA) <br>
+
+          Bước 1: Khảo sát<br>
+          - Tìm hiểu mô hình, quy trình cho bài toán: Tổng quan lĩnh vực, quy trình nghiệp vụ, luồng dữ liệu, ERD<br>
+          - Tìm hiểu yêu cầu phân tích: Mô tả theo các chủ điểm và minh họa thông qua mindmap<br>
+          - Tìm hiểu hệ thống chỉ số, cây phân tích dashboard và liên kết dashboard sẽ phân tích ở đâu trên quy trình/mô hình<br>
+          - Tìm hiểu data flow of IT systems, quy mô dữ liệu và tần suất cập nhật dữ liệu mới<br>
+
+          Bước 2: ERD OLTP<br>
+          👉Màu sắc phân loại, gạch chân các trường quan trọng để xây dựng data model đa chiều<br>
+
+          Bước 3: Data exploration<br>
+          - Sử dụng đa dạng biểu đồ để xác định phân phối, thống kê đăc trưng và phân tích tương quan<br>
+          - Phân tích chi tiết kiến trúc dữ liệu<br>
+
+          Bước 4: ETL dữ liệu<br>
+          - Sử dụng đa dạng công cụ ETL: Power query - Python - SQL<br>
+          - Mô tả quá trình OLAP và trình bày Before - After của hoạt động ETL<br>
+
+          Bước 5: Phân tích Dimension<br>
+          - Tiền xử lý dữ liệu để tạo ra các chiều mới hiêu quả hơn để phân tích khi dữ liệu quá dài<br>
+          - Phân dimension thành các nhóm cho dễ theo dõi và thống kê số lượng dòng ở mỗi dimension<br>
+
+          Bước 6: Phân tích Data model OLAP (logic, vật lý)<br>
+
+          Bước 7: Xây dựng Dashboard<br>
+          - Phân tích chi tiết dạng story telling<br>
+          - Phân tích OLAP (sử dụng slicer, drill down,...). có<br>
+          - Phân tích theo dòng thời gian để phát hiện tính mùa, xu thế, dự báo<br>
+          - Public dashboard lên web<br>
+
+          • Công việc: Phân tích Dim, Fact, OLTP, OLAP <br>
+          • Video thuyết trình: https://youtu.be/09FTRXLidpg <br>
+        </p>
+
+        <div class="img-grid" data-gallery="Olist">
+          <img src="./img/Olist-1.jpg" onclick="openGallery('Olist',0)">
+          <img src="./img/Olist-2.jpg" onclick="openGallery('Olist',1)">
+          <img src="./img/Olist-3.jpg" onclick="openGallery('Olist',2)">
+          <img src="./img/Olist-4.jpg" onclick="openGallery('Olist',3)">
+          <img src="./img/Olist-5.jpg" onclick="openGallery('Olist',4)">
+          <img src="./img/Olist-6.jpg" onclick="openGallery('Olist',5)">
+        </div>
+
+        <div class="project-tags">
+          <span>Data Analysis</span>
+          <span>Academic Profile</span>
+          <span>GitHub Pages</span>
+        </div>
+
+      </section>
+
+
+      <!-- Project 5 -->
+      <section class="project-card">
+
+        <h2>Research Portfolio Website</h2>
+
+        <p class="project-meta">
+          2024 • Personal Project
+        </p>
+
+        <p>
+          Personal academic website for research profile, publications, and portfolio.
+        </p>
+
+        <div class="project-tags">
+          <span>Web</span>
+          <span>Academic Profile</span>
+          <span>GitHub Pages</span>
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
 
 </div>
-  
-  <!-- Modal Gallery -->
-      <div id="imgModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <span class="nav prev" onclick="prevImg()">&#10094;</span>
-        <img class="modal-content" id="modalImg">
-        <span class="nav next" onclick="nextImg()">&#10095;</span>
-      </div>
 
+
+<!-- ===== Modal Gallery ===== -->
+<div id="imgModal" class="modal">
+
+  <span class="close" onclick="closeModal()">&times;</span>
+
+  <span class="nav prev" onclick="prevImg()">&#10094;</span>
+
+  <img class="modal-content" id="modalImg">
+
+  <span class="nav next" onclick="nextImg()">&#10095;</span>
+
+</div>
+
+
+<!-- ===== Gallery JS ===== -->
 <script>
-fetch("/assets/components/menu.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("menu").innerHTML = data;
 
-    const links = document.querySelectorAll("#menu a");
-    let currentPath = window.location.pathname; // URL hiện tại
-
-    // chuẩn hóa path
-    currentPath = currentPath
-      .replace(/index\.html$/, "")
-      .replace(/\.html$/, "")
-      .replace(/\/$/, "");
-
-    links.forEach(link => {
-      let linkPath = link.getAttribute("href");
-
-      linkPath = linkPath
-        .replace(/index\.html$/, "")
-        .replace(/\.html$/, "")
-        .replace(/\/$/, "");
-
-      if(linkPath === currentPath){
-        link.classList.add("active");
-      }
-    });
-  });
-</script>
-<script>
 const galleries = {
-  NauLau: ["./img/nau-lau-1.png", "./img/nau-lau-2.png", "./img/nau-lau-3.png"],
-  Olist: ["./img/Olist-1.jpg", "./img/Olist-2.jpg", "./img/Olist-3.jpg", 
-          "./img/Olist-4.jpg", "./img/Olist-5.jpg", "./img/Olist-6.jpg"],
-  "10KBC": ["./img/10KBC-phat-dong.jpg", "./img/10KBC-tra-cuu.jpg", "./img/10KBC-thong-ke.jpg",  
-          "./img/10KBC-BTC.jpg", "./img/10KBC-du-lieu.jpg", "./img/10KBC-gui-mail.jpg"],
-  DATN: ["./img/DATN-1.jpg", "./img/DATN-2.jpg", "./img/DATN-3.jpg"]
+
+  NauLau: [
+    "./img/nau-lau-1.png",
+    "./img/nau-lau-2.png",
+    "./img/nau-lau-3.png"
+  ],
+
+  Olist: [
+    "./img/Olist-1.jpg",
+    "./img/Olist-2.jpg",
+    "./img/Olist-3.jpg",
+    "./img/Olist-4.jpg",
+    "./img/Olist-5.jpg",
+    "./img/Olist-6.jpg"
+  ],
+
+  "10KBC": [
+    "./img/10KBC-phat-dong.jpg",
+    "./img/10KBC-tra-cuu.jpg",
+    "./img/10KBC-thong-ke.jpg",
+    "./img/10KBC-BTC.jpg",
+    "./img/10KBC-du-lieu.jpg",
+    "./img/10KBC-gui-mail.jpg"
+  ],
+
+  DATN: [
+    "./img/DATN-1.jpg",
+    "./img/DATN-2.jpg",
+    "./img/DATN-3.jpg"
+  ]
+
 };
 
 
+let currentGallery = "";
+let currentIndex = 0;
 
-let currentGallery = ""; let currentIndex = 0;
 
-function openGallery(galleryName, index){
+function openGallery(galleryName, index) {
+
   currentGallery = galleryName;
   currentIndex = index;
+
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
+
   modal.style.display = "flex";
   modalImg.src = galleries[currentGallery][currentIndex];
+
 }
 
-function closeModal(){
+
+function closeModal() {
+
   document.getElementById("imgModal").style.display = "none";
+
 }
 
-function nextImg(){
+
+function nextImg() {
+
   const imgs = galleries[currentGallery];
+
   currentIndex = (currentIndex + 1) % imgs.length;
+
   document.getElementById("modalImg").src = imgs[currentIndex];
+
 }
 
-function prevImg(){
+
+function prevImg() {
+
   const imgs = galleries[currentGallery];
+
   currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+
   document.getElementById("modalImg").src = imgs[currentIndex];
+
 }
 
-/* click vùng tối để đóng modal */
+
+/* Click vùng tối để đóng modal */
+
 const modal = document.getElementById("imgModal");
 
-modal.addEventListener("click", function(e){
-  if(e.target === modal){
+modal.addEventListener("click", function(e) {
+
+  if (e.target === modal) {
     closeModal();
   }
+
 });
 
+
 /* Keyboard control */
-document.addEventListener("keydown", function(e){
+
+document.addEventListener("keydown", function(e) {
+
   const modal = document.getElementById("imgModal");
-  if(modal.style.display === "flex"){
-    if(e.key === "Escape") closeModal(); if(e.key === "ArrowRight") nextImg(); if(e.key === "ArrowLeft") prevImg();
+
+  if (modal.style.display === "flex") {
+
+    if (e.key === "Escape") closeModal();
+
+    if (e.key === "ArrowRight") nextImg();
+
+    if (e.key === "ArrowLeft") prevImg();
+
   }
+
 });
+
 </script>
-  
+
+
+<!-- ===== Main JS ===== -->
+<script src="/js/main.js"></script>
+
 </body>
 </html>
