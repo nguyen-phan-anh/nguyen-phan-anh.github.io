@@ -4,7 +4,7 @@ body{font-family:system-ui,sans-serif;background:#f5f5f5}
 .layout{display:flex;min-height:100vh}
 
 .sidebar{
-  position: fixed; background:#fff;
+  position: fixed; background:#00A5CF;
   width:280px; height: 100vh; top: 0; left: 0;
   border-right:1px solid #e5e5e5;
   padding:30px 20px;
