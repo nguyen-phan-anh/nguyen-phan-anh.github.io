@@ -4,7 +4,7 @@ console.log("Website loaded");
 const sidebar = document.getElementById("sidebar");
 
 if (sidebar) {
-  fetch("/sidebar.html")
+  fetch("sidebar.html")
     .then(response => {
       if (!response.ok) {
         throw new Error(`Sidebar not found: ${response.status}`);
