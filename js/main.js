@@ -5,32 +5,27 @@ const sidebar = document.getElementById("sidebar");
 
 if (sidebar) {
   fetch("/sidebar.html")
-  .then(response => {
-    console.log("Sidebar response:", response.status);
-    return response.text();
-  })
-  .then(data => {
-    console.log("Sidebar data:", data);
-    sidebar.innerHTML = data;
-  })
-  .catch(error => {
-    console.error("Sidebar error:", error);
-  });
-    .then(response => {
+    .then(function (response) {
       if (!response.ok) {
-        throw new Error(`Sidebar not found: ${response.status}`);
+        throw new Error("Sidebar not found: " + response.status);
       }
+
       return response.text();
     })
-    .then(data => {
+    .then(function (data) {
       sidebar.innerHTML = data;
 
       // ===== Active Menu =====
-      const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+      const currentPath =
+        window.location.pathname.replace(/\/$/, "") || "/";
+
       const menuLinks = sidebar.querySelectorAll(".menu a");
 
-      menuLinks.forEach(link => {
-        const linkPath = new URL(link.href).pathname.replace(/\/$/, "") || "/";
+      menuLinks.forEach(function (link) {
+        const linkPath =
+          new URL(link.href, window.location.origin)
+            .pathname
+            .replace(/\/$/, "") || "/";
 
         if (linkPath === currentPath) {
           link.classList.add("active");
@@ -39,7 +34,7 @@ if (sidebar) {
         }
       });
     })
-    .catch(error => {
+    .catch(function (error) {
       console.error("Failed to load sidebar:", error);
     });
 }
@@ -62,8 +57,10 @@ if (hero) {
   function changeHero() {
     hero.classList.add("fade-out");
 
-    setTimeout(() => {
-      hero.style.backgroundImage = `url('${heroImages[current]}')`;
+    setTimeout(function () {
+      hero.style.backgroundImage =
+        "url('" + heroImages[current] + "')";
+
       hero.style.backgroundSize = "cover";
       hero.style.backgroundPosition = "center";
 
