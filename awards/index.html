@@ -2,183 +2,231 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Projects</title>
+<title>Awards</title>
 <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
+
 <div class="layout">
 
-<!-- ===== Sidebar ===== -->
-<aside class="sidebar">
-  <div class="profile">
-    <img src="/assets/img/avatar.jpg" class="avatar">
-    <h2>Phan Anh</h2>
-    <p class="role">Research Student</p>
-  </div>
+  <!-- ===== Sidebar ===== -->
+  <aside id="sidebar" class="sidebar"></aside>
 
-  <div id="menu"></div>
 
-</aside>
+  <!-- ===== Main ===== -->
+  <main class="main">
 
-  
-<!-- ===== Main ===== -->
-<main class="main">
-  <div style="padding:80px; max-width:1000px;">
+    <div style="padding:80px; max-width:1000px;">
 
-    <h1>Awards</h1>
+      <h1>Awards</h1>
 
-    <!-- Tốt nghiệp xuất sắc -->
-    <section class="project-card">
-      <h2>Tốt nghiệp xếp hạng Xuất sắc Đại học Bách khoa Hà Nội</h2>
-      <p class="project-meta">Không bằng Xuất sắc, không ra trường!!</p>
-      <p>
-        •	Được vinh danh trong buổi lễ Tốt nghiệp <br>
-        •	Kỷ niệm chương mạ vàng của Đại học <br>
-      </p>
-      <div class="img-grid" data-gallery="TNXS">
-        <img src="./img/TNXS-1.jpg" onclick="openGallery('TNXS',0)">
-        <img src="./img/TNXS-2.jpg" onclick="openGallery('TNXS',1)">
-        <img src="./img/TNXS-3.jpg" onclick="openGallery('TNXS',2)">
-        <video class="project-video" controls>
-          <source src="./img/TNXS-Vid.mp4" type="video/mp4">
-        </video>
-      </div>
-      
-    </section>
 
-    <!-- Project item -->
-    <section class="project-card">
-      <h2>Danh hiệu "Sinh viên 5 tốt"</h2>
-      <p class="project-meta">Phần thưởng cao quý của Hội Sinh viên Việt Nam</p>
-      <p>
-        •	Danh hiệu "Sinh viên 5 tốt" cấp Thành phố: Được vinh danh 2 năm liên tiếp (năm học 2021-2022 và 2022-2023) 
-        cho thành tích xuất sắc về Học tập, Đạo đức, Thể lực, Tình nguyện và Hội nhập. <br>
-        •	Danh hiệu "Sinh viên 5 tốt" cấp Trường: Đạt danh hiệu trong cả 4 năm học Đại học <br>
-      </p>
-      <h3>Hình ảnh Bằng khen, Kỷ niệm chương và Lễ Tuyên dương:</h3>
-      <div class="img-grid" data-gallery="SV5T">
-        <img src="./img/SV5TTP-2022-SK.jpg" onclick="openGallery('SV5T',0)">
-        <img src="./img/SV5TTP-2022-BK.jpg" onclick="openGallery('SV5T',1)">
-        <img src="./img/SV5TTP-2023-SK.jpg" onclick="openGallery('SV5T',2)">
-        <img src="./img/SV5TTP-2023-BK.jpg" onclick="openGallery('SV5T',3)">
-        <img src="./img/SV5TTP-KTX.jpg"     onclick="openGallery('SV5T',4)">
-        <img src="./img/SV5T-Full-cup.jpg"  onclick="openGallery('SV5T',5)">
-      </div>
-    </section>
+      <!-- Tốt nghiệp xuất sắc -->
+      <section class="project-card">
 
-    <!-- Project item -->
-    <section class="project-card">
-      <h2>Giấy khen Hiệu trưởng - Giấy khen Giám đốc</h2>
-      <p class="project-meta">Năm học 2020 - 2021; 2021 - 2022 và 2022 - 2023</p>
-      <p>
-        •	Giấy khen dành cho sinh viên có nhiều đóng góp tích cực trong các hoạt động của Đại học <br>
-        •	Phần thưởng cao quý cho sự nhiệt huyết và cống hiến trong công tác tổ chức các sự kiện quy mô toàn trường <br>
-      </p>
-      <h3>Hình ảnh Giấy khen:</h3>
+        <h2>Tốt nghiệp xếp hạng Xuất sắc Đại học Bách khoa Hà Nội</h2>
 
-      <div class="img-grid" data-gallery="gkht">
-        <img src="./img/GKHT-20-21.jpg" onclick="openGallery('gkht',0)">
-        <img src="./img/GKHT-21-22.jpg" onclick="openGallery('gkht',1)">
-        <img src="./img/GKHT-22-23.jpg" onclick="openGallery('gkht',2)">
-      </div>
+        <p class="project-meta">Không bằng Xuất sắc, không ra trường!!</p>
 
-    </section>
+        <p>
+          • Được vinh danh trong buổi lễ Tốt nghiệp <br>
+          • Kỷ niệm chương mạ vàng của Đại học <br>
+        </p>
 
-    <!-- Project item -->
-    <section class="project-card">
-      <h2>Học bổng KKHT</h2>
-      <p class="project-meta">Học kỳ II năm học 2021 - 2022</p>
-      <p>
-        •	Là 1 trong <a href="https://ctt.hust.edu.vn/DisplayWeb/DisplayBaiViet?baiviet=39218">1646 sinh viên</a> 
-        vinh dự nhận học bổng từ Nhà trường <br>
-        •	Học bổng loại Giỏi: Giá trị bằng 120% học phí <br>
-      </p>
-      <h3>Hình ảnh thông tin và chứng nhận học bổng:</h3>
+        <div class="img-grid" data-gallery="TNXS">
+          <img src="./img/TNXS-1.jpg" onclick="openGallery('TNXS',0)">
+          <img src="./img/TNXS-2.jpg" onclick="openGallery('TNXS',1)">
+          <img src="./img/TNXS-3.jpg" onclick="openGallery('TNXS',2)">
 
-      <div class="img-grid" data-gallery="KKHT">
-        <img src="./img/HB-KKHT-1.jpg" onclick="openGallery('KKHT',0)">
-        <img src="./img/HB-KKHT-2.jpg" onclick="openGallery('KKHT',1)">
-      </div>
-    </section>
+          <video class="project-video" controls>
+            <source src="./img/TNXS-Vid.mp4" type="video/mp4">
+          </video>
+        </div>
 
-    <!-- Project item -->
-    <section class="project-card">
-      <h2>Học bổng Exness</h2>
-      <p class="project-meta">Năm học 2022 - 2023</p>
-      <p>
-        •	Là 1 trong <a href="https://hust.edu.vn/vi/news/tuyen-sinh-dao-tao-cong-tac-sinh-vien/sinh-vien-bach-khoa-ha-noi-nhan-hoc-bong-tri-gia-hon-mot-ti-dong-654834.html">
-          35 sinh viên</a> vinh dự nhận học bổng từ Doanh nghiệp <br>
-        •	Học bổng trị giá 30 triệu đồng dành cho sinh viên có kết quả học tập và rèn luyện xuất sắc, có năng lực sử dụng tiếng Anh. <br>
-      </p>
-      <h3>Hình ảnh giấy chứng nhận và lễ trao học bổng:</h3>
-      <div class="img-grid" data-gallery="exness">
-        <img src="./img/HB-Exness-1.jpg" onclick="openGallery('exness',0)">
-        <img src="./img/HB-Exness-2.jpg" onclick="openGallery('exness',1)">
-        <img src="./img/HB-Exness-3.jpg" onclick="openGallery('exness',2)">
-      </div>
+      </section>
 
-      <!-- Modal Gallery -->
+
+      <!-- Sinh viên 5 tốt -->
+      <section class="project-card">
+
+        <h2>Danh hiệu "Sinh viên 5 tốt"</h2>
+
+        <p class="project-meta">
+          Phần thưởng cao quý của Hội Sinh viên Việt Nam
+        </p>
+
+        <p>
+          • Danh hiệu "Sinh viên 5 tốt" cấp Thành phố: Được vinh danh 2 năm liên tiếp
+          (năm học 2021-2022 và 2022-2023) cho thành tích xuất sắc về Học tập,
+          Đạo đức, Thể lực, Tình nguyện và Hội nhập. <br>
+
+          • Danh hiệu "Sinh viên 5 tốt" cấp Trường: Đạt danh hiệu trong cả 4 năm học Đại học <br>
+        </p>
+
+        <h3>Hình ảnh Bằng khen, Kỷ niệm chương và Lễ Tuyên dương:</h3>
+
+        <div class="img-grid" data-gallery="SV5T">
+          <img src="./img/SV5TTP-2022-SK.jpg" onclick="openGallery('SV5T',0)">
+          <img src="./img/SV5TTP-2022-BK.jpg" onclick="openGallery('SV5T',1)">
+          <img src="./img/SV5TTP-2023-SK.jpg" onclick="openGallery('SV5T',2)">
+          <img src="./img/SV5TTP-2023-BK.jpg" onclick="openGallery('SV5T',3)">
+          <img src="./img/SV5TTP-KTX.jpg" onclick="openGallery('SV5T',4)">
+          <img src="./img/SV5T-Full-cup.jpg" onclick="openGallery('SV5T',5)">
+        </div>
+
+      </section>
+
+
+      <!-- Giấy khen -->
+      <section class="project-card">
+
+        <h2>Giấy khen Hiệu trưởng - Giấy khen Giám đốc</h2>
+
+        <p class="project-meta">
+          Năm học 2020 - 2021; 2021 - 2022 và 2022 - 2023
+        </p>
+
+        <p>
+          • Giấy khen dành cho sinh viên có nhiều đóng góp tích cực trong các hoạt động của Đại học <br>
+          • Phần thưởng cao quý cho sự nhiệt huyết và cống hiến trong công tác tổ chức các sự kiện quy mô toàn trường <br>
+        </p>
+
+        <h3>Hình ảnh Giấy khen:</h3>
+
+        <div class="img-grid" data-gallery="gkht">
+          <img src="./img/GKHT-20-21.jpg" onclick="openGallery('gkht',0)">
+          <img src="./img/GKHT-21-22.jpg" onclick="openGallery('gkht',1)">
+          <img src="./img/GKHT-22-23.jpg" onclick="openGallery('gkht',2)">
+        </div>
+
+      </section>
+
+
+      <!-- Học bổng KKHT -->
+      <section class="project-card">
+
+        <h2>Học bổng KKHT</h2>
+
+        <p class="project-meta">
+          Học kỳ II năm học 2021 - 2022
+        </p>
+
+        <p>
+          • Là 1 trong
+          <a href="https://ctt.hust.edu.vn/DisplayWeb/DisplayBaiViet?baiviet=39218" target="_blank">
+            1646 sinh viên
+          </a>
+          vinh dự nhận học bổng từ Nhà trường <br>
+
+          • Học bổng loại Giỏi: Giá trị bằng 120% học phí <br>
+        </p>
+
+        <h3>Hình ảnh thông tin và chứng nhận học bổng:</h3>
+
+        <div class="img-grid" data-gallery="KKHT">
+          <img src="./img/HB-KKHT-1.jpg" onclick="openGallery('KKHT',0)">
+          <img src="./img/HB-KKHT-2.jpg" onclick="openGallery('KKHT',1)">
+        </div>
+
+      </section>
+
+
+      <!-- Học bổng Exness -->
+      <section class="project-card">
+
+        <h2>Học bổng Exness</h2>
+
+        <p class="project-meta">Năm học 2022 - 2023</p>
+
+        <p>
+          • Là 1 trong
+          <a href="https://hust.edu.vn/vi/news/tuyen-sinh-dao-tao-cong-tac-sinh-vien/sinh-vien-bach-khoa-ha-noi-nhan-hoc-bong-tri-gia-hon-mot-ti-dong-654834.html" target="_blank">
+            35 sinh viên
+          </a>
+          vinh dự nhận học bổng từ Doanh nghiệp <br>
+
+          • Học bổng trị giá 30 triệu đồng dành cho sinh viên có kết quả học tập
+          và rèn luyện xuất sắc, có năng lực sử dụng tiếng Anh. <br>
+        </p>
+
+        <h3>Hình ảnh giấy chứng nhận và lễ trao học bổng:</h3>
+
+        <div class="img-grid" data-gallery="exness">
+          <img src="./img/HB-Exness-1.jpg" onclick="openGallery('exness',0)">
+          <img src="./img/HB-Exness-2.jpg" onclick="openGallery('exness',1)">
+          <img src="./img/HB-Exness-3.jpg" onclick="openGallery('exness',2)">
+        </div>
+
+      </section>
+
+
+      <!-- ===== Modal Gallery ===== -->
       <div id="imgModal" class="modal">
+
         <span class="close" onclick="closeModal()">&times;</span>
+
         <span class="nav prev" onclick="prevImg()">&#10094;</span>
+
         <img class="modal-content" id="modalImg">
+
         <span class="nav next" onclick="nextImg()">&#10095;</span>
+
       </div>
-    </section>
-  </div>
-</main>
+
+    </div>
+
+  </main>
 
 </div>
 
-<script>
-fetch("/assets/components/menu.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("menu").innerHTML = data;
-    const links = document.querySelectorAll("#menu a");
-    let currentPath = window.location.pathname; // URL hiện tại
-    // chuẩn hóa path
-    currentPath = currentPath
-      .replace(/index\.html$/, "")
-      .replace(/\.html$/, "")
-      .replace(/\/$/, "");
 
-    links.forEach(link => {
-      let linkPath = link.getAttribute("href");
-      linkPath = linkPath
-        .replace(/index\.html$/, "")
-        .replace(/\.html$/, "")
-        .replace(/\/$/, "");
-
-      if(linkPath === currentPath){link.classList.add("active");}
-    });
-  });
-</script>
-  
+<!-- ===== Gallery JS ===== -->
 <script>
+
 const galleries = {
-  gkht: ["./img/GKHT-20-21.jpg", "./img/GKHT-21-22.jpg", "./img/GKHT-22-23.jpg"],
-  SV5T: ["./img/SV5TTP-2022-SK.jpg", "./img/SV5TTP-2022-BK.jpg", "./img/SV5TTP-2023-SK.jpg",
-    "./img/SV5TTP-2023-BK.jpg", "./img/SV5TTP-KTX.jpg", "./img/SV5T-Full-cup.jpg"],
+
+  gkht: [
+    "./img/GKHT-20-21.jpg",
+    "./img/GKHT-21-22.jpg",
+    "./img/GKHT-22-23.jpg"
+  ],
+
+  SV5T: [
+    "./img/SV5TTP-2022-SK.jpg",
+    "./img/SV5TTP-2022-BK.jpg",
+    "./img/SV5TTP-2023-SK.jpg",
+    "./img/SV5TTP-2023-BK.jpg",
+    "./img/SV5TTP-KTX.jpg",
+    "./img/SV5T-Full-cup.jpg"
+  ],
+
   KKHT: [
     "./img/HB-KKHT-1.jpg",
     "./img/HB-KKHT-2.jpg"
   ],
+
   TNXS: [
     "./img/TNXS-1.jpg",
     "./img/TNXS-2.jpg",
     "./img/TNXS-3.jpg"
   ],
+
   exness: [
     "./img/HB-Exness-1.jpg",
     "./img/HB-Exness-2.jpg",
     "./img/HB-Exness-3.jpg"
   ]
+
 };
 
-let currentGallery = ""; let currentIndex = 0;
-function openGallery(galleryName, index){
+
+let currentGallery = "";
+let currentIndex = 0;
+
+
+function openGallery(galleryName, index) {
+
   currentGallery = galleryName;
   currentIndex = index;
 
@@ -186,47 +234,88 @@ function openGallery(galleryName, index){
   const modalImg = document.getElementById("modalImg");
 
   modal.style.display = "flex";
-  modalImg.src = galleries[currentGallery][currentIndex];
+
+  modalImg.src =
+    galleries[currentGallery][currentIndex];
+
 }
 
-function closeModal(){
+
+function closeModal() {
+
   document.getElementById("imgModal").style.display = "none";
+
 }
 
-function nextImg(){
+
+function nextImg() {
+
   const imgs = galleries[currentGallery];
 
-  currentIndex = (currentIndex + 1) % imgs.length;
+  currentIndex =
+    (currentIndex + 1) % imgs.length;
 
-  document.getElementById("modalImg").src = imgs[currentIndex];
+  document.getElementById("modalImg").src =
+    imgs[currentIndex];
+
 }
 
-function prevImg(){
+
+function prevImg() {
+
   const imgs = galleries[currentGallery];
 
-  currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+  currentIndex =
+    (currentIndex - 1 + imgs.length) % imgs.length;
 
-  document.getElementById("modalImg").src = imgs[currentIndex];
+  document.getElementById("modalImg").src =
+    imgs[currentIndex];
+
 }
 
-/* click vùng tối để đóng modal */
+
+/* Click vùng tối để đóng modal */
+
 const modal = document.getElementById("imgModal");
 
-modal.addEventListener("click", function(e){
-  if(e.target === modal){
+modal.addEventListener("click", function(e) {
+
+  if (e.target === modal) {
     closeModal();
   }
+
 });
 
+
 /* Keyboard control */
-document.addEventListener("keydown", function(e){
+
+document.addEventListener("keydown", function(e) {
+
   const modal = document.getElementById("imgModal");
-  if(modal.style.display === "flex"){
-    if(e.key === "Escape") closeModal();
-    if(e.key === "ArrowRight") nextImg();
-    if(e.key === "ArrowLeft") prevImg();
+
+  if (modal.style.display === "flex") {
+
+    if (e.key === "Escape") {
+      closeModal();
+    }
+
+    if (e.key === "ArrowRight") {
+      nextImg();
+    }
+
+    if (e.key === "ArrowLeft") {
+      prevImg();
+    }
+
   }
+
 });
+
 </script>
+
+
+<!-- ===== Main JS ===== -->
+<script src="/js/main.js"></script>
+
 </body>
 </html>
