@@ -5,6 +5,17 @@ const sidebar = document.getElementById("sidebar");
 
 if (sidebar) {
   fetch("/sidebar.html")
+  .then(response => {
+    console.log("Sidebar response:", response.status);
+    return response.text();
+  })
+  .then(data => {
+    console.log("Sidebar data:", data);
+    sidebar.innerHTML = data;
+  })
+  .catch(error => {
+    console.error("Sidebar error:", error);
+  });
     .then(response => {
       if (!response.ok) {
         throw new Error(`Sidebar not found: ${response.status}`);
