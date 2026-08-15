@@ -14,10 +14,6 @@ body{font-family:system-ui,sans-serif;background:#f5f5f5}
 }
 /* ===== Sidebar Background Image ===== */
 
-.sidebar{
-  overflow:hidden;
-}
-
 .sidebar-bg{
   position:absolute;
   inset:0; z-index:0;
