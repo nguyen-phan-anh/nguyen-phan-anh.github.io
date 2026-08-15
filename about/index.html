@@ -2,25 +2,22 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Projects</title>
+<title>About</title>
 <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/gallery.css">
 <link rel="icon" type="image/png" href="/img/favicon.ico">
 </head>
 
 <body>
 <div class="layout">
 
-<!-- ===== Sidebar ===== -->
 <aside id="sidebar" class="sidebar"></aside>
 
-  
-<!-- ===== Main ===== -->
 <main class="main">
   <div style="padding:80px; max-width:1000px;">
 
     <h1>About</h1>
 
-    <!-- Project item -->
     <section class="project-card">
       <h2>Contact Information</h2>
       <p>
@@ -32,7 +29,6 @@
       </p>
     </section>
 
-    <!-- Project item -->
     <section class="project-card">
       <h2>Education</h2>
       <p>
@@ -56,58 +52,48 @@
       </p>
     </section>
 
-    <!-- Project item -->
     <section class="project-card">
       <h2>Hobbies</h2>
+
       <p>
-        •	Sưu tập: Mình thích sưu tập nhiều thứ, chẳng hạn như album K-pop nhóm Red Velvet, sưu tập thẻ bài Naruto, Pokemon, vỏ lon,... <br>
+        • Sưu tập: Mình thích sưu tập nhiều thứ, chẳng hạn như album K-pop nhóm Red Velvet, sưu tập thẻ bài Naruto, Pokemon, vỏ lon,... <br>
       </p>
+
       <h3>Hình ảnh một số bộ sưu tập của mình:</h3>
 
-      <div class="img-grid" data-gallery="BST">
-        <img src="./img/BST-Album.jpg" onclick="openGallery('BST',0)">
-        <img src="./img/BST-Boardgame.jpg" onclick="openGallery('BST',1)">
-        <img src="./img/BST-VoLon.jpg" onclick="openGallery('BST',2)">
+      <div class="img-grid gallery-slider" data-gallery="BST">
+        <img src="./img/BST-Album.jpg" alt="BST Album">
+        <img src="./img/BST-Boardgame.jpg" alt="BST Boardgame">
+        <img src="./img/BST-VoLon.jpg" alt="BST Vỏ Lon">
       </div>
 
       <p>
-        •	Boardgame và Card game: Mình chơi nhiều loại boardgame, ví dụ như Monopoly, Chinatown, Room 25 ,... và card game thì mình chơi Pokemon TCG và Riftbound <br>
+        • Boardgame và Card game: Mình chơi nhiều loại boardgame, ví dụ như Monopoly, Chinatown, Room 25,... và card game thì mình chơi Pokemon TCG và Riftbound <br>
       </p>
+
       <h3>Hình ảnh một số game của mình:</h3>
 
-      <div class="img-grid" data-gallery="BG">
-        <img src="./img/BG-Monopoly.jpg" onclick="openGallery('BG',0)">
-        <img src="./img/BG-Chinatown.jpg" onclick="openGallery('BG',1)">
-        <img src="./img/BG-Pokemon.jpg" onclick="openGallery('BG',2)">
+      <div class="img-grid gallery-slider" data-gallery="BG">
+        <img src="./img/BG-Monopoly.jpg" alt="Monopoly">
+        <img src="./img/BG-Chinatown.jpg" alt="Chinatown">
+        <img src="./img/BG-Pokemon.jpg" alt="Pokemon">
       </div>
 
       <p>
-        •	Game điện tử và Esport: Mình thích thể loại choice-based games, nghĩa là kết thúc game như thế nào sẽ do các lựa chọn của bạn. Một số ví dụ về thể loại
-        này là Detroit Become Human, Beyond: Two Souls, Telltale series,... Ngoài ra mình cũng thích các game co-op như Overcooked, It takes two hay We were here series. 
-        Mình có chơi cả Liên minh và Liên quân <br>
+        • Game điện tử và Esport: Mình thích thể loại choice-based games, nghĩa là kết thúc game như thế nào sẽ do các lựa chọn của bạn. Một số ví dụ về thể loại này là Detroit Become Human, Beyond: Two Souls, Telltale series,... Ngoài ra mình cũng thích các game co-op như Overcooked, It takes two hay We were here series. Mình có chơi cả Liên minh và Liên quân <br>
       </p>
 
       <h3>Hình ảnh một số game mình yêu thích:</h3>
 
-      <div class="img-grid" data-gallery="Game">
-        <img src="./img/Game-DET.jpg" onclick="openGallery('Game',0)">
-        <img src="./img/Game-TWD.jpg" onclick="openGallery('Game',1)">
-        <img src="./img/Game-OVC.jpg" onclick="openGallery('Game',2)">
-        <img src="./img/Game-ITT.jpg" onclick="openGallery('Game',3)">
-        <img src="./img/Game-WWH.jpg" onclick="openGallery('Game',4)">
+      <div class="img-grid gallery-slider" data-gallery="Game">
+        <img src="./img/Game-DET.jpg" alt="Detroit Become Human">
+        <img src="./img/Game-TWD.jpg" alt="Telltale The Walking Dead">
+        <img src="./img/Game-OVC.jpg" alt="Overcooked">
+        <img src="./img/Game-ITT.jpg" alt="It Takes Two">
+        <img src="./img/Game-WWH.jpg" alt="We Were Here">
       </div>
-
-<!-- Modal Gallery -->
-<div id="imgModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <span class="nav prev" onclick="prevImg()">&#10094;</span>
-  <img class="modal-content" id="modalImg">
-  <span class="nav next" onclick="nextImg()">&#10095;</span>
-</div>
     </section>
 
-
-    <!-- Project item -->
     <section class="project-card">
       <h2>Strengths and Weaknesses</h2>
       <p class="project-meta"> </p>
@@ -116,8 +102,8 @@
           <li>Strengths
             <ul>
               <li>Dedicated, biết đặt mục tiêu và hoàn thành mục tiêu của mình</li>
-              <li> bbb </li>
-              <li> bbb </li>
+              <li>bbb</li>
+              <li>bbb</li>
             </ul>
           </li>
           <li>Weaknesses
@@ -129,113 +115,20 @@
           </li>
         </ul>
       </p>
-
-
     </section>
 
   </div>
 </main>
-
 </div>
 
-<script>
-fetch("/assets/components/menu.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("menu").innerHTML = data;
-    const links = document.querySelectorAll("#menu a");
-    let currentPath = window.location.pathname; // URL hiện tại
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <span class="nav prev" onclick="prevImg()">&#10094;</span>
+  <img class="modal-content" id="modalImg">
+  <span class="nav next" onclick="nextImg()">&#10095;</span>
+</div>
 
-    currentPath = currentPath // chuẩn hóa path
-      .replace(/index\.html$/, "")
-      .replace(/\.html$/, "")
-      .replace(/\/$/, "");
-
-    links.forEach(link => {
-      let linkPath = link.getAttribute("href");
-
-      linkPath = linkPath
-        .replace(/index\.html$/, "")
-        .replace(/\.html$/, "")
-        .replace(/\/$/, "");
-
-      if(linkPath === currentPath){
-        link.classList.add("active");
-      }
-    });
-  });
-</script>
-<script>
-const galleries = {
-  BST: [
-    "./img/BST-Album.jpg",
-    "./img/BST-Boardgame.jpg",
-    "./img/BST-VoLon.jpg"
-  ],
-  BG: [
-    "./img/BG-Monopoly.jpg",
-    "./img/BG-Chinatown.jpg",
-    "./img/BG-Pokemon.jpg"
-  ],
-  Game: [
-    "./img/Game-DET.jpg",
-    "./img/Game-TWD.jpg",
-    "./img/Game-OVC.jpg",
-    "./img/Game-ITT.jpg",
-    "./img/Game-WWH.jpg"
-  ]
-};
-
-  
-let currentGallery = "";
-let currentIndex = 0;
-
-function openGallery(galleryName, index){
-  currentGallery = galleryName;
-  currentIndex = index;
-
-  const modal = document.getElementById("imgModal");
-  const modalImg = document.getElementById("modalImg");
-
-  modal.style.display = "flex";
-  modalImg.src = galleries[currentGallery][currentIndex];
-}
-
-function closeModal(){
-  document.getElementById("imgModal").style.display = "none";
-}
-
-function nextImg(){
-  const imgs = galleries[currentGallery];
-  currentIndex = (currentIndex + 1) % imgs.length;
-  document.getElementById("modalImg").src = imgs[currentIndex];
-}
-
-function prevImg(){
-  const imgs = galleries[currentGallery];
-  currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
-  document.getElementById("modalImg").src = imgs[currentIndex];
-}
-  
-/* click vùng tối để đóng modal */
-const modal = document.getElementById("imgModal");
-
-modal.addEventListener("click", function(e){
-  if(e.target === modal){
-    closeModal();
-  }
-});
-  
-/* Keyboard control */
-document.addEventListener("keydown", function(e){
-  const modal = document.getElementById("imgModal");
-  if(modal.style.display === "flex"){
-    if(e.key === "Escape") closeModal();
-    if(e.key === "ArrowRight") nextImg();
-    if(e.key === "ArrowLeft") prevImg();
-  }
-});
-</script>
-  <script src="/js/main.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/gallery.js"></script>
 </body>
 </html>
