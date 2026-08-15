@@ -48,7 +48,7 @@ body{font-family:system-ui,sans-serif;background:#f5f5f5}
 
 .menu a:hover{background:#f1f1f1;}
 
-.main{margin-left:280px; margin-right:350px;
+.main{margin-left:280px;
    flex:1;position:relative}
 
 .hero{
@@ -197,15 +197,11 @@ display:inline-block; padding:12px 30px; border:1px solid #111; text-decoration:
 /* ===== Modal Gallery ===== */
 .modal{
   display:none; position:fixed;
-  z-index:9999; left:0; top:0;
-  width:100%; height:100%;
-  background:rgba(0,0,0,0.9);
-  align-items:center; justify-content:center;
+  z-index:9999; left:0; top:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.9); align-items:center; justify-content:center;
 }
 
-.modal-content{
-  max-width:90%; max-height:90%; border-radius:12px;
-}
+.modal-content{max-width:90%; max-height:90%; border-radius:12px;}
 
 .close{
   position:absolute; top:20px; right:30px;
@@ -217,8 +213,7 @@ display:inline-block; padding:12px 30px; border:1px solid #111; text-decoration:
 .nav{
   position:absolute; top:50%;
   transform:translateY(-50%);
-  font-size:60px;
-  color:#fff; cursor:pointer;
+  font-size:60px; color:#fff; cursor:pointer;
   user-select:none; padding:10px;
   z-index:10001;
 }
