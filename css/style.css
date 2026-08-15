@@ -417,3 +417,45 @@ th:nth-child(2){
   }
 
 }
+/* ===== Back To Top ===== */
+
+#backToTop{
+  position:fixed;
+  right:30px;
+  bottom:30px;
+  width:45px;
+  height:45px;
+  border:none;
+  border-radius:50%;
+  background:#111;
+  color:#fff;
+  font-size:22px;
+  line-height:45px;
+  text-align:center;
+  cursor:pointer;
+  z-index:800;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+  transition:opacity 0.25s ease,
+             visibility 0.25s ease,
+             transform 0.25s ease,
+             background 0.2s ease;
+}
+
+#backToTop.show{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+#backToTop:hover{
+  background:#2563eb;
+}
+
+@media (max-width:768px){
+  #backToTop{
+    right:20px;
+    bottom:20px;
+  }
+}
