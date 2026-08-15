@@ -5,6 +5,59 @@
 <title>Activities</title>
 <link rel="stylesheet" href="/css/style.css">
 <link rel="icon" type="image/png" href="/img/favicon.ico">
+
+<style>
+/* ===== Horizontal Image Slider ===== */
+
+.activity-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 15px;
+}
+
+.activity-slider-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.8s ease;
+}
+
+.activity-slider-track img {
+  width: calc((100% - 48px) / 3);
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  flex-shrink: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.activity-slider-track img:hover {
+  transform: scale(1.02);
+}
+
+
+/* ===== Mobile ===== */
+
+@media (max-width: 800px) {
+
+  .activity-slider-track img {
+    width: calc((100% - 24px) / 2);
+    height: 250px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .activity-slider-track img {
+    width: 100%;
+    height: 250px;
+  }
+
+}
+</style>
+
 </head>
 
 <body>
@@ -17,6 +70,7 @@
 
   <!-- ===== Main ===== -->
   <main class="main">
+
     <div style="padding:80px; max-width:1000px;">
 
       <h1>Activities</h1>
@@ -32,11 +86,13 @@
         <p>
           <ul>
             <li>Từ một CTV, mình đã trở thành phó mảng Kiểm duyệt và cuối cùng là Tổ Trưởng</li>
+
             <li>
               Trách nhiệm: Quản lý hoạt động của Tổ; Đề xuất tổ chức các hoạt động;
               Hỗ trợ các hoạt động của nhà trường như Sinh hoạt Công dân, Lễ Khai giảng,
               Lễ Tốt nghiệp, Job Fair,...
             </li>
+
             <li>
               Fanpage Tổ chức:
               <a href="https://www.facebook.com/ictsv.hust" target="_blank">
@@ -54,13 +110,32 @@
 
         <h3>Một vài hình ảnh về hoạt động của mình tại Tổ:</h3>
 
-        <div class="img-grid" data-gallery="iCTSV">
-          <img src="./img/iCTSV-1.jpg" onclick="openGallery('iCTSV',0)">
-          <img src="./img/iCTSV-2.jpg" onclick="openGallery('iCTSV',1)">
-          <img src="./img/iCTSV-3.jpg" onclick="openGallery('iCTSV',2)">
-          <img src="./img/iCTSV-4.jpg" onclick="openGallery('iCTSV',3)">
-          <img src="./img/iCTSV-5.jpg" onclick="openGallery('iCTSV',4)">
-          <img src="./img/iCTSV-6.jpg" onclick="openGallery('iCTSV',5)">
+
+        <!-- iCTSV Slider -->
+        <div class="activity-slider">
+
+          <div class="activity-slider-track" id="ictsvSlider">
+
+            <img src="./img/iCTSV-1.jpg"
+                 onclick="openGallery('iCTSV',0)">
+
+            <img src="./img/iCTSV-2.jpg"
+                 onclick="openGallery('iCTSV',1)">
+
+            <img src="./img/iCTSV-3.jpg"
+                 onclick="openGallery('iCTSV',2)">
+
+            <img src="./img/iCTSV-4.jpg"
+                 onclick="openGallery('iCTSV',3)">
+
+            <img src="./img/iCTSV-5.jpg"
+                 onclick="openGallery('iCTSV',4)">
+
+            <img src="./img/iCTSV-6.jpg"
+                 onclick="openGallery('iCTSV',5)">
+
+          </div>
+
         </div>
 
       </section>
@@ -75,9 +150,13 @@
 
         <p>
           <ul>
+
             <li>Vị trí công việc: RnD &amp; Data Engineer</li>
+
             <li>Học hỏi về cấu trúc Data Warehouse tại các ngân hàng</li>
+
             <li>Lập trình SQL các job lấy dữ liệu hàng ngày</li>
+
           </ul>
         </p>
 
@@ -89,10 +168,23 @@
 
         <h3>Một vài hình ảnh về dự án:</h3>
 
-        <div class="img-grid" data-gallery="FSS">
-          <img src="./img/FSS-1.jpg" onclick="openGallery('FSS',0)">
-          <img src="./img/FSS-2.jpg" onclick="openGallery('FSS',1)">
-          <img src="./img/FSS-3.jpg" onclick="openGallery('FSS',2)">
+
+        <!-- FSS Slider -->
+        <div class="activity-slider">
+
+          <div class="activity-slider-track" id="fssSlider">
+
+            <img src="./img/FSS-1.jpg"
+                 onclick="openGallery('FSS',0)">
+
+            <img src="./img/FSS-2.jpg"
+                 onclick="openGallery('FSS',1)">
+
+            <img src="./img/FSS-3.jpg"
+                 onclick="openGallery('FSS',2)">
+
+          </div>
+
         </div>
 
       </section>
@@ -134,6 +226,7 @@
       </div>
 
     </div>
+
   </main>
 
 </div>
@@ -165,6 +258,8 @@ const galleries = {
 let currentGallery = "";
 let currentIndex = 0;
 
+
+/* ===== Modal Gallery ===== */
 
 function openGallery(galleryName, index) {
 
@@ -239,6 +334,112 @@ document.addEventListener("keydown", function(e) {
   }
 
 });
+
+
+/* =====================================================
+   Automatic Horizontal Slider
+   - Always shows 3 images on desktop
+   - Moves 1 image at a time
+   - Loops infinitely
+   ===================================================== */
+
+function createSlider(sliderId) {
+
+  const track = document.getElementById(sliderId);
+
+  if (!track) return;
+
+  const originalImages = Array.from(track.children);
+
+  if (originalImages.length <= 3) {
+
+    /*
+      Nếu chỉ có đúng 3 ảnh:
+      nhân bản 3 ảnh để tạo vòng lặp.
+    */
+
+    originalImages.forEach(img => {
+
+      const clone = img.cloneNode(true);
+
+      track.appendChild(clone);
+
+    });
+
+  } else {
+
+    /*
+      Với nhiều hơn 3 ảnh:
+      nhân bản 3 ảnh đầu để khi tới cuối
+      có thể tiếp tục chạy sang đầu.
+    */
+
+    originalImages.slice(0, 3).forEach(img => {
+
+      const clone = img.cloneNode(true);
+
+      track.appendChild(clone);
+
+    });
+
+  }
+
+
+  let index = 0;
+
+
+  function moveSlider() {
+
+    const image = track.children[0];
+
+    const gap = parseFloat(
+      window.getComputedStyle(track).gap
+    ) || 0;
+
+    const imageWidth = image.getBoundingClientRect().width;
+
+    index++;
+
+    track.style.transition = "transform 0.8s ease";
+
+    track.style.transform =
+      `translateX(-${index * (imageWidth + gap)}px)`;
+
+
+    /*
+      Khi chạy qua toàn bộ ảnh gốc,
+      reset về đầu mà không có hiệu ứng.
+    */
+
+    const originalCount = originalImages.length;
+
+    if (index >= originalCount) {
+
+      setTimeout(() => {
+
+        track.style.transition = "none";
+
+        index = 0;
+
+        track.style.transform = "translateX(0)";
+
+      }, 800);
+
+    }
+
+  }
+
+
+  setInterval(moveSlider, 2500);
+
+}
+
+
+/* Start sliders */
+
+createSlider("ictsvSlider");
+
+createSlider("fssSlider");
 
 </script>
 
