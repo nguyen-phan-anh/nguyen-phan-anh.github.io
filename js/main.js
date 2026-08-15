@@ -74,3 +74,34 @@ if (hero) {
   changeHero();
   setInterval(changeHero, 5000);
 }
+
+// ===== Load Contact Form =====
+const currentPage =
+  window.location.pathname.replace(/\/$/, "") || "/";
+
+if (currentPage !== "/") {
+
+  fetch("/contact.html")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Contact form not found: " + response.status);
+      }
+
+      return response.text();
+    })
+    .then(data => {
+
+      const contactContainer = document.createElement("aside");
+
+      contactContainer.className = "contact-sidebar";
+
+      contactContainer.innerHTML = data;
+
+      document.body.appendChild(contactContainer);
+
+    })
+    .catch(error => {
+      console.error("Failed to load contact form:", error);
+    });
+
+}
