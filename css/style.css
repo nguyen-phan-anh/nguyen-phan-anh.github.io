@@ -418,44 +418,45 @@ th:nth-child(2){
 }
 /* ===== Back to Top ===== */
 
-#backToTop {
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  width: 45px;
-  height: 45px;
+#backToTop{
+  position:fixed;
+  right:30px;
+  bottom:30px;
 
-  border: 1px solid #ddd;
-  border-radius: 50%;
+  width:45px;
+  height:45px;
 
-  background: #fff;
-  color: #111;
+  border:1px solid #ddd;
+  border-radius:50%;
 
-  font-size: 22px;
-  line-height: 1;
+  background:#fff;
+  color:#111;
 
-  cursor: pointer;
+  font-size:22px;
+  line-height:1;
 
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
+  cursor:pointer;
+
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
 
   transition:
-    opacity 0.25s ease,
-    transform 0.25s ease,
-    visibility 0.25s ease;
+    opacity .25s ease,
+    transform .25s ease,
+    visibility .25s ease;
 
-  z-index: 2000;
+  z-index:9999;
 }
 
-#backToTop.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+#backToTop.show{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
 }
 
-#backToTop:hover {
-  background: #111;
-  color: #fff;
-  border-color: #111;
+#backToTop:hover{
+  background:#111;
+  color:#fff;
+  border-color:#111;
 }
