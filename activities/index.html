@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -33,12 +34,14 @@
   animation: fss-scroll 10s linear infinite;
 }
 
+/* Hover vào slider thì tạm dừng để dễ click ảnh */
 .activity-slider:hover .activity-slider-track {
   animation-play-state: paused;
 }
 
 .activity-slider-track img {
-   width: 250px; height: 250px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border-radius: 15px;
   flex-shrink: 0;
@@ -67,26 +70,6 @@
   }
 }
 
-
-/* ===== Mobile ===== */
-
-@media (max-width: 800px) {
-
-  .activity-slider-track img {
-    width: 240px;
-    height: 240px;
-  }
-
-}
-
-@media (max-width: 500px) {
-
-  .activity-slider-track img {
-    width: 220px;
-    height: 220px;
-  }
-
-}
 </style>
 
 </head>
@@ -96,217 +79,248 @@
 <div class="layout">
 
   <!-- ===== Sidebar ===== -->
+
   <aside id="sidebar" class="sidebar"></aside>
 
-
   <!-- ===== Main ===== -->
+
   <main class="main">
 
-    <div style="padding:80px; max-width:1000px;">
+```
+<div style="padding:80px; max-width:1000px;">
 
-      <h1>Activities</h1>
+  <h1>Activities</h1>
 
 
-      <!-- Activity 1 -->
-      <section class="project-card">
+  <!-- Activity 1 -->
+  <section class="project-card">
 
-        <h2>Tổ Hỗ trợ triển khai Hệ thống iCTSV</h2>
+    <h2>Tổ Hỗ trợ triển khai Hệ thống iCTSV</h2>
 
-        <p class="project-meta">2020 - 2024</p>
+    <p class="project-meta">2020 - 2024</p>
 
-        <p>
-          <ul>
-            <li>
-              Từ một CTV, mình đã trở thành phó mảng Kiểm duyệt và cuối cùng là Tổ Trưởng
-            </li>
+    <p>
+      <ul>
+        <li>
+          Từ một CTV, mình đã trở thành phó mảng Kiểm duyệt và cuối cùng là Tổ Trưởng
+        </li>
 
-            <li>
-              Trách nhiệm: Quản lý hoạt động của Tổ; Đề xuất tổ chức các hoạt động;
-              Hỗ trợ các hoạt động của nhà trường như Sinh hoạt Công dân, Lễ Khai giảng,
-              Lễ Tốt nghiệp, Job Fair,...
-            </li>
+        <li>
+          Trách nhiệm: Quản lý hoạt động của Tổ; Đề xuất tổ chức các hoạt động;
+          Hỗ trợ các hoạt động của nhà trường như Sinh hoạt Công dân, Lễ Khai giảng,
+          Lễ Tốt nghiệp, Job Fair,...
+        </li>
 
-            <li>
-              Fanpage Tổ chức:
-              <a href="https://www.facebook.com/ictsv.hust" target="_blank">
-                https://www.facebook.com/ictsv.hust
-              </a>
-            </li>
-          </ul>
-        </p>
+        <li>
+          Fanpage Tổ chức:
+          <a href="https://www.facebook.com/ictsv.hust" target="_blank">
+            https://www.facebook.com/ictsv.hust
+          </a>
+        </li>
+      </ul>
+    </p>
 
-        <div class="project-tags">
-          <span>Leadership</span>
-          <span>Social responsibility</span>
-          <span>Commitment</span>
-        </div>
+    <div class="project-tags">
+      <span>Leadership</span>
+      <span>Social responsibility</span>
+      <span>Commitment</span>
+    </div>
 
-        <h3>Một vài hình ảnh về hoạt động của mình tại Tổ:</h3>
+    <h3>Một vài hình ảnh về hoạt động của mình tại Tổ:</h3>
 
 
-        <!-- ===== iCTSV Slider ===== -->
+    <!-- ===== iCTSV Slider ===== -->
 
-        <div class="activity-slider">
+    <div class="activity-slider">
 
-          <div class="activity-slider-track ictsv-slider">
+      <div class="activity-slider-track ictsv-slider">
 
-            <!-- Original -->
+        <!-- Original -->
 
-            <img src="./img/iCTSV-1.jpg"
-                 onclick="openGallery('iCTSV',0)">
+        <img src="./img/iCTSV-1.jpg"
+             alt="iCTSV activity 1"
+             onclick="openGallery('iCTSV',0)">
 
-            <img src="./img/iCTSV-2.jpg"
-                 onclick="openGallery('iCTSV',1)">
+        <img src="./img/iCTSV-2.jpg"
+             alt="iCTSV activity 2"
+             onclick="openGallery('iCTSV',1)">
 
-            <img src="./img/iCTSV-3.jpg"
-                 onclick="openGallery('iCTSV',2)">
+        <img src="./img/iCTSV-3.jpg"
+             alt="iCTSV activity 3"
+             onclick="openGallery('iCTSV',2)">
 
-            <img src="./img/iCTSV-4.jpg"
-                 onclick="openGallery('iCTSV',3)">
+        <img src="./img/iCTSV-4.jpg"
+             alt="iCTSV activity 4"
+             onclick="openGallery('iCTSV',3)">
 
-            <img src="./img/iCTSV-5.jpg"
-                 onclick="openGallery('iCTSV',4)">
+        <img src="./img/iCTSV-5.jpg"
+             alt="iCTSV activity 5"
+             onclick="openGallery('iCTSV',4)">
 
-            <img src="./img/iCTSV-6.jpg"
-                 onclick="openGallery('iCTSV',5)">
+        <img src="./img/iCTSV-6.jpg"
+             alt="iCTSV activity 6"
+             onclick="openGallery('iCTSV',5)">
 
 
-            <!-- Duplicate -->
+        <!-- Duplicate -->
+        <!-- Vẫn có onclick để ảnh duplicate cũng mở modal -->
 
-            <img src="./img/iCTSV-1.jpg">
+        <img src="./img/iCTSV-1.jpg"
+             alt="iCTSV activity 1"
+             onclick="openGallery('iCTSV',0)">
 
-            <img src="./img/iCTSV-2.jpg">
+        <img src="./img/iCTSV-2.jpg"
+             alt="iCTSV activity 2"
+             onclick="openGallery('iCTSV',1)">
 
-            <img src="./img/iCTSV-3.jpg">
+        <img src="./img/iCTSV-3.jpg"
+             alt="iCTSV activity 3"
+             onclick="openGallery('iCTSV',2)">
 
-            <img src="./img/iCTSV-4.jpg">
+        <img src="./img/iCTSV-4.jpg"
+             alt="iCTSV activity 4"
+             onclick="openGallery('iCTSV',3)">
 
-            <img src="./img/iCTSV-5.jpg">
+        <img src="./img/iCTSV-5.jpg"
+             alt="iCTSV activity 5"
+             onclick="openGallery('iCTSV',4)">
 
-            <img src="./img/iCTSV-6.jpg">
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- Activity 2 -->
-      <section class="project-card">
-
-        <h2>
-          Thực tập sinh R&amp;D tại Công ty Giải pháp phần mềm tài chính FSS
-        </h2>
-
-        <p class="project-meta">
-          Tháng 2 đến tháng 5 năm 2024
-        </p>
-
-        <p>
-          <ul>
-
-            <li>
-              Vị trí công việc: RnD &amp; Data Engineer
-            </li>
-
-            <li>
-              Học hỏi về cấu trúc Data Warehouse tại các ngân hàng
-            </li>
-
-            <li>
-              Lập trình SQL các job lấy dữ liệu hàng ngày
-            </li>
-
-          </ul>
-        </p>
-
-        <div class="project-tags">
-          <span>SQL</span>
-          <span>Data Engineering</span>
-          <span>Banking domain knowledge</span>
-        </div>
-
-        <h3>Một vài hình ảnh về dự án:</h3>
-
-
-        <!-- ===== FSS Slider ===== -->
-
-        <div class="activity-slider">
-
-          <div class="activity-slider-track fss-slider">
-
-            <!-- Original -->
-
-            <img src="./img/FSS-1.jpg"
-                 onclick="openGallery('FSS',0)">
-
-            <img src="./img/FSS-2.jpg"
-                 onclick="openGallery('FSS',1)">
-
-            <img src="./img/FSS-3.jpg"
-                 onclick="openGallery('FSS',2)">
-
-
-            <!-- Duplicate -->
-
-            <img src="./img/FSS-1.jpg">
-
-            <img src="./img/FSS-2.jpg">
-
-            <img src="./img/FSS-3.jpg">
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- Activity 3 -->
-      <section class="project-card">
-
-        <h2>Content Moderator tại Gear Inc Vietnam</h2>
-
-        <p class="project-meta">
-          Tháng 2 đến tháng 5 năm 2026
-        </p>
-
-        <p>
-          • Vị trí công việc: Content Moderator<br>
-          • Nội dung công việc: Kiểm soát nội dung Livestream, xem xét việc tuân thủ Tiêu chuẩn cộng đồng<br>
-          • Nắm bắt và áp dụng các policy của nền tảng một cách nhanh chóng và chính xác<br>
-        </p>
-
-        <div class="project-tags">
-          <span>Emotion Control</span>
-          <span>Detail Oriented</span>
-          <span>Consistency</span>
-        </div>
-
-      </section>
-
-
-      <!-- ===== Modal Gallery ===== -->
-
-      <div id="imgModal" class="modal">
-
-        <span class="close" onclick="closeModal()">&times;</span>
-
-        <span class="nav prev" onclick="prevImg()">&#10094;</span>
-
-        <img class="modal-content" id="modalImg">
-
-        <span class="nav next" onclick="nextImg()">&#10095;</span>
+        <img src="./img/iCTSV-6.jpg"
+             alt="iCTSV activity 6"
+             onclick="openGallery('iCTSV',5)">
 
       </div>
 
     </div>
 
+  </section>
+
+
+  <!-- Activity 2 -->
+  <section class="project-card">
+
+    <h2>
+      Thực tập sinh R&amp;D tại Công ty Giải pháp phần mềm tài chính FSS
+    </h2>
+
+    <p class="project-meta">
+      Tháng 2 đến tháng 5 năm 2024
+    </p>
+
+    <p>
+      <ul>
+
+        <li>
+          Vị trí công việc: RnD &amp; Data Engineer
+        </li>
+
+        <li>
+          Học hỏi về cấu trúc Data Warehouse tại các ngân hàng
+        </li>
+
+        <li>
+          Lập trình SQL các job lấy dữ liệu hàng ngày
+        </li>
+
+      </ul>
+    </p>
+
+    <div class="project-tags">
+      <span>SQL</span>
+      <span>Data Engineering</span>
+      <span>Banking domain knowledge</span>
+    </div>
+
+    <h3>Một vài hình ảnh về dự án:</h3>
+
+
+    <!-- ===== FSS Slider ===== -->
+
+    <div class="activity-slider">
+
+      <div class="activity-slider-track fss-slider">
+
+        <!-- Original -->
+
+        <img src="./img/FSS-1.jpg"
+             alt="FSS activity 1"
+             onclick="openGallery('FSS',0)">
+
+        <img src="./img/FSS-2.jpg"
+             alt="FSS activity 2"
+             onclick="openGallery('FSS',1)">
+
+        <img src="./img/FSS-3.jpg"
+             alt="FSS activity 3"
+             onclick="openGallery('FSS',2)">
+
+
+        <!-- Duplicate -->
+        <!-- Vẫn có onclick để ảnh duplicate cũng mở modal -->
+
+        <img src="./img/FSS-1.jpg"
+             alt="FSS activity 1"
+             onclick="openGallery('FSS',0)">
+
+        <img src="./img/FSS-2.jpg"
+             alt="FSS activity 2"
+             onclick="openGallery('FSS',1)">
+
+        <img src="./img/FSS-3.jpg"
+             alt="FSS activity 3"
+             onclick="openGallery('FSS',2)">
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Activity 3 -->
+  <section class="project-card">
+
+    <h2>Content Moderator tại Gear Inc Vietnam</h2>
+
+    <p class="project-meta">
+      Tháng 2 đến tháng 5 năm 2026
+    </p>
+
+    <p>
+      • Vị trí công việc: Content Moderator<br>
+      • Nội dung công việc: Kiểm soát nội dung Livestream, xem xét việc tuân thủ Tiêu chuẩn cộng đồng<br>
+      • Nắm bắt và áp dụng các policy của nền tảng một cách nhanh chóng và chính xác<br>
+    </p>
+
+    <div class="project-tags">
+      <span>Emotion Control</span>
+      <span>Detail Oriented</span>
+      <span>Consistency</span>
+    </div>
+
+  </section>
+
+
+  <!-- ===== Modal Gallery ===== -->
+
+  <div id="imgModal" class="modal">
+
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <span class="nav prev" onclick="prevImg()">&#10094;</span>
+
+    <img class="modal-content" id="modalImg">
+
+    <span class="nav next" onclick="nextImg()">&#10095;</span>
+
+  </div>
+
+</div>
+```
+
   </main>
 
 </div>
-
 
 <!-- ===== Gallery JS ===== -->
 
@@ -412,8 +426,8 @@ document.addEventListener("keydown", function(e) {
 
 </script>
 
-
 <!-- ===== Main JS ===== -->
+
 <script src="/js/main.js"></script>
 
 </body>
