@@ -105,3 +105,30 @@ if (currentPage !== "/") {
     });
 
 }
+// ===== Back to Top =====
+if (currentPage !== "/") {
+
+  const backToTop = document.createElement("button");
+
+  backToTop.id = "backToTop";
+  backToTop.type = "button";
+  backToTop.setAttribute("aria-label", "Back to top");
+  backToTop.innerHTML = "↑";
+
+  document.body.appendChild(backToTop);
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+
+  backToTop.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
