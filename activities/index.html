@@ -20,7 +20,17 @@
   display: flex;
   gap: 24px;
   width: max-content;
-  animation: activity-scroll 25s linear infinite;
+  will-change: transform;
+}
+
+/* iCTSV: 6 ảnh */
+.ictsv-slider {
+  animation: ictsv-scroll 20s linear infinite;
+}
+
+/* FSS: 3 ảnh */
+.fss-slider {
+  animation: fss-scroll 10s linear infinite;
 }
 
 .activity-slider:hover .activity-slider-track {
@@ -28,20 +38,27 @@
 }
 
 .activity-slider-track img {
-  width: 317px;
-  height: 317px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   border-radius: 20px;
   flex-shrink: 0;
   cursor: pointer;
-  transition: transform 0.2s ease;
 }
 
-.activity-slider-track img:hover {
-  transform: scale(1.02);
+/* ===== Seamless loop ===== */
+
+@keyframes ictsv-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 12px));
+  }
 }
 
-@keyframes activity-scroll {
+@keyframes fss-scroll {
   from {
     transform: translateX(0);
   }
@@ -57,8 +74,8 @@
 @media (max-width: 800px) {
 
   .activity-slider-track img {
-    width: 280px;
-    height: 280px;
+    width: 240px;
+    height: 240px;
   }
 
 }
@@ -66,8 +83,8 @@
 @media (max-width: 500px) {
 
   .activity-slider-track img {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
   }
 
 }
@@ -100,7 +117,9 @@
 
         <p>
           <ul>
-            <li>Từ một CTV, mình đã trở thành phó mảng Kiểm duyệt và cuối cùng là Tổ Trưởng</li>
+            <li>
+              Từ một CTV, mình đã trở thành phó mảng Kiểm duyệt và cuối cùng là Tổ Trưởng
+            </li>
 
             <li>
               Trách nhiệm: Quản lý hoạt động của Tổ; Đề xuất tổ chức các hoạt động;
@@ -126,10 +145,13 @@
         <h3>Một vài hình ảnh về hoạt động của mình tại Tổ:</h3>
 
 
-        <!-- iCTSV Slider -->
+        <!-- ===== iCTSV Slider ===== -->
+
         <div class="activity-slider">
 
-          <div class="activity-slider-track">
+          <div class="activity-slider-track ictsv-slider">
+
+            <!-- Original -->
 
             <img src="./img/iCTSV-1.jpg"
                  onclick="openGallery('iCTSV',0)">
@@ -149,7 +171,8 @@
             <img src="./img/iCTSV-6.jpg"
                  onclick="openGallery('iCTSV',5)">
 
-            <!-- Duplicate for seamless loop -->
+
+            <!-- Duplicate -->
 
             <img src="./img/iCTSV-1.jpg">
 
@@ -173,18 +196,28 @@
       <!-- Activity 2 -->
       <section class="project-card">
 
-        <h2>Thực tập sinh R&amp;D tại Công ty Giải pháp phần mềm tài chính FSS</h2>
+        <h2>
+          Thực tập sinh R&amp;D tại Công ty Giải pháp phần mềm tài chính FSS
+        </h2>
 
-        <p class="project-meta">Tháng 2 đến tháng 5 năm 2024</p>
+        <p class="project-meta">
+          Tháng 2 đến tháng 5 năm 2024
+        </p>
 
         <p>
           <ul>
 
-            <li>Vị trí công việc: RnD &amp; Data Engineer</li>
+            <li>
+              Vị trí công việc: RnD &amp; Data Engineer
+            </li>
 
-            <li>Học hỏi về cấu trúc Data Warehouse tại các ngân hàng</li>
+            <li>
+              Học hỏi về cấu trúc Data Warehouse tại các ngân hàng
+            </li>
 
-            <li>Lập trình SQL các job lấy dữ liệu hàng ngày</li>
+            <li>
+              Lập trình SQL các job lấy dữ liệu hàng ngày
+            </li>
 
           </ul>
         </p>
@@ -198,10 +231,13 @@
         <h3>Một vài hình ảnh về dự án:</h3>
 
 
-        <!-- FSS Slider -->
+        <!-- ===== FSS Slider ===== -->
+
         <div class="activity-slider">
 
-          <div class="activity-slider-track">
+          <div class="activity-slider-track fss-slider">
+
+            <!-- Original -->
 
             <img src="./img/FSS-1.jpg"
                  onclick="openGallery('FSS',0)">
@@ -212,7 +248,8 @@
             <img src="./img/FSS-3.jpg"
                  onclick="openGallery('FSS',2)">
 
-            <!-- Duplicate for seamless loop -->
+
+            <!-- Duplicate -->
 
             <img src="./img/FSS-1.jpg">
 
@@ -232,7 +269,9 @@
 
         <h2>Content Moderator tại Gear Inc Vietnam</h2>
 
-        <p class="project-meta">Tháng 2 đến tháng 5 năm 2026</p>
+        <p class="project-meta">
+          Tháng 2 đến tháng 5 năm 2026
+        </p>
 
         <p>
           • Vị trí công việc: Content Moderator<br>
@@ -250,6 +289,7 @@
 
 
       <!-- ===== Modal Gallery ===== -->
+
       <div id="imgModal" class="modal">
 
         <span class="close" onclick="closeModal()">&times;</span>
@@ -270,6 +310,7 @@
 
 
 <!-- ===== Gallery JS ===== -->
+
 <script>
 
 const galleries = {
