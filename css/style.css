@@ -409,3 +409,15 @@ th:nth-child(2){
 .contact-form button:hover{
   background:#2563eb;
 }
+
+@media (max-width:1100px){
+
+  .contact-box{
+    display:none;
+  }
+
+  .main{
+    margin-right:0;
+  }
+
+}
