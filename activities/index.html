@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" href="/img/favicon.ico">
 
 <style>
-/* ===== Horizontal Image Slider ===== */
+/* ===== Continuous Image Slider ===== */
 
 .activity-slider {
   width: 100%;
@@ -19,21 +19,36 @@
 .activity-slider-track {
   display: flex;
   gap: 24px;
-  transition: transform 0.8s ease;
+  width: max-content;
+  animation: activity-scroll 25s linear infinite;
+}
+
+.activity-slider:hover .activity-slider-track {
+  animation-play-state: paused;
 }
 
 .activity-slider-track img {
-  width: calc((100% - 48px) / 3);
-  height: 300px;
+  width: 317px;
+  height: 317px;
   object-fit: cover;
   border-radius: 20px;
   flex-shrink: 0;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease;
 }
 
 .activity-slider-track img:hover {
   transform: scale(1.02);
+}
+
+@keyframes activity-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 12px));
+  }
 }
 
 
@@ -42,8 +57,8 @@
 @media (max-width: 800px) {
 
   .activity-slider-track img {
-    width: calc((100% - 24px) / 2);
-    height: 250px;
+    width: 280px;
+    height: 280px;
   }
 
 }
@@ -51,7 +66,7 @@
 @media (max-width: 500px) {
 
   .activity-slider-track img {
-    width: 100%;
+    width: 250px;
     height: 250px;
   }
 
@@ -114,7 +129,7 @@
         <!-- iCTSV Slider -->
         <div class="activity-slider">
 
-          <div class="activity-slider-track" id="ictsvSlider">
+          <div class="activity-slider-track">
 
             <img src="./img/iCTSV-1.jpg"
                  onclick="openGallery('iCTSV',0)">
@@ -133,6 +148,20 @@
 
             <img src="./img/iCTSV-6.jpg"
                  onclick="openGallery('iCTSV',5)">
+
+            <!-- Duplicate for seamless loop -->
+
+            <img src="./img/iCTSV-1.jpg">
+
+            <img src="./img/iCTSV-2.jpg">
+
+            <img src="./img/iCTSV-3.jpg">
+
+            <img src="./img/iCTSV-4.jpg">
+
+            <img src="./img/iCTSV-5.jpg">
+
+            <img src="./img/iCTSV-6.jpg">
 
           </div>
 
@@ -172,7 +201,7 @@
         <!-- FSS Slider -->
         <div class="activity-slider">
 
-          <div class="activity-slider-track" id="fssSlider">
+          <div class="activity-slider-track">
 
             <img src="./img/FSS-1.jpg"
                  onclick="openGallery('FSS',0)">
@@ -182,6 +211,14 @@
 
             <img src="./img/FSS-3.jpg"
                  onclick="openGallery('FSS',2)">
+
+            <!-- Duplicate for seamless loop -->
+
+            <img src="./img/FSS-1.jpg">
+
+            <img src="./img/FSS-2.jpg">
+
+            <img src="./img/FSS-3.jpg">
 
           </div>
 
@@ -259,8 +296,6 @@ let currentGallery = "";
 let currentIndex = 0;
 
 
-/* ===== Modal Gallery ===== */
-
 function openGallery(galleryName, index) {
 
   currentGallery = galleryName;
@@ -334,112 +369,6 @@ document.addEventListener("keydown", function(e) {
   }
 
 });
-
-
-/* =====================================================
-   Automatic Horizontal Slider
-   - Always shows 3 images on desktop
-   - Moves 1 image at a time
-   - Loops infinitely
-   ===================================================== */
-
-function createSlider(sliderId) {
-
-  const track = document.getElementById(sliderId);
-
-  if (!track) return;
-
-  const originalImages = Array.from(track.children);
-
-  if (originalImages.length <= 3) {
-
-    /*
-      Nếu chỉ có đúng 3 ảnh:
-      nhân bản 3 ảnh để tạo vòng lặp.
-    */
-
-    originalImages.forEach(img => {
-
-      const clone = img.cloneNode(true);
-
-      track.appendChild(clone);
-
-    });
-
-  } else {
-
-    /*
-      Với nhiều hơn 3 ảnh:
-      nhân bản 3 ảnh đầu để khi tới cuối
-      có thể tiếp tục chạy sang đầu.
-    */
-
-    originalImages.slice(0, 3).forEach(img => {
-
-      const clone = img.cloneNode(true);
-
-      track.appendChild(clone);
-
-    });
-
-  }
-
-
-  let index = 0;
-
-
-  function moveSlider() {
-
-    const image = track.children[0];
-
-    const gap = parseFloat(
-      window.getComputedStyle(track).gap
-    ) || 0;
-
-    const imageWidth = image.getBoundingClientRect().width;
-
-    index++;
-
-    track.style.transition = "transform 0.8s ease";
-
-    track.style.transform =
-      `translateX(-${index * (imageWidth + gap)}px)`;
-
-
-    /*
-      Khi chạy qua toàn bộ ảnh gốc,
-      reset về đầu mà không có hiệu ứng.
-    */
-
-    const originalCount = originalImages.length;
-
-    if (index >= originalCount) {
-
-      setTimeout(() => {
-
-        track.style.transition = "none";
-
-        index = 0;
-
-        track.style.transform = "translateX(0)";
-
-      }, 800);
-
-    }
-
-  }
-
-
-  setInterval(moveSlider, 2500);
-
-}
-
-
-/* Start sliders */
-
-createSlider("ictsvSlider");
-
-createSlider("fssSlider");
 
 </script>
 
