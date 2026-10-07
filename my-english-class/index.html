@@ -20,18 +20,20 @@
 
     <div style="padding:80px; max-width:900px;">
 
-      <h1>About my English class</h1>
+      <h1>About my English class - <i>Về lớp học tiếng Anh của mình</i></h1>
 
       <p style="margin-top:20px; line-height:1.8;">
-        Mình đã bắt đầu dạy tiếng Anh đến nay được 3 năm rồi.
-        Mình chuyên về dạy cho người mới bắt đầu và luyện thi TOEIC.
-      </p>
+      I've been teaching English since 2020. I specialize in helping beginners and TOEIC test-takers<br>
+      <i>Mình đã bắt đầu dạy tiếng Anh từ 2020. Mình chuyên về dạy cho người mới bắt đầu và luyện thi TOEIC</i>
+</p>
 
 
-      <h2>Chứng chỉ của mình:</h2>
+      <h2>My certificates - <i>Chứng chỉ của mình</i></h2>
 
       <p style="margin-top:20px; line-height:1.8;">
-        Mình có IELTS 7.5, TOEIC 990 và 980
+        I hold an IELTS score of 7.5 and have achieved TOEIC scores of 990 and 980<br>
+      <i>Mình có IELTS 7.5, TOEIC 990 và 980</i>
+        
       </p>
 
       <h3>Ảnh chụp chứng chỉ của mình:</h3>
@@ -56,8 +58,7 @@
         <img src="./img/PA-Stu-525.jpg" onclick="openGallery('PA-Stu',7)">
       </div>
 
-
-      <h2>Một số ảnh lớp học của mình</h2>
+      <h2>Some pictures of my class - <i>Một số ảnh lớp học của mình</i></h2>
 
       <div class="img-grid" data-gallery="PA-Class">
         <img src="./img/MyClass-01.jpg" onclick="openGallery('PA-Class',0)">
@@ -74,9 +75,7 @@
         <div class="modal-ui">
 
           <span class="close" onclick="closeModal()">&times;</span>
-
           <span class="nav prev" onclick="prevImg()">&#10094;</span>
-
           <div class="modal-box">
             <img class="modal-content" id="modalImg">
             <div class="modal-caption" id="modalCaption"></div>
@@ -86,13 +85,9 @@
           <span class="nav next" onclick="nextImg()">&#10095;</span>
 
         </div>
-
       </div>
-
     </div>
-
   </main>
-
 </div>
 
 
@@ -103,22 +98,18 @@ const galleries = {
 
   "PA-cert": [
     {
-      src: "./img/PA-Eng-Cert-1.jpg",
-      caption: "IELTS Academic 7.5"
+      src: "./img/PA-Eng-Cert-1.jpg",caption: "IELTS Academic 7.5"
     },
     {
-      src: "./img/PA-Eng-Cert-2.jpg",
-      caption: "TOEIC 990 – Listening & Reading"
+      src: "./img/PA-Eng-Cert-2.jpg",caption: "TOEIC 990 – Listening & Reading"
     },
     {
-      src: "./img/PA-Eng-Cert-3.jpg",
-      caption: "TOEIC 980 – Listening & Reading"
+      src: "./img/PA-Eng-Cert-3.jpg",caption: "TOEIC 980 – Listening & Reading"
     }
   ],
 
   "PA-Stu": [
-    {
-      src: "./img/PA-Stu-990.jpg",caption: "Nguyễn Thạc Dũng - 990"
+    {src: "./img/PA-Stu-990.jpg",caption: "Nguyễn Thạc Dũng - 990"
     },
     {
       src: "./img/PA-Stu-775.jpg",caption: "Trần Quang Trung - 775"
@@ -154,7 +145,6 @@ const galleries = {
 
 let currentGallery = "";
 let currentIndex = 0;
-
 
 /* Preload images */
 
